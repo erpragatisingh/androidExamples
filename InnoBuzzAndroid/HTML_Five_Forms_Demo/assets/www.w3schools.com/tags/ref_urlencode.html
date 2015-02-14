@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/tags/ref_urlencode.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 05:42:51 GMT -->
+<head>
+
+<title>HTML URL Encoding Reference</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript">
+<!--
+function urlencode()
+{
+var txt=document.getElementById("txt").value;
+var encodetxt=encodeURI(txt)
+document.getElementById("encodingresult").innerHTML=encodetxt
+}
+-->
+</script>
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<a id="top"></a>
+<div style="width:960px;margin-top:5px;margin-left:auto;margin-right:auto">
+<div style="width:960px;height:74px;margin:0;padding:0;">
+<div style="width:340px;text-align:left;float:left;">
+	<a href="../index.html"><img width="336" height="69" src="../images/w3schoolslogo.gif" alt="W3Schools.com" style="border:0;margin-top:5px;" /></a>
+</div>
+
+<div style="width:300px;float:right;text-align:right;margin-top:20px;margin-right:14px;margin-bottom:5px;">
+<div id="google_translate_element" style="display:none"></div>
+<div id="translate_link" style="margin-bottom:14px">
+<a href="#" class="topnav"
+onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+	<form style="font-size:11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.w3schools.com" />
+    <input onfocus="searchfield_focus(this)" style="width:150px;color:#808080;font-style:italic;margin:0;" 
+    type="text" name="as_q" size="20" value="Search w3schools.com" /><input type="submit" style="margin:0;" value="Search" title="Search" />
+	</form>
+</div>
+</div>
+<div id="topnav" style="clear:both;width:960px;height:25px;">
+<div style="float:left;width:400px;word-spacing:12px;font-size:90%;padding-left:15px;padding-top:6px;white-space:nowrap;text-align:left;">
+	<a class="topnav" href="../default.html" target="_top">HOME </a>
+	<a class="topnav" href="../html/default.html" target="_top">HTML </a>
+	<a class="topnav" href="../css/default.html" target="_top">CSS </a>
+	<a class="topnav" href="../xml/default.html" target="_top">XML </a>
+	<a class="topnav" href="../js/default.html" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="../asp/default.html" target="_top">ASP </a>
+	<a class="topnav" href="../php/default.html" target="_top">PHP </a>
+	<a class="topnav" href="../sql/default.html" target="_top">SQL </a>	
+	<a class="topnav" href="../sitemap/default.html" target="_top">MORE...</a>
+</div>
+<div style="float:right;width:280px;word-spacing:6px;font-size:80%;padding-right:13px;padding-top:7px;color:#888888;white-space:nowrap;text-align:right;">
+	<a class="topnav" href="../sitemap/default.html#references" target="_top">REFERENCES</a> |
+	<a class="topnav" href="../sitemap/default.html#examples" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://w3schools.invisionzone.com/" target="_top">FORUM</a> |
+	<a class="topnav" href="../about/default.html" target="_top">ABOUT</a>	
+</div>
+</div>
+<div style="width:960px;height:94px;position:relative;margin-left:auto;margin-right:auto;margin:0px;padding:0px;overflow:hidden">
+<script type='text/javascript' src='../../partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-3440800076797949");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-3440800076797949", "MainLeaderboard");
+GA_googleAddSlot("ca-pub-3440800076797949", "SmallPS");
+GA_googleAddSlot("ca-pub-3440800076797949", "LargePS");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomRectangle");
+GA_googleAddSlot("ca-pub-3440800076797949", "SkyScraper");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomBanner");
+GA_googleAddSlot("ca-pub-3440800076797949", "TopRectangle");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- TopRectangle -->
+<script type='text/javascript'>
+GA_googleFillSlot("TopRectangle");
+</script>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- MainLeaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("MainLeaderboard");
+</script>
+</div></div>
+<div style="width:960px;padding:0px;margin:0px;">
+<div id="leftcolumn" style="width:170px;margin:0;padding:0;margin-top:5px;float:left;"><h2 class="left"><span class="left_h2">HTML</span> Reference</h2>
+<a target="_top" href="default.html" >HTML by Alphabet</a><br />
+<a target="_top" href="ref_byfunc.html" >HTML by Function</a><br />
+<a target="_top" href="ref_standardattributes.html" >HTML Attributes</a><br />
+<a target="_top" href="ref_eventattributes.html" >HTML Events</a><br />
+<a target="_top" href="ref_html_dtd.html" >HTML Valid DTDs</a><br />
+<a target="_top" href="ref_colornames.html" >HTML Colornames</a><br />
+<a target="_top" href="ref_colorpicker.html" >HTML Colorpicker</a><br />
+<a target="_top" href="ref_colormixer.html" >HTML Colormixer</a><br />
+<a target="_top" href="ref_charactersets.html" >HTML Character Sets</a><br />
+<a target="_top" href="ref_ascii.html" >HTML ASCII</a><br />
+<a target="_top" href="ref_entities.html" >HTML ISO-8859-1</a><br />
+<a target="_top" href="ref_symbols.html" >HTML Symbols</a><br />
+<a target="_top" href="ref_urlencode.html" style='font-weight:bold;'>HTML URL Encode</a><br />
+<a target="_top" href="ref_language_codes.html" >HTML Lang Codes</a><br />
+<a target="_top" href="ref_httpmessages.html" >HTTP Messages</a><br />
+<br />
+<h2 class="left"><span class="left_h2">HTML</span> Tags</h2>
+<a target="_top" href="tag_comment.html" >&lt;!--&gt;</a><br />
+<a target="_top" href="tag_doctype.html" >&lt;!DOCTYPE&gt;</a><br />
+<a target="_top" href="tag_a.html" >&lt;a&gt;</a><br />
+<a target="_top" href="tag_abbr.html" >&lt;abbr&gt;</a><br />
+<a target="_top" href="tag_acronym.html" >&lt;acronym&gt;</a><br />
+<a target="_top" href="tag_address.html" >&lt;address&gt;</a><br />
+<a target="_top" href="tag_applet.html" >&lt;applet&gt;</a><br />
+<a target="_top" href="tag_area.html" >&lt;area&gt;</a><br />
+<a target="_top" href="tag_font_style.html" >&lt;b&gt;</a><br />
+<a target="_top" href="tag_base.html" >&lt;base&gt;</a><br />
+<a target="_top" href="tag_basefont.html" >&lt;basefont&gt;</a><br />
+<a target="_top" href="tag_bdo.html" >&lt;bdo&gt;</a><br />
+<a target="_top" href="tag_font_style.html" >&lt;big&gt;</a><br />
+<a target="_top" href="tag_blockquote.html" >&lt;blockquote&gt;</a><br />
+<a target="_top" href="tag_body.html" >&lt;body&gt;</a><br />
+<a target="_top" href="tag_br.html" >&lt;br&gt;</a><br />
+<a target="_top" href="tag_button.html" >&lt;button&gt;</a><br />
+<a target="_top" href="tag_caption.html" >&lt;caption&gt;</a><br />
+<a target="_top" href="tag_center.html" >&lt;center&gt;</a><br />
+<a target="_top" href="tag_phrase_elements.html" >&lt;cite&gt;</a><br />
+<a target="_top" href="tag_phrase_elements.html" >&lt;code&gt;</a><br />
+<a target="_top" href="tag_col.html" >&lt;col&gt;</a><br />
+<a target="_top" href="tag_colgroup.html" >&lt;colgroup&gt;</a><br />
+<a target="_top" href="tag_dd.html" >&lt;dd&gt;</a><br />
+<a target="_top" href="tag_del.html" >&lt;del&gt;</a><br />
+<a target="_top" href="tag_phrase_elements.html" >&lt;dfn&gt;</a><br />
+<a target="_top" href="tag_dir.html" >&lt;dir&gt;</a><br />
+<a target="_top" href="tag_div.html" >&lt;div&gt;</a><br />
+<a target="_top" href="tag_dl.html" >&lt;dl&gt;</a><br />
+<a target="_top" href="tag_dt.html" >&lt;dt&gt;</a><br />
+<a target="_top" href="tag_phrase_elements.html" >&lt;em&gt;</a><br />
+<a target="_top" href="tag_fieldset.html" >&lt;fieldset&gt;</a><br />
+<a target="_top" href="tag_font.html" >&lt;font&gt;</a><br />
+<a target="_top" href="tag_form.html" >&lt;form&gt;</a><br />
+<a target="_top" href="tag_frame.html" >&lt;frame&gt;</a><br />
+<a target="_top" href="tag_frameset.html" >&lt;frameset&gt;</a><br />
+<a target="_top" href="tag_head.html" >&lt;head&gt;</a><br />
+<a target="_top" href="tag_hn.html" >&lt;h1&gt; - &lt;h6&gt;</a><br />
+<a target="_top" href="tag_hr.html" >&lt;hr&gt;</a><br />
+<a target="_top" href="tag_html.html" >&lt;html&gt;</a><br />
+<a target="_top" href="tag_font_style.html" >&lt;i&gt;</a><br />
+<a target="_top" href="tag_iframe.html" >&lt;iframe&gt;</a><br />
+<a target="_top" href="tag_img.html" >&lt;img&gt;</a><br />
+<a target="_top" href="tag_input.html" >&lt;input&gt;</a><br />
+<a target="_top" href="tag_ins.html" >&lt;ins&gt;</a><br />
+<a target="_top" href="tag_phrase_elements.html" >&lt;kbd&gt;</a><br />
+<a target="_top" href="tag_label.html" >&lt;label&gt;</a><br />
+<a target="_top" href="tag_legend.html" >&lt;legend&gt;</a><br />
+<a target="_top" href="tag_li.html" >&lt;li&gt;</a><br />
+<a target="_top" href="tag_link.html" >&lt;link&gt;</a><br />
+<a target="_top" href="tag_map.html" >&lt;map&gt;</a><br />
+<a target="_top" href="tag_menu.html" >&lt;menu&gt;</a><br />
+<a target="_top" href="tag_meta.html" >&lt;meta&gt;</a><br />
+<a target="_top" href="tag_noframes.html" >&lt;noframes&gt;</a><br />
+<a target="_top" href="tag_noscript.html" >&lt;noscript&gt;</a><br />
+<a target="_top" href="tag_object.html" >&lt;object&gt;</a><br />
+<a target="_top" href="tag_ol.html" >&lt;ol&gt;</a><br />
+<a target="_top" href="tag_optgroup.html" >&lt;optgroup&gt;</a><br />
+<a target="_top" href="tag_option.html" >&lt;option&gt;</a><br />
+<a target="_top" href="tag_p.html" >&lt;p&gt;</a><br />
+<a target="_top" href="tag_param.html" >&lt;param&gt;</a><br />
+<a target="_top" href="tag_pre.html" >&lt;pre&gt;</a><br />
+<a target="_top" href="tag_q.html" >&lt;q&gt;</a><br />
+<a target="_top" href="tag_strike.html" >&lt;s&gt;</a><br />
+<a target="_top" href="tag_phrase_elements.html" >&lt;samp&gt;</a><br />
+<a target="_top" href="tag_script.html" >&lt;script&gt;</a><br />
+<a target="_top" href="tag_select.html" >&lt;select&gt;</a><br />
+<a target="_top" href="tag_font_style.html" >&lt;small&gt;</a><br />
+<a target="_top" href="tag_span.html" >&lt;span&gt;</a><br />
+<a target="_top" href="tag_strike.html" >&lt;strike&gt;</a><br />
+<a target="_top" href="tag_phrase_elements.html" >&lt;strong&gt;</a><br />
+<a target="_top" href="tag_style.html" >&lt;style&gt;</a><br />
+<a target="_top" href="tag_sup.html" >&lt;sub&gt;</a><br />
+<a target="_top" href="tag_sup.html" >&lt;sup&gt;</a><br />
+<a target="_top" href="tag_table.html" >&lt;table&gt;</a><br />
+<a target="_top" href="tag_tbody.html" >&lt;tbody&gt;</a><br />
+<a target="_top" href="tag_td.html" >&lt;td&gt;</a><br />
+<a target="_top" href="tag_textarea.html" >&lt;textarea&gt;</a><br />
+<a target="_top" href="tag_tfoot.html" >&lt;tfoot&gt;</a><br />
+<a target="_top" href="tag_th.html" >&lt;th&gt;</a><br />
+<a target="_top" href="tag_thead.html" >&lt;thead&gt;</a><br />
+<a target="_top" href="tag_title.html" >&lt;title&gt;</a><br />
+<a target="_top" href="tag_tr.html" >&lt;tr&gt;</a><br />
+<a target="_top" href="tag_font_style.html" >&lt;tt&gt;</a><br />
+<a target="_top" href="tag_u.html" >&lt;u&gt;</a><br />
+<a target="_top" href="tag_ul.html" >&lt;ul&gt;</a><br />
+<a target="_top" href="tag_phrase_elements.html" >&lt;var&gt;</a><br />
+
+
+</div>
+<div style="width:634px;margin:0px;padding:0px;background-color:#ffffff;color:#000000;padding-bottom:8px;padding-right:5px;padding-top:4px;float:left;">
+
+<h1>HTML <span class="color_h1">URL Encoding</span> Reference</h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="ref_symbols.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="ref_language_codes.html">Next Reference &raquo;</a></div>
+</div>
+<hr />
+<p class="intro">URL encoding converts characters into a format that can be transmitted over the Internet.</p>
+<hr />
+
+<h2>URL - Uniform Resource Locator</h2>
+<p>Web browsers request pages from web servers by using a URL.</p>
+<p>The URL is the address of a web page, like: <b>http://www.w3schools.com.</b></p>
+<hr />
+<h2>URL Encoding</h2>
+<p>URLs can only be sent over the Internet using the <a href="ref_ascii.html">ASCII character-set</a>.</p>
+<p>Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid ASCII format.</p>
+<p>URL encoding replaces unsafe ASCII characters with 
+a &quot;%&quot; followed by two hexadecimal digits.<br />
+</p>
+<p>URLs cannot contain spaces. URL encoding normally replaces a space with a + sign.</p>
+<hr />
+<h2>Try It Yourself</h2>
+
+<p>
+If you click the "Submit" button below, 
+the browser will URL encode the input before it is sent to the server. A page at the 
+server will display the received input.</p>
+<form name="input" target="_blank" action="http://www.w3schools.com/tags/html_form_submit.asp" method="get">
+<input type="text" value="Hello Günter" name="text" size="30" />
+<input type="submit" value="Submit" />
+</form>
+
+<p>
+Try some other input and click Submit again.</p>
+<hr />
+
+<h2>URL Encoding Functions</h2>
+<p>In JavaScript, PHP, and ASP there are functions that can be used to URL 
+encode a string.</p>
+<p>In JavaScript you can use the encodeURI() function. PHP has the rawurlencode() 
+function and ASP has the Server.URLEncode() function.</p>
+<p>Click the &quot;URL Encode&quot; 
+button to see how the JavaScript function encodes the text.</p>
+<form name="changeform" action="http://www.w3schools.com/tags/ref_urlresult.asp" target="_blank" method="post">
+<input type="text" name="txt" id="txt" value="Hello Günter" size="30" />
+<input name="submit" type="button" value="URL Encode" onclick="urlencode()" />
+</form>
+<span id="encodingresult"></span>
+<p><b>Note: </b>The JavaScript function encodes space as %20.</p>
+<hr />
+<h2>URL Encoding Reference</h2>
+
+<table class="reference">
+    <tr>
+      <th align="left">ASCII Character</th>
+      <th align="left">URL-encoding</th>
+      </tr>
+    <tr>
+      <td>space</td>
+      <td>%20</td>
+    </tr>
+    <tr>
+      <td>!</td>
+      <td>%21</td>
+    </tr>
+    <tr>
+      <td>&quot;</td>
+      <td>%22</td>
+    </tr>
+    <tr>
+      <td>#</td>
+      <td>%23</td>
+    </tr>
+    <tr>
+      <td>$</td>
+      <td>%24</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>%25</td>
+    </tr>
+    <tr>
+      <td>&amp;</td>
+      <td>%26</td>
+    </tr>
+    <tr>
+      <td>'</td>
+      <td>%27</td>
+    </tr>
+    <tr>
+      <td>(</td>
+      <td>%28</td>
+    </tr>
+    <tr>
+      <td>)</td>
+      <td>%29</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>%2A</td>
+    </tr>
+    <tr>
+      <td>+</td>
+      <td>%2B</td>
+    </tr>
+    <tr>
+      <td>,</td>
+      <td>%2C</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>%2D</td>
+    </tr>
+    <tr>
+      <td>.</td>
+      <td>%2E</td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>%2F</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>%30</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>%31</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>%32</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>%33</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>%34</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>%35</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>%36</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>%37</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>%38</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>%39</td>
+    </tr>
+    <tr>
+      <td>:</td>
+      <td>%3A</td>
+    </tr>
+    <tr>
+      <td>;</td>
+      <td>%3B</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>%3C</td>
+    </tr>
+    <tr>
+      <td>=</td>
+      <td>%3D</td>
+    </tr>
+    <tr>
+      <td>&gt;</td>
+      <td>%3E</td>
+    </tr>
+    <tr>
+      <td>?</td>
+      <td>%3F</td>
+    </tr>
+    <tr>
+      <td>@</td>
+      <td>%40</td>
+    </tr>
+    <tr>
+      <td>A</td>
+      <td>%41</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>%42</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>%43</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>%44</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>%45</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>%46</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>%47</td>
+    </tr>
+    <tr>
+      <td>H</td>
+      <td>%48</td>
+    </tr>
+    <tr>
+      <td>I</td>
+      <td>%49</td>
+    </tr>
+    <tr>
+      <td>J</td>
+      <td>%4A</td>
+    </tr>
+    <tr>
+      <td>K</td>
+      <td>%4B</td>
+    </tr>
+    <tr>
+      <td>L</td>
+      <td>%4C</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>%4D</td>
+    </tr>
+    <tr>
+      <td>N</td>
+      <td>%4E</td>
+    </tr>
+    <tr>
+      <td>O</td>
+      <td>%4F</td>
+    </tr>
+    <tr>
+      <td>P</td>
+      <td>%50</td>
+    </tr>
+    <tr>
+      <td>Q</td>
+      <td>%51</td>
+    </tr>
+    <tr>
+      <td>R</td>
+      <td>%52</td>
+    </tr>
+    <tr>
+      <td>S</td>
+      <td>%53</td>
+    </tr>
+    <tr>
+      <td>T</td>
+      <td>%54</td>
+    </tr>
+    <tr>
+      <td>U</td>
+      <td>%55</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>%56</td>
+    </tr>
+    <tr>
+      <td>W</td>
+      <td>%57</td>
+    </tr>
+    <tr>
+      <td>X</td>
+      <td>%58</td>
+    </tr>
+    <tr>
+      <td>Y</td>
+      <td>%59</td>
+    </tr>
+    <tr>
+      <td>Z</td>
+      <td>%5A</td>
+    </tr>
+    <tr>
+      <td>[</td>
+      <td>%5B</td>
+    </tr>
+    <tr>
+      <td>\</td>
+      <td>%5C</td>
+    </tr>
+    <tr>
+      <td>]</td>
+      <td>%5D</td>
+    </tr>
+    <tr>
+      <td>^</td>
+      <td>%5E</td>
+    </tr>
+    <tr>
+      <td>_</td>
+      <td>%5F</td>
+    </tr>
+    <tr>
+      <td>`</td>
+      <td>%60</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>%61</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>%62</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>%63</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>%64</td>
+    </tr>
+    <tr>
+      <td>e</td>
+      <td>%65</td>
+    </tr>
+    <tr>
+      <td>f</td>
+      <td>%66</td>
+    </tr>
+    <tr>
+      <td>g</td>
+      <td>%67</td>
+    </tr>
+    <tr>
+      <td>h</td>
+      <td>%68</td>
+    </tr>
+    <tr>
+      <td>i</td>
+      <td>%69</td>
+    </tr>
+    <tr>
+      <td>j</td>
+      <td>%6A</td>
+    </tr>
+    <tr>
+      <td>k</td>
+      <td>%6B</td>
+    </tr>
+    <tr>
+      <td>l</td>
+      <td>%6C</td>
+    </tr>
+    <tr>
+      <td>m</td>
+      <td>%6D</td>
+    </tr>
+    <tr>
+      <td>n</td>
+      <td>%6E</td>
+    </tr>
+    <tr>
+      <td>o</td>
+      <td>%6F</td>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>%70</td>
+    </tr>
+    <tr>
+      <td>q</td>
+      <td>%71</td>
+    </tr>
+    <tr>
+      <td>r</td>
+      <td>%72</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>%73</td>
+    </tr>
+    <tr>
+      <td>t</td>
+      <td>%74</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td>%75</td>
+    </tr>
+    <tr>
+      <td>v</td>
+      <td>%76</td>
+    </tr>
+    <tr>
+      <td>w</td>
+      <td>%77</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>%78</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>%79</td>
+    </tr>
+    <tr>
+      <td>z</td>
+      <td>%7A</td>
+    </tr>
+    <tr>
+      <td>{</td>
+      <td>%7B</td>
+    </tr>
+    <tr>
+      <td>|</td>
+      <td>%7C</td>
+    </tr>
+    <tr>
+      <td>}</td>
+      <td>%7D</td>
+    </tr>
+    <tr>
+      <td>~</td>
+      <td>%7E</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%7F</td>
+    </tr>
+    <tr>
+      <td>€</td>
+      <td>%80</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%81</td>
+    </tr>
+    <tr>
+      <td>‚</td>
+      <td>%82</td>
+    </tr>
+    <tr>
+      <td>ƒ</td>
+      <td>%83</td>
+    </tr>
+    <tr>
+      <td>„</td>
+      <td>%84</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>%85</td>
+    </tr>
+    <tr>
+      <td>†</td>
+      <td>%86</td>
+    </tr>
+    <tr>
+      <td>‡</td>
+      <td>%87</td>
+    </tr>
+    <tr>
+      <td>ˆ</td>
+      <td>%88</td>
+    </tr>
+    <tr>
+      <td>‰</td>
+      <td>%89</td>
+    </tr>
+    <tr>
+      <td>Š</td>
+      <td>%8A</td>
+    </tr>
+    <tr>
+      <td>‹</td>
+      <td>%8B</td>
+    </tr>
+    <tr>
+      <td>Œ</td>
+      <td>%8C</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%8D</td>
+    </tr>
+    <tr>
+      <td>Ž</td>
+      <td>%8E</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%8F</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%90</td>
+    </tr>
+    <tr>
+      <td>‘</td>
+      <td>%91</td>
+    </tr>
+    <tr>
+      <td>’</td>
+      <td>%92</td>
+    </tr>
+    <tr>
+      <td>“</td>
+      <td>%93</td>
+    </tr>
+    <tr>
+      <td>”</td>
+      <td>%94</td>
+    </tr>
+    <tr>
+      <td>•</td>
+      <td>%95</td>
+    </tr>
+    <tr>
+      <td>–</td>
+      <td>%96</td>
+    </tr>
+    <tr>
+      <td>—</td>
+      <td>%97</td>
+    </tr>
+    <tr>
+      <td>˜</td>
+      <td>%98</td>
+    </tr>
+    <tr>
+      <td>™</td>
+      <td>%99</td>
+    </tr>
+    <tr>
+      <td>š</td>
+      <td>%9A</td>
+    </tr>
+    <tr>
+      <td>›</td>
+      <td>%9B</td>
+    </tr>
+    <tr>
+      <td>œ</td>
+      <td>%9C</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%9D</td>
+    </tr>
+    <tr>
+      <td>ž</td>
+      <td>%9E</td>
+    </tr>
+    <tr>
+      <td>Ÿ</td>
+      <td>%9F</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%A0</td>
+    </tr>
+    <tr>
+      <td>¡</td>
+      <td>%A1</td>
+    </tr>
+    <tr>
+      <td>¢</td>
+      <td>%A2</td>
+    </tr>
+    <tr>
+      <td>£</td>
+      <td>%A3</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%A4</td>
+    </tr>
+    <tr>
+      <td>¥</td>
+      <td>%A5</td>
+    </tr>
+    <tr>
+      <td>|</td>
+      <td>%A6</td>
+    </tr>
+    <tr>
+      <td>§</td>
+      <td>%A7</td>
+    </tr>
+    <tr>
+      <td>¨</td>
+      <td>%A8</td>
+    </tr>
+    <tr>
+      <td>©</td>
+      <td>%A9</td>
+    </tr>
+    <tr>
+      <td>ª</td>
+      <td>%AA</td>
+    </tr>
+    <tr>
+      <td>«</td>
+      <td>%AB</td>
+    </tr>
+    <tr>
+      <td>¬</td>
+      <td>%AC</td>
+    </tr>
+    <tr>
+      <td>¯</td>
+      <td>%AD</td>
+    </tr>
+    <tr>
+      <td>®</td>
+      <td>%AE</td>
+    </tr>
+    <tr>
+      <td>¯</td>
+      <td>%AF</td>
+    </tr>
+    <tr>
+      <td>°</td>
+      <td>%B0</td>
+    </tr>
+    <tr>
+      <td>±</td>
+      <td>%B1</td>
+    </tr>
+    <tr>
+      <td>²</td>
+      <td>%B2</td>
+    </tr>
+    <tr>
+      <td>³</td>
+      <td>%B3</td>
+    </tr>
+    <tr>
+      <td>´</td>
+      <td>%B4</td>
+    </tr>
+    <tr>
+      <td>µ</td>
+      <td>%B5</td>
+    </tr>
+    <tr>
+      <td>¶</td>
+      <td>%B6</td>
+    </tr>
+    <tr>
+      <td>·</td>
+      <td>%B7</td>
+    </tr>
+    <tr>
+      <td>¸</td>
+      <td>%B8</td>
+    </tr>
+    <tr>
+      <td>¹</td>
+      <td>%B9</td>
+    </tr>
+    <tr>
+      <td>º</td>
+      <td>%BA</td>
+    </tr>
+    <tr>
+      <td>»</td>
+      <td>%BB</td>
+    </tr>
+    <tr>
+      <td>¼</td>
+      <td>%BC</td>
+    </tr>
+    <tr>
+      <td>½</td>
+      <td>%BD</td>
+    </tr>
+    <tr>
+      <td>¾</td>
+      <td>%BE</td>
+    </tr>
+    <tr>
+      <td>¿</td>
+      <td>%BF</td>
+    </tr>
+    <tr>
+      <td>À</td>
+      <td>%C0</td>
+    </tr>
+    <tr>
+      <td>Á</td>
+      <td>%C1</td>
+    </tr>
+    <tr>
+      <td>Â</td>
+      <td>%C2</td>
+    </tr>
+    <tr>
+      <td>Ã</td>
+      <td>%C3</td>
+    </tr>
+    <tr>
+      <td>Ä</td>
+      <td>%C4</td>
+    </tr>
+    <tr>
+      <td>Å</td>
+      <td>%C5</td>
+    </tr>
+    <tr>
+      <td>Æ</td>
+      <td>%C6</td>
+    </tr>
+    <tr>
+      <td>Ç</td>
+      <td>%C7</td>
+    </tr>
+    <tr>
+      <td>È</td>
+      <td>%C8</td>
+    </tr>
+    <tr>
+      <td>É</td>
+      <td>%C9</td>
+    </tr>
+    <tr>
+      <td>Ê</td>
+      <td>%CA</td>
+    </tr>
+    <tr>
+      <td>Ë</td>
+      <td>%CB</td>
+    </tr>
+    <tr>
+      <td>Ì</td>
+      <td>%CC</td>
+    </tr>
+    <tr>
+      <td>Í</td>
+      <td>%CD</td>
+    </tr>
+    <tr>
+      <td>Î</td>
+      <td>%CE</td>
+    </tr>
+    <tr>
+      <td>Ï</td>
+      <td>%CF</td>
+    </tr>
+    <tr>
+      <td>Ð</td>
+      <td>%D0</td>
+    </tr>
+    <tr>
+      <td>Ñ</td>
+      <td>%D1</td>
+    </tr>
+    <tr>
+      <td>Ò</td>
+      <td>%D2</td>
+    </tr>
+    <tr>
+      <td>Ó</td>
+      <td>%D3</td>
+    </tr>
+    <tr>
+      <td>Ô</td>
+      <td>%D4</td>
+    </tr>
+    <tr>
+      <td>Õ</td>
+      <td>%D5</td>
+    </tr>
+    <tr>
+      <td>Ö</td>
+      <td>%D6</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>%D7</td>
+    </tr>
+    <tr>
+      <td>Ø</td>
+      <td>%D8</td>
+    </tr>
+    <tr>
+      <td>Ù</td>
+      <td>%D9</td>
+    </tr>
+    <tr>
+      <td>Ú</td>
+      <td>%DA</td>
+    </tr>
+    <tr>
+      <td>Û</td>
+      <td>%DB</td>
+    </tr>
+    <tr>
+      <td>Ü</td>
+      <td>%DC</td>
+    </tr>
+    <tr>
+      <td>Ý</td>
+      <td>%DD</td>
+    </tr>
+    <tr>
+      <td>Þ</td>
+      <td>%DE</td>
+    </tr>
+    <tr>
+      <td>ß</td>
+      <td>%DF</td>
+    </tr>
+    <tr>
+      <td>à</td>
+      <td>%E0</td>
+    </tr>
+    <tr>
+      <td>á</td>
+      <td>%E1</td>
+    </tr>
+    <tr>
+      <td>â</td>
+      <td>%E2</td>
+    </tr>
+    <tr>
+      <td>ã</td>
+      <td>%E3</td>
+    </tr>
+    <tr>
+      <td>ä</td>
+      <td>%E4</td>
+    </tr>
+    <tr>
+      <td>å</td>
+      <td>%E5</td>
+    </tr>
+    <tr>
+      <td>æ</td>
+      <td>%E6</td>
+    </tr>
+    <tr>
+      <td>ç</td>
+      <td>%E7</td>
+    </tr>
+    <tr>
+      <td>è</td>
+      <td>%E8</td>
+    </tr>
+    <tr>
+      <td>é</td>
+      <td>%E9</td>
+    </tr>
+    <tr>
+      <td>ê</td>
+      <td>%EA</td>
+    </tr>
+    <tr>
+      <td>ë</td>
+      <td>%EB</td>
+    </tr>
+    <tr>
+      <td>ì</td>
+      <td>%EC</td>
+    </tr>
+    <tr>
+      <td>í</td>
+      <td>%ED</td>
+    </tr>
+    <tr>
+      <td>î</td>
+      <td>%EE</td>
+    </tr>
+    <tr>
+      <td>ï</td>
+      <td>%EF</td>
+    </tr>
+    <tr>
+      <td>ð</td>
+      <td>%F0</td>
+    </tr>
+    <tr>
+      <td>ñ</td>
+      <td>%F1</td>
+    </tr>
+    <tr>
+      <td>ò</td>
+      <td>%F2</td>
+    </tr>
+    <tr>
+      <td>ó</td>
+      <td>%F3</td>
+    </tr>
+    <tr>
+      <td>ô</td>
+      <td>%F4</td>
+    </tr>
+    <tr>
+      <td>õ</td>
+      <td>%F5</td>
+    </tr>
+    <tr>
+      <td>ö</td>
+      <td>%F6</td>
+    </tr>
+    <tr>
+      <td>÷</td>
+      <td>%F7</td>
+    </tr>
+    <tr>
+      <td>ø</td>
+      <td>%F8</td>
+    </tr>
+    <tr>
+      <td>ù</td>
+      <td>%F9</td>
+    </tr>
+    <tr>
+      <td>ú</td>
+      <td>%FA</td>
+    </tr>
+    <tr>
+      <td>û</td>
+      <td>%FB</td>
+    </tr>
+    <tr>
+      <td>ü</td>
+      <td>%FC</td>
+    </tr>
+    <tr>
+      <td>ý</td>
+      <td>%FD</td>
+    </tr>
+    <tr>
+      <td>þ</td>
+      <td>%FE</td>
+    </tr>
+    <tr>
+      <td>ÿ</td>
+      <td>%FF</td>
+    </tr>
+    </table>
+
+<br />
+<hr />
+<h2>URL Encoding Reference</h2>
+
+<p>The ASCII device control characters %00-%1f were originally designed to control hardware
+devices. Control characters have nothing to do inside a URL.</p>
+
+<table class="reference">
+    <tr>
+      <th align="left">ASCII Character</th>
+      <th align="left">Description</th>
+      <th align="left">URL-encoding</th>
+      </tr>
+    <tr>
+      <td>NUL</td>
+      <td>null character</td>
+      <td>%00</td>
+    </tr>
+    <tr>
+      <td>SOH</td>
+      <td>start of header</td>
+      <td>%01</td>
+    </tr>
+    <tr>
+      <td>STX</td>
+      <td>start of text</td>
+      <td>%02</td>
+    </tr>
+    <tr>
+      <td>ETX</td>
+      <td>end of text</td>
+      <td>%03</td>
+    </tr>
+    <tr>
+      <td>EOT</td>
+      <td>end of transmission</td>
+      <td>%04</td>
+    </tr>
+    <tr>
+      <td>ENQ</td>
+      <td>enquiry</td>
+      <td>%05</td>
+    </tr>
+    <tr>
+      <td>ACK</td>
+      <td>acknowledge</td>
+      <td>%06</td>
+    </tr>
+    <tr>
+      <td>BEL</td>
+      <td>bell (ring)</td>
+      <td>%07</td>
+    </tr>
+    <tr>
+      <td>BS</td>
+      <td>backspace</td>
+      <td>%08</td>
+    </tr>
+    <tr>
+      <td>HT</td>
+      <td>horizontal tab</td>
+      <td>%09</td>
+    </tr>
+    <tr>
+      <td>LF</td>
+      <td>line feed</td>
+      <td>%0A</td>
+    </tr>
+    <tr>
+      <td>VT</td>
+      <td>vertical tab</td>
+      <td>%0B</td>
+    </tr>
+    <tr>
+      <td>FF</td>
+      <td>form feed</td>
+      <td>%0C</td>
+    </tr>
+    <tr>
+      <td>CR</td>
+      <td>carriage return</td>
+      <td>%0D</td>
+    </tr>
+    <tr>
+      <td>SO</td>
+      <td>shift out</td>
+      <td>%0E</td>
+    </tr>
+    <tr>
+      <td>SI</td>
+      <td>shift in</td>
+      <td>%0F</td>
+    </tr>
+    <tr>
+      <td>DLE</td>
+      <td>data link escape</td>
+      <td>%10</td>
+    </tr>
+    <tr>
+      <td>DC1</td>
+      <td>device control 1</td>
+      <td>%11</td>
+    </tr>
+    <tr>
+      <td>DC2</td>
+      <td>device control 2</td>
+      <td>%12</td>
+    </tr>
+    <tr>
+      <td>DC3</td>
+      <td>device control 3</td>
+      <td>%13</td>
+    </tr>
+    <tr>
+      <td>DC4</td>
+      <td>device control 4</td>
+      <td>%14</td>
+    </tr>
+    <tr>
+      <td>NAK</td>
+      <td>negative acknowledge</td>
+      <td>%15</td>
+    </tr>
+    <tr>
+      <td>SYN</td>
+      <td>synchronize</td>
+      <td>%16</td>
+    </tr>
+    <tr>
+      <td>ETB</td>
+      <td>end transmission block</td>
+      <td>%17</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>cancel</td>
+      <td>%18</td>
+    </tr>
+    <tr>
+      <td>EM</td>
+      <td>end of medium</td>
+      <td>%19</td>
+    </tr>
+    <tr>
+      <td>SUB</td>
+      <td>substitute</td>
+      <td>%1A</td>
+    </tr>
+    <tr>
+      <td>ESC</td>
+      <td>escape</td>
+      <td>%1B</td>
+    </tr>
+    <tr>
+      <td>FS</td>
+      <td>file separator</td>
+      <td>%1C</td>
+    </tr>
+    <tr>
+      <td>GS</td>
+      <td>group separator</td>
+      <td>%1D</td>
+    </tr>
+    <tr>
+      <td>RS</td>
+      <td>record separator</td>
+      <td>%1E</td>
+    </tr>
+    <tr>
+      <td>US</td>
+      <td>unit separator</td>
+      <td>%1F</td>
+    </tr>
+    </table>
+
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="ref_symbols.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="ref_language_codes.html">Next Reference &raquo;</a></div>
+</div>
+<hr />
+
+<!-- **** SPOTLIGHTS 1 **** -->
+<!-- SmallPS -->
+<script type='text/javascript'>
+GA_googleFillSlot("SmallPS");
+</script>
+<!-- **** SPOTLIGHTS 2 **** -->
+<!-- LargePS -->
+<script type='text/javascript'>
+GA_googleFillSlot("LargePS");
+</script>
+<!-- **** SPOTLIGHTS 3 **** -->
+<!-- BottomRectangle -->
+<div style="width:340px;margin:auto">
+<script type='text/javascript'>
+GA_googleFillSlot("BottomRectangle");
+</script>
+</div>
+
+<div style="width:470px;margin:auto;margin-top:5px;">
+<!-- BottomBanner -->
+<script type='text/javascript'>
+GA_googleFillSlot("BottomBanner");
+</script>
+</div>
+
+<div id="err_form" style="display:none">
+<h2>Your suggestion:</h2>
+<p><label for="err_email">Your E-mail (optional):</label> <input type="text" id="err_email" name="err_email" /></p>
+<p><label for="err_url">Page address:</label> <input type="text" disabled="disabled" id="err_url" name="err_url" /></p>
+<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+<p class="submit"><input type="button" value="Submit" onclick="sendErr()" /></p>
+<div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent" style="display:none">
+<h2>Thank you for your support.</h2>
+<div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+
+<div id="rightcolumn" style="width:150px;margin:0px;padding:0px;float:left">
+<table>
+<tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/id/w3schools/goto/w3schools">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/coupons">Best Hosting Coupons</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.justhost.com/track/w3schools/textlink">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/index.cfm?A=w3text">$3.98 Unlimited Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.website.com/">Premium Website Design</a>
+</td></tr>
+</table>
+<table>
+<tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML Editor - Free Trial!</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_400H">FREE Website BUILDER</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_400H">CREATE HTML Websites</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.edirecthost.com/main/home">EASY WEBSITE BUILDER</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="../cert/default.html">Get Certified in:<br />HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="../books/default.html">
+New Books:<br />HTML, CSS<br />
+JavaScript, and Ajax</a>
+</td></tr>
+</table>
+<table>
+<tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="../browsers/browsers_stats.html">Browser Statistics</a><br />
+<a target="_top" href="../browsers/browsers_os.html">Browser OS</a><br />
+<a target="_top" href="../browsers/browsers_display.html">Browser Display</a>
+</td></tr></table>
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table>
+<tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height:16px">
+<a href="#" onclick="sharethis();return false;">Share with &raquo;</a>
+</div>
+</td>
+</tr>
+</table>
+<table>
+<tr><td><br />
+<div style="width:124px;margin:auto">
+<!-- SkyScraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("SkyScraper");
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br />
+</div>
+<div style="width:100%;clear:both;margin:0;padding:0;background-color:transparent;background-image:url('../images/gradientbottom.jpg');background-repeat:repeat-x;position:relative;">
+<div id="footer" style="width:960px;margin-left:auto;margin-right:auto;height:110px;">
+<div style="float:left;width:200px;text-align:left;padding-left:3px;padding-top:11px;"><a href="../index.html">
+<img style="border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com" /></a>
+</div>
+<div style="word-spacing:6px;font-size:80%;padding-right:12px;padding-top:19px;float:right;width:600px;text-align:right;">
+<a href="#" onclick="displayError();return false">REPORT ERROR</a> |
+<a href="../default.html" target="_top">HOME</a> |
+<a href="#top" target="_top">TOP</a> |
+<a href='ref_urlencoded86a.html?output=print' target="_blank">PRINT</a> |
+<a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+<a href="../about/default.html" target="_top">ABOUT</a>
+</div>
+<div style="padding-top:13px;color:#404040;clear:both;">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.<br />
+While using this site, you agree to have read and accepted our
+<a href="../about/about_copyright.html">terms of use</a> and
+<a href="../about/about_privacy.html">privacy policy</a>.<br />
+<a href="../about/about_copyright.html">Copyright 1999-2012</a> by Refsnes Data. All Rights Reserved.
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/tags/ref_urlencode.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 05:42:52 GMT -->
+</html>

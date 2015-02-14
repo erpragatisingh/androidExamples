@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/xpath/xpath_functions.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 05:03:54 GMT -->
+<head>
+
+<title>XPath, XQuery, and XSLT Function Reference</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<a id="top"></a>
+<div style="width:960px;margin-top:5px;margin-left:auto;margin-right:auto">
+<div style="width:960px;height:74px;margin:0;padding:0;">
+<div style="width:340px;text-align:left;float:left;">
+	<a href="../index.html"><img width="336" height="69" src="../images/w3schoolslogo.gif" alt="W3Schools.com" style="border:0;margin-top:5px;" /></a>
+</div>
+
+<div style="width:300px;float:right;text-align:right;margin-top:20px;margin-right:14px;margin-bottom:5px;">
+<div id="google_translate_element" style="display:none"></div>
+<div id="translate_link" style="margin-bottom:14px">
+<a href="#" class="topnav"
+onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+	<form style="font-size:11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.w3schools.com" />
+    <input onfocus="searchfield_focus(this)" style="width:150px;color:#808080;font-style:italic;margin:0;" 
+    type="text" name="as_q" size="20" value="Search w3schools.com" /><input type="submit" style="margin:0;" value="Search" title="Search" />
+	</form>
+</div>
+</div>
+<div id="topnav" style="clear:both;width:960px;height:25px;">
+<div style="float:left;width:400px;word-spacing:12px;font-size:90%;padding-left:15px;padding-top:6px;white-space:nowrap;text-align:left;">
+	<a class="topnav" href="../default.html" target="_top">HOME </a>
+	<a class="topnav" href="../html/default.html" target="_top">HTML </a>
+	<a class="topnav" href="../css/default.html" target="_top">CSS </a>
+	<a class="topnav" href="../xml/default.html" target="_top">XML </a>
+	<a class="topnav" href="../js/default.html" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="../asp/default.html" target="_top">ASP </a>
+	<a class="topnav" href="../php/default.html" target="_top">PHP </a>
+	<a class="topnav" href="../sql/default.html" target="_top">SQL </a>	
+	<a class="topnav" href="../sitemap/default.html" target="_top">MORE...</a>
+</div>
+<div style="float:right;width:280px;word-spacing:6px;font-size:80%;padding-right:13px;padding-top:7px;color:#888888;white-space:nowrap;text-align:right;">
+	<a class="topnav" href="../sitemap/default.html#references" target="_top">REFERENCES</a> |
+	<a class="topnav" href="../sitemap/default.html#examples" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://w3schools.invisionzone.com/" target="_top">FORUM</a> |
+	<a class="topnav" href="../about/default.html" target="_top">ABOUT</a>	
+</div>
+</div>
+<div style="width:960px;height:94px;position:relative;margin-left:auto;margin-right:auto;margin:0px;padding:0px;overflow:hidden">
+<script type='text/javascript' src='../../partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-3440800076797949");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-3440800076797949", "MainLeaderboard");
+GA_googleAddSlot("ca-pub-3440800076797949", "SmallPS");
+GA_googleAddSlot("ca-pub-3440800076797949", "LargePS");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomRectangle");
+GA_googleAddSlot("ca-pub-3440800076797949", "SkyScraper");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomBanner");
+GA_googleAddSlot("ca-pub-3440800076797949", "TopRectangle");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- TopRectangle -->
+<script type='text/javascript'>
+GA_googleFillSlot("TopRectangle");
+</script>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- MainLeaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("MainLeaderboard");
+</script>
+</div></div>
+<div style="width:960px;padding:0px;margin:0px;">
+<div id="leftcolumn" style="width:170px;margin:0;padding:0;margin-top:5px;float:left;"><h2 class="left"><span class="left_h2">XPath</span> Tutorial</h2>
+<a target="_top" href="default.html" >XPath HOME</a><br />
+<a target="_top" href="xpath_intro.html" >XPath Intro</a><br />
+<a target="_top" href="xpath_nodes.html" >XPath Nodes</a><br />
+<a target="_top" href="xpath_syntax.html" >XPath Syntax</a><br />
+<a target="_top" href="xpath_axes.html" >XPath Axes</a><br />
+<a target="_top" href="xpath_operators.html" >XPath Operators</a><br />
+<a target="_top" href="xpath_examples.html" >XPath Examples</a><br />
+<a target="_top" href="xpath_summary.html" >XPath Summary</a><br />
+<br />
+<h2 class="left"><span class="left_h2">XPath</span> Reference</h2>
+<a target="_top" href="xpath_functions.html" style='font-weight:bold;'>XPath Functions</a><br />
+
+</div>
+<div style="width:634px;margin:0px;padding:0px;background-color:#ffffff;color:#000000;padding-bottom:8px;padding-right:5px;padding-top:4px;float:left;">
+
+<h1>XPath, XQuery, and XSLT <span class="color_h1">Functions</span></h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="xpath_summary.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="default.html">Next Chapter &raquo;</a></div>
+</div>
+<hr />
+<p class="intro">The following reference library defines the functions required for XPath 2.0, XQuery 1.0 and XSLT 2.0.</p>
+<hr />
+
+<h1>Functions Reference</h1>
+<table border="0">
+<tr>
+<td valign="top">
+<ul>
+  <li><a href="#accessor">Accessor</a></li>
+  <li><a href="#error">Error and Trace</a></li>
+  <li><a href="#numeric">Numeric</a></li>
+  <li><a href="#string">String</a></li>
+</ul>
+</td>
+<td valign="top">
+<ul>
+  <li><a href="#anyuri">AnyURI</a></li>
+  <li><a href="#boolean">Boolean</a></li>
+  <li><a href="#datetime">Duration/Date/Time</a></li>
+  <li><a href="#qname">QName</a></li>
+</ul>
+</td>
+<td valign="top">
+<ul>
+  <li><a href="#node">Node</a></li>
+  <li><a href="#sequence">Sequence</a></li>
+  <li><a href="#context">Context</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<p><img src="../sql/lamp.gif" alt="Note" /> The default prefix for the function 
+namespace is fn:</p>
+<p><img src="../sql/lamp.gif" alt="Note" /> The URI of the function namespace is:
+http://www.w3.org/2005/xpath-functions</p>
+<h3><a name="accessor">Accessor Functions</a></h3>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:node-name(<i>node</i>)</td>
+    <td valign="top">Returns the node-name of the argument node</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:nilled(<i>node</i>)</td>
+    <td valign="top">Returns a Boolean value indicating whether the argument 
+	node is nilled</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:data(<i>item.item,...</i>)</td>
+    <td valign="top">Takes a sequence of items and returns a sequence of atomic 
+	values</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:base-uri()<br />
+	fn:base-uri(<i>node</i>)</td>
+    <td valign="top">Returns the value of the base-uri property of the current 
+	or specified node </td>
+    </tr>
+  <tr>
+    <td valign="top">fn:document-uri(<i>node</i>)</td>
+    <td valign="top">Returns the value of the document-uri property for the 
+	specified node</td>
+    </tr>
+</table>
+
+<h3><a name="error">Error and Trace Functions</a></h3>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:error()<br />
+	fn:error(<i>error</i>)<br />
+	fn:error(<i>error,description</i>)<br />
+	fn:error(<i>error,description,error-object</i>)</td>
+    <td valign="top">Example: error(fn:QName('http://example.com/test', 
+	'err:toohigh'), 'Error: Price is too high')<p>Result: Returns 
+	http://example.com/test#toohigh and the string &quot;Error: Price is too high&quot; to 
+	the external processing environment</td>
+    </tr>
+	<tr>
+    <td valign="top">fn:trace(<i>value,label</i>)</td>
+    <td valign="top">Used to debug queries</td>
+    </tr>
+</table>
+
+<h3><a name="numeric">Functions on Numeric Values</a></h3>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:number(<i>arg</i>)</td>
+    <td valign="top">Returns the numeric value of the argument. The argument 
+	could be a boolean, string, or node-set<p>Example: number('100')<br />
+      Result: 100</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:abs(<i>num</i>)</td>
+    <td valign="top">Returns the absolute value of the argument<p>Example: 
+	abs(3.14)<br />
+      Result: 3.14</p>
+	<p>Example: abs(-3.14)<br />
+      Result: 3.14</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:ceiling(<i>num</i>)</td>
+    <td valign="top">Returns the smallest integer that is greater than the number argument<p>
+	Example: ceiling(3.14)<br />
+      Result: 4</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:floor(<i>num</i>)</td>
+    <td valign="top">Returns the largest integer that is not greater than the number argument<p>
+	Example: floor(3.14)<br />
+Result: 3</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:round(<i>num</i>)</td>
+    <td valign="top">Rounds the number argument to the nearest integer<p>Example: round(3.14)<br />
+      Result: 3</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:round-half-to-even()</td>
+    <td valign="top">Example: round-half-to-even(0.5)<br />
+	Result: 0
+	<p>Example: round-half-to-even(1.5)<br />
+	Result: 2</p>
+	<p>Example: round-half-to-even(2.5)<br />
+	Result: 2</p></td>
+    </tr>
+</table>
+
+<h3><a name="string">Functions on Strings</a></h3>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:string(<i>arg</i>)</td>
+    <td valign="top">Returns the string value of the argument. The argument 
+	could be a number, boolean, or node-set<p>Example: string(314)<br />
+      Result: &quot;314&quot;</td>
+  </tr>
+  <tr>
+    <td valign="top">fn:codepoints-to-string(<i>int,int,...</i>)</td>
+    <td valign="top">Returns a string from a sequence of code points<p>Example: 
+	codepoints-to-string(84, 104, 233, 114, 232, 115, 101)<br />
+	Result: 'Thérèse' </td>
+    </tr>
+  <tr>
+    <td valign="top">fn:string-to-codepoints(<i>string</i>)</td>
+    <td valign="top">Returns a sequence of code points from a string<p>Example: 
+	string-to-codepoints(&quot;Thérèse&quot;)<br />
+	Result: 84, 104, 233, 114, 232, 115, 101</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:codepoint-equal(<i>comp1,comp2</i>)</td>
+    <td valign="top">Returns true if the value of comp1 is equal to the value of 
+	comp2, according to the Unicode code point collation 
+	(http://www.w3.org/2005/02/xpath-functions/collation/codepoint), otherwise 
+	it returns false</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:compare(<i>comp1,comp2</i>)<br />
+	fn:compare(<i>comp1,comp2,collation</i>)</td>
+    <td valign="top">Returns -1 if comp1 is less than comp2, 0 if comp1 is equal 
+	to comp2, or 1 if comp1 is greater than comp2 (according to the rules of the 
+	collation that is used)<p>Example: compare('ghi', 'ghi')<br />
+	Result: 0</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:concat(<i>string,string,...</i>)</td>
+    <td valign="top">Returns the concatenation of the strings<p>Example: concat('XPath ','is ','FUN!')<br />
+      Result: 'XPath is FUN!'</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:string-join(<i>(string,string,...),sep</i>)</td>
+    <td valign="top">Returns a string created by concatenating the string 
+	arguments and using the sep argument as the separator<p>Example: 
+	string-join(('We', 'are', 'having', 'fun!'), ' ')<br />
+	Result: ' We are having fun! '</p>
+	<p>Example: string-join(('We', 'are', 'having', 'fun!'))<br />
+	Result: 'Wearehavingfun!'</p>
+	<p>Example:string-join((), 'sep')<br />
+	Result: ''</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:substring(<i>string,start,len</i>)<br />
+	fn:substring(<i>string,start</i>)</td>
+    <td valign="top">Returns the substring from the start position to the 
+	specified length. Index of the first character is 1. If length is omitted it 
+	returns the substring from the start position to the end<p>Example: substring('Beatles',1,4)<br />
+      Result: 'Beat'</p>
+	<p>Example: substring('Beatles',2)<br />
+      Result: 'eatles'</p></td>
+    </tr>
+  <tr>
+    <td valign="top">fn:string-length(<i>string</i>)<br />
+	fn:string-length()</td>
+    <td valign="top">Returns the length of the specified string. If there is no 
+	string argument it returns the length of the string value of the current 
+	node<p>Example: string-length('Beatles')<br />
+	Result: 7</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:normalize-space(<i>string</i>)<br />
+	fn:normalize-space()</td>
+    <td valign="top">Removes leading and trailing spaces from the specified string, and 
+    replaces all internal sequences of white space with one and returns the 
+	result. If there is no string argument it does the same on the current node<p>Example: normalize-space(' The&nbsp;&nbsp; XML ')<br />
+      Result: 'The XML'</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:normalize-unicode()</td>
+    <td valign="top">&nbsp;</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:upper-case(<i>string</i>)</td>
+    <td valign="top">Converts the string argument to upper-case<p>Example: upper-case('The XML')<br />
+      Result: 'THE XML'</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:lower-case(<i>string</i>)</td>
+    <td valign="top">Converts the string argument to lower-case<p>Example: lower-case('The XML')<br />
+      Result: 'the xml'</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:translate(<i>string1,string2,string3</i>)</td>
+    <td valign="top">Converts string1 by replacing the characters in string2 
+	with the characters in string3<p>Example: translate('12:30','30','45')<br />
+    Result: '12:45'</p>
+    <p>Example: translate('12:30','03','54')<br />
+    Result: '12:45'</p>
+    <p>Example: translate('12:30','0123','abcd')<br />
+    Result: 'bc:da'</p></td>
+    </tr>
+  <tr>
+    <td valign="top">fn:escape-uri(<i>stringURI,esc-res</i>)</td>
+    <td valign="top">Example: escape-uri(&quot;http://example.com/test#car&quot;, true())<br />
+	Result: &quot;http%3A%2F%2Fexample.com%2Ftest#car&quot;<p>Example: escape-uri(&quot;http://example.com/test#car&quot;, 
+	false())<br />
+	Result: &quot;http://example.com/test#car&quot;</p>
+	<p>Example: escape-uri (&quot;http://example.com/~bébé&quot;, false())<br />
+	Result: &quot;http://example.com/~b%C3%A9b%C3%A9&quot;</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:contains(<i>string1,string2</i>)</td>
+    <td valign="top">Returns true if string1 contains string2, otherwise it 
+	returns false<p>Example: contains('XML','XM')<br />
+Result: true</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:starts-with(<i>string1,string2</i>)</td>
+    <td valign="top">Returns true if string1 starts with string2, otherwise it returns false<p>
+	Example: starts-with('XML','X')<br />
+      Result: true</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:ends-with(<i>string1,string2</i>)</td>
+    <td valign="top">Returns true if string1 ends with string2, otherwise it returns false<p>
+	Example: ends-with('XML','X')<br />
+      Result: false</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:substring-before(<i>string1,string2</i>)</td>
+    <td valign="top">Returns the start of string1 before string2 occurs in it<p>
+	Example: substring-before('12/10','/')<br />
+      Result: '12'</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:substring-after(<i>string1,string2</i>)</td>
+    <td valign="top">Returns the remainder of string1 after string2 occurs in it<p>
+	Example: substring-after('12/10','/')<br />
+      Result: '10'</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:matches(<i>string,pattern</i>)</td>
+    <td valign="top">Returns true if the string argument matches the pattern, 
+	otherwise, it returns false<p>Example: matches(&quot;Merano&quot;, &quot;ran&quot;)<br />
+	Result: true</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:replace(<i>string,pattern,replace</i>)</td>
+    <td valign="top">Returns a string that is created by replacing the given 
+	pattern with the replace argument<p>Example: replace(&quot;Bella Italia&quot;, &quot;l&quot;, 
+	&quot;*&quot;)<br />
+	Result: 'Be**a Ita*ia'</p>
+	Example: replace(&quot;Bella Italia&quot;, &quot;l&quot;, &quot;&quot;)<br />
+	Result: 'Bea Itaia'</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:tokenize(<i>string,pattern</i>)</td>
+    <td valign="top">Example: tokenize(&quot;XPath is fun&quot;, &quot;\s+&quot;)<br />
+	Result: (&quot;XPath&quot;, &quot;is&quot;, &quot;fun&quot;)</td>
+    </tr>
+</table>
+
+<h3><a name="anyuri">Functions for anyURI</a></h3>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:resolve-uri(<i>relative,base</i>)</td>
+    <td valign="top">&nbsp;</td>
+    </tr>
+  </table>
+
+<h3><a name="boolean">Functions on Boolean Values</a></h3>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:boolean(<i>arg</i>)</td>
+    <td valign="top">Returns a boolean value for a number, string, or node-set</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:not(<i>arg</i>)</td>
+    <td valign="top">The argument is first reduced to a boolean value by 
+	applying the boolean() function. Returns true if the boolean value is false, 
+	and false if the boolean value is true<p>Example: not(true())<br />
+	Result: false</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:true()</td>
+    <td valign="top">Returns the boolean value true<p>Example: true()<br />
+	Result: true</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:false()</td>
+    <td valign="top">Returns the boolean value false<p>Example: false()<br />
+	Result: false</td>
+    </tr>
+  </table>
+
+<h3><a name="datetime">Functions on Durations, Dates and Times</a></h3>
+<p>Component Extraction Functions on Durations, Dates and Times </p>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:dateTime(<i>date,time</i>)</td>
+    <td valign="top">Converts the arguments to a date and a time</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:years-from-duration(<i>datetimedur</i>)</td>
+    <td valign="top">Returns an integer that represents the years component in 
+	the canonical lexical representation of the value of the argument</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:months-from-duration(<i>datetimedur</i>)</td>
+    <td valign="top">Returns an integer that represents the months component in 
+	the canonical lexical representation of the value of the argument</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:days-from-duration(<i>datetimedur</i>)</td>
+    <td valign="top">Returns an integer that represents the days component in 
+	the canonical lexical representation of the value of the argument</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:hours-from-duration(<i>datetimedur</i>)</td>
+    <td valign="top">Returns an integer that represents the hours component in 
+	the canonical lexical representation of the value of the argument</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:minutes-from-duration(<i>datetimedur</i>)</td>
+    <td valign="top">Returns an integer that represents the minutes component in 
+	the canonical lexical representation of the value of the argument</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:seconds-from-duration(<i>datetimedur</i>)</td>
+    <td valign="top">Returns a decimal that represents the seconds component in 
+	the canonical lexical representation of the value of the argument</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:year-from-dateTime(<i>datetime</i>)</td>
+    <td valign="top">Returns an integer that represents the year component in 
+	the localized value of the argument<p>Example: year-from-dateTime(xs:dateTime(&quot;2005-01-10T12:30-04:10&quot;))<br />
+	Result: 2005</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:month-from-dateTime(<i>datetime</i>)</td>
+    <td valign="top">Returns an integer that represents the month component in 
+	the localized value of the argument<p>Example: month-from-dateTime(xs:dateTime(&quot;2005-01-10T12:30-04:10&quot;))<br />
+	Result: 01</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:day-from-dateTime(<i>datetime</i>)</td>
+    <td valign="top">Returns an integer that represents the day component in the 
+	localized value of the argument<p>Example: day-from-dateTime(xs:dateTime(&quot;2005-01-10T12:30-04:10&quot;))<br />
+	Result: 10</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:hours-from-dateTime(<i>datetime</i>)</td>
+    <td valign="top">Returns an integer that represents the hours component in 
+	the localized value of the argument<p>Example: hours-from-dateTime(xs:dateTime(&quot;2005-01-10T12:30-04:10&quot;))<br />
+	Result: 12</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:minutes-from-dateTime(<i>datetime</i>)</td>
+    <td valign="top">Returns an integer that represents the minutes component in 
+	the localized value of the argument<p>Example: minutes-from-dateTime(xs:dateTime(&quot;2005-01-10T12:30-04:10&quot;))<br />
+	Result: 30</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:seconds-from-dateTime(<i>datetime</i>)</td>
+    <td valign="top">Returns a decimal that represents the seconds component in 
+	the localized value of the argument<p>Example: seconds-from-dateTime(xs:dateTime(&quot;2005-01-10T12:30:00-04:10&quot;))<br />
+	Result: 0</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:timezone-from-dateTime(<i>datetime</i>)</td>
+    <td valign="top">Returns the time zone component of the argument if any</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:year-from-date(<i>date</i>)</td>
+    <td valign="top">Returns an integer that represents the year in the 
+	localized value of the argument<p>Example: year-from-date(xs:date(&quot;2005-04-23&quot;))<br />
+	Result: 2005</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:month-from-date(<i>date</i>)</td>
+    <td valign="top">Returns an integer that represents the month in the 
+	localized value of the argument<p>Example: month-from-date(xs:date(&quot;2005-04-23&quot;))<br />
+	Result: 4</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:day-from-date(<i>date</i>)</td>
+    <td valign="top">Returns an integer that represents the day in the localized 
+	value of the argument<p>Example: day-from-date(xs:date(&quot;2005-04-23&quot;))<br />
+	Result: 23</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:timezone-from-date(<i>date</i>)</td>
+    <td valign="top">Returns the time zone component of the argument if any</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:hours-from-time(<i>time</i>)</td>
+    <td valign="top">Returns an integer that represents the hours component in 
+	the localized value of the argument<p>Example: hours-from-time(xs:time(&quot;10:22:00&quot;))<br />
+	Result: 10</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:minutes-from-time(<i>time</i>)</td>
+    <td valign="top">Returns an integer that represents the minutes component in 
+	the localized value of the argument<p>Example: minutes-from-time(xs:time(&quot;10:22:00&quot;))<br />
+	Result: 22</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:seconds-from-time(<i>time</i>)</td>
+    <td valign="top">Returns an integer that represents the seconds component in 
+	the localized value of the argument<p>Example: seconds-from-time(xs:time(&quot;10:22:00&quot;))<br />
+	Result: 0</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:timezone-from-time(<i>time</i>)</td>
+    <td valign="top">Returns the time zone component of the argument if any</td>
+    </tr>
+	<tr>
+    <td valign="top">fn:adjust-dateTime-to-timezone(<i>datetime,timezone</i>)</td>
+    <td valign="top">If the timezone argument is empty, it returns a dateTime 
+	without a timezone. Otherwise, it returns a dateTime with a timezone</td>
+    </tr>
+	<tr>
+    <td valign="top">fn:adjust-date-to-timezone(<i>date</i><i>,timezone</i>)</td>
+    <td valign="top">If the timezone argument is empty, it returns a date 
+	without a timezone. Otherwise, it returns a date with a timezone</td>
+    </tr>
+	<tr>
+    <td valign="top">fn:adjust-time-to-timezone(<i>time</i><i>,timezone</i>)</td>
+    <td valign="top">If the timezone argument is empty, it returns a time 
+	without a timezone. Otherwise, it returns a time with a timezone</td>
+    </tr>
+</table>
+
+<h3><a name="qname">Functions Related to QNames</a></h3>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:QName()</td>
+    <td valign="top">&nbsp;</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:local-name-from-QName()</td>
+    <td valign="top">&nbsp;</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:namespace-uri-from-QName()</td>
+    <td valign="top">&nbsp;</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:namespace-uri-for-prefix()</td>
+    <td valign="top">&nbsp;</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:in-scope-prefixes()</td>
+    <td valign="top">&nbsp;</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:resolve-QName()</td>
+    <td valign="top">&nbsp;</td>
+    </tr>
+  </table>
+
+<h3><a name="node">Functions on Nodes</a></h3>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:name()<br />
+	fn:name(<i>nodeset</i>)</td>
+    <td valign="top">Returns the name of the current node or the first node in 
+	the specified node set</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:local-name()<br />
+	fn:local-name(<i>nodeset</i>)</td>
+    <td valign="top">Returns the name of the current node or the first node in 
+	the specified node set - without the namespace prefix</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:namespace-uri()<br />
+	fn:namespace-uri(<i>nodeset</i>)</td>
+    <td valign="top">Returns the namespace URI of the current node or the first 
+	node in the specified node set</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:lang(<i>lang</i>)</td>
+    <td valign="top">Returns true if the language of the current node matches the language of the 
+	specified language<p>Example: Lang(&quot;en&quot;) is true for<br />
+	&lt;p xml:lang=&quot;en&quot;&gt;...&lt;/p&gt;</p>
+	<p>Example: Lang(&quot;de&quot;) is false for<br />
+	&lt;p xml:lang=&quot;en&quot;&gt;...&lt;/p&gt;</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:root()<br />
+	fn:root(<i>node</i>)</td>
+    <td valign="top">Returns the root of the tree to which the current node or 
+	the specified belongs. This will usually be a document node</td>
+    </tr>
+  </table>
+
+<h3><a name="sequence">Functions on Sequences</a></h3>
+<p>General Functions on Sequences</p>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:index-of(<i>(item,item,...),searchitem</i>)</td>
+    <td valign="top">Returns the positions within the sequence of items that are 
+	equal to the searchitem argument<p>Example: index-of ((15, 40, 25, 40, 10), 
+	40)<br />
+	Result: (2, 4)</p>
+	<p>Example: index-of ((&quot;a&quot;, &quot;dog&quot;, &quot;and&quot;, &quot;a&quot;, &quot;duck&quot;), &quot;a&quot;)<br />
+	Result (1, 4)</p>
+	<p>Example: index-of ((15, 40, 25, 40, 10), 18)<br />
+	Result: ()</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:remove(<i>(item,item,...),position</i>)</td>
+    <td valign="top">Returns a new sequence constructed from the value of the 
+	item arguments - with the item specified by the position argument removed<p>
+	Example: remove((&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;), 0)<br />
+	Result: (&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;)</p>
+	<p>Example: remove((&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;), 1)<br />
+	Result: (&quot;cd&quot;, &quot;ef&quot;)</p>
+	<p>Example: remove((&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;), 4)<br />
+	Result: (&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;)</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:empty(<i>item,item,...</i>)</td>
+    <td valign="top">Returns true if the value of the arguments IS an empty 
+	sequence, otherwise it returns false<p>Example: empty(remove((&quot;ab&quot;, &quot;cd&quot;), 
+	1))<br />
+	Result: false</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:exists(<i>item,item,...</i>)</td>
+    <td valign="top">Returns true if the value of the arguments IS NOT an empty 
+	sequence, otherwise it returns false<p>Example: exists(remove((&quot;ab&quot;), 1))<br />
+	Result: false</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:distinct-values(<i>(item,item,...),collation</i>)</td>
+    <td valign="top">Returns only distinct (different) values<p>Example: 
+	distinct-values((1, 2, 3, 1, 2))<br />
+	Result: (1, 2, 3)</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:insert-before(<i>(item,item,...),pos,inserts</i>)</td>
+    <td valign="top">Returns a new sequence constructed from the value of the 
+	item arguments - with the value of the inserts argument inserted in the 
+	position specified by the pos argument<p>Example: insert-before((&quot;ab&quot;, 
+	&quot;cd&quot;), 0, &quot;gh&quot;)<br />
+	Result: (&quot;gh&quot;, &quot;ab&quot;, &quot;cd&quot;)</p>
+	<p>Example: insert-before((&quot;ab&quot;, &quot;cd&quot;), 1, &quot;gh&quot;)<br />
+	Result: (&quot;gh&quot;, &quot;ab&quot;, &quot;cd&quot;)</p>
+	<p>Example: insert-before((&quot;ab&quot;, &quot;cd&quot;), 2, &quot;gh&quot;)<br />
+	Result: (&quot;ab&quot;, &quot;gh&quot;, &quot;cd&quot;)</p>
+	<p>Example: insert-before((&quot;ab&quot;, &quot;cd&quot;), 5, &quot;gh&quot;)<br />
+	Result: (&quot;ab&quot;, &quot;cd&quot;, &quot;gh&quot;)</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:reverse(<i>(item,item,...)</i>)</td>
+    <td valign="top">Returns the reversed order of the items specified<p>
+	Example: reverse((&quot;ab&quot;, &quot;cd&quot;, &quot;ef&quot;))<br />
+	Result: (&quot;ef&quot;, &quot;cd&quot;, &quot;ab&quot;)</p>
+	<p>Example: reverse((&quot;ab&quot;))<br />
+	Result: (&quot;ab&quot;)</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:subsequence(<i>(item,item,...),start,len</i>)</td>
+    <td valign="top">Returns a sequence of items from the position specified by 
+	the start argument and continuing for the number of items specified by the 
+	len argument. The first item is located at position 1<p>Example: 
+	subsequence(($item1, $item2, $item3,...), 3)<br />
+	Result: ($item3, ...)</p>
+	<p>Example: subsequence(($item1, $item2, $item3, ...), 2, 2)<br />
+	Result: ($item2, $item3)</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:unordered(<i>(item,item,...)</i>)</td>
+    <td valign="top">Returns the items in an implementation dependent order</td>
+    </tr>
+</table>
+
+<p>Functions That Test the Cardinality of Sequences </p>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:zero-or-one(<i>item,item,...</i>)</td>
+    <td valign="top">Returns the argument if it contains zero or one items, 
+	otherwise it raises an error</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:one-or-more(<i>item,item,...</i>)</td>
+    <td valign="top">Returns the argument if it contains one or more items, 
+	otherwise it raises an error</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:exactly-one(<i>item,item,...</i>)</td>
+    <td valign="top">Returns the argument if it contains exactly one item, 
+	otherwise it raises an error</td>
+    </tr>
+</table>
+
+<p>Equals, Union, Intersection and Except </p>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:deep-equal(<i>param1,param2,collation</i>)</td>
+    <td valign="top">Returns true if param1 and param2 are deep-equal to each 
+	other, otherwise it returns false</td>
+    </tr>
+</table>
+
+<p>Aggregate Functions</p>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:count(<i>(item,item,...)</i>)</td>
+    <td valign="top">Returns the count of nodes</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:avg(<i>(arg,arg,...)</i>)</td>
+    <td valign="top">Returns the average of the argument values<p>Example: avg((1,2,3))<br />
+	Result: 2</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:max(<i>(arg,arg,...)</i>)</td>
+    <td valign="top">Returns the argument that is greater than the others<p>
+	Example: max((1,2,3))<br />
+	Result: 3</p>
+	<p>Example: max(('a', 'k'))<br />
+	Result: 'k'</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:min(<i>(arg,arg,...)</i>)</td>
+    <td valign="top">Returns the argument that is less than the others<p>
+	Example: min((1,2,3))<br />
+	Result: 1</p>
+	<p>Example: min(('a', 'k'))<br />
+	Result: 'a'</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:sum(<i>arg,arg,...</i>)</td>
+    <td valign="top">Returns the sum of the numeric value of each node in the 
+	specified node-set</td>
+    </tr>
+  </table>
+
+<p>Functions that Generate Sequences</p>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:id(<i>(string,string,...),node</i>)</td>
+    <td valign="top">Returns a sequence of element nodes that have an ID value 
+	equal to the value of one or more of the values specified in the string 
+	argument</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:idref(<i>(string,string,...),node</i>)</td>
+    <td valign="top">Returns a sequence of element or attribute nodes that have 
+	an IDREF value equal to the value of one or more of the values specified in 
+	the string argument</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:doc(<i>URI</i>)</td>
+    <td valign="top">&nbsp;</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:doc-available(<i>URI</i>)</td>
+    <td valign="top">Returns true if the doc() function returns a document node, 
+	otherwise it returns false</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:collection()<br />
+	fn:collection(<i>string</i>)</td>
+    <td valign="top">&nbsp;</td>
+    </tr>
+  </table>
+
+<h3><a name="context">Context Functions</a></h3>
+<table class="reference">
+  <tr>
+	<th width="45%" valign="top" align="left">Name</th>
+    <th width="55%" valign="top" align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">fn:position()</td>
+    <td valign="top">Returns the index position of the node that is currently being processed<p>
+	Example: //book[position()&lt;=3]<br />
+	Result: Selects the first three book elements </td>
+    </tr>
+  <tr>
+    <td valign="top">fn:last()</td>
+    <td valign="top">Returns the number of items in the processed node list<p>
+	Example: //book[last()]<br />
+	Result: Selects the last book element</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:current-dateTime()</td>
+    <td valign="top">Returns the current dateTime (with timezone)</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:current-date()</td>
+    <td valign="top">Returns the current date (with timezone)</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:current-time()</td>
+    <td valign="top">Returns the current time (with timezone)</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:implicit-timezone()</td>
+    <td valign="top">Returns the value of the implicit timezone</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:default-collation()</td>
+    <td valign="top">Returns the value of the default collation</td>
+    </tr>
+  <tr>
+    <td valign="top">fn:static-base-uri()</td>
+    <td valign="top">Returns the value of the base-uri</td>
+    </tr>
+  </table>
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="xpath_summary.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="default.html">Next Chapter &raquo;</a></div>
+</div>
+
+<hr />
+
+<!-- **** SPOTLIGHTS 1 **** -->
+<!-- SmallPS -->
+<script type='text/javascript'>
+GA_googleFillSlot("SmallPS");
+</script>
+<!-- **** SPOTLIGHTS 2 **** -->
+<!-- LargePS -->
+<script type='text/javascript'>
+GA_googleFillSlot("LargePS");
+</script>
+<!-- **** SPOTLIGHTS 3 **** -->
+<!-- BottomRectangle -->
+<div style="width:340px;margin:auto">
+<script type='text/javascript'>
+GA_googleFillSlot("BottomRectangle");
+</script>
+</div>
+
+<hr />
+<div>
+<div style="float:left;width:224px;">
+<a href="../cert/default.html"><img src="../images/w3cert.gif" style="margin-top:40px;border:0;" alt="W3Schools Certification" /></a> 
+</div>
+<div style="float:left;width:400px;">
+<h2>W3Schools' Online Certification</h2>
+<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
+<p>More than 10 000 certificates already issued!</p>
+<p><a class="tryitbtn" style="width:200px;font-size:120%;margin-top:5px;" href="../cert/default.html">Get Your Certificate &raquo;</a></p></div>
+<p style="clear:both;">The <a href="../cert/default.html">HTML Certificate</a> documents your knowledge of HTML.</p>
+<p>The <a href="../cert/default.html">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
+<p>The <a href="../cert/default.html">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
+<p>The <a href="../cert/default.html">jQuery Certificate</a> documents your knowledge of jQuery.</p>
+<p>The <a href="../cert/default.html">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
+<p>The <a href="../cert/default.html">ASP Certificate</a> documents your knowledge of ASP, SQL, and ADO.</p>
+<p>The <a href="../cert/default.html">PHP Certificate</a> documents your knowledge of PHP and SQL (MySQL).</p>
+</div>
+<div style="width:470px;margin:auto;margin-top:5px;">
+<!-- BottomBanner -->
+<script type='text/javascript'>
+GA_googleFillSlot("BottomBanner");
+</script>
+</div>
+
+<div id="err_form" style="display:none">
+<h2>Your suggestion:</h2>
+<p><label for="err_email">Your E-mail (optional):</label> <input type="text" id="err_email" name="err_email" /></p>
+<p><label for="err_url">Page address:</label> <input type="text" disabled="disabled" id="err_url" name="err_url" /></p>
+<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+<p class="submit"><input type="button" value="Submit" onclick="sendErr()" /></p>
+<div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent" style="display:none">
+<h2>Thank you for your support.</h2>
+<div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+
+<div id="rightcolumn" style="width:150px;margin:0px;padding:0px;float:left">
+<table>
+<tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/id/w3schools/goto/w3schools">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/coupons">Best Hosting Coupons</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.justhost.com/track/w3schools/textlink">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/index.cfm?A=w3text">$3.98 Unlimited Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.website.com/">Premium Website Design</a>
+</td></tr>
+</table>
+<table>
+<tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text&amp;q=xmlspy">Download XML Editor</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_400H">FREE Website BUILDER</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_400H">CREATE HTML Websites</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.edirecthost.com/main/home">EASY WEBSITE BUILDER</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="../cert/default.html">Get Certified in:<br />HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="../books/default.html">
+New Books:<br />HTML, CSS<br />
+JavaScript, and Ajax</a>
+</td></tr>
+</table>
+<table>
+<tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="../browsers/browsers_stats.html">Browser Statistics</a><br />
+<a target="_top" href="../browsers/browsers_os.html">Browser OS</a><br />
+<a target="_top" href="../browsers/browsers_display.html">Browser Display</a>
+</td></tr></table>
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table>
+<tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height:16px">
+<a href="#" onclick="sharethis();return false;">Share with &raquo;</a>
+</div>
+</td>
+</tr>
+</table>
+<table>
+<tr><td><br />
+<div style="width:124px;margin:auto">
+<!-- SkyScraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("SkyScraper");
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br />
+</div>
+<div style="width:100%;clear:both;margin:0;padding:0;background-color:transparent;background-image:url('../images/gradientbottom.jpg');background-repeat:repeat-x;position:relative;">
+<div id="footer" style="width:960px;margin-left:auto;margin-right:auto;height:110px;">
+<div style="float:left;width:200px;text-align:left;padding-left:3px;padding-top:11px;"><a href="../index.html">
+<img style="border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com" /></a>
+</div>
+<div style="word-spacing:6px;font-size:80%;padding-right:12px;padding-top:19px;float:right;width:600px;text-align:right;">
+<a href="#" onclick="displayError();return false">REPORT ERROR</a> |
+<a href="../default.html" target="_top">HOME</a> |
+<a href="#top" target="_top">TOP</a> |
+<a href='xpath_functionsd86a.html?output=print' target="_blank">PRINT</a> |
+<a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+<a href="../about/default.html" target="_top">ABOUT</a>
+</div>
+<div style="padding-top:13px;color:#404040;clear:both;">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.<br />
+While using this site, you agree to have read and accepted our
+<a href="../about/about_copyright.html">terms of use</a> and
+<a href="../about/about_privacy.html">privacy policy</a>.<br />
+<a href="../about/about_copyright.html">Copyright 1999-2012</a> by Refsnes Data. All Rights Reserved.
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/xpath/xpath_functions.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 05:03:56 GMT -->
+</html>

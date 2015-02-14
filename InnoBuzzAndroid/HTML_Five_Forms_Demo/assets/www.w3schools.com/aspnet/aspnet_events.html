@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/aspnet/aspnet_events.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 06:49:49 GMT -->
+<head>
+
+<title>ASP.NET Event Handlers</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<a id="top"></a>
+<div style="width:960px;margin-top:5px;margin-left:auto;margin-right:auto">
+<div style="width:960px;height:74px;margin:0;padding:0;">
+<div style="width:340px;text-align:left;float:left;">
+	<a href="../index.html"><img width="336" height="69" src="../images/w3schoolslogo.gif" alt="W3Schools.com" style="border:0;margin-top:5px;" /></a>
+</div>
+
+<div style="width:300px;float:right;text-align:right;margin-top:20px;margin-right:14px;margin-bottom:5px;">
+<div id="google_translate_element" style="display:none"></div>
+<div id="translate_link" style="margin-bottom:14px">
+<a href="#" class="topnav"
+onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+	<form style="font-size:11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.w3schools.com" />
+    <input onfocus="searchfield_focus(this)" style="width:150px;color:#808080;font-style:italic;margin:0;" 
+    type="text" name="as_q" size="20" value="Search w3schools.com" /><input type="submit" style="margin:0;" value="Search" title="Search" />
+	</form>
+</div>
+</div>
+<div id="topnav" style="clear:both;width:960px;height:25px;">
+<div style="float:left;width:400px;word-spacing:12px;font-size:90%;padding-left:15px;padding-top:6px;white-space:nowrap;text-align:left;">
+	<a class="topnav" href="../default.html" target="_top">HOME </a>
+	<a class="topnav" href="../html/default.html" target="_top">HTML </a>
+	<a class="topnav" href="../css/default.html" target="_top">CSS </a>
+	<a class="topnav" href="../xml/default.html" target="_top">XML </a>
+	<a class="topnav" href="../js/default.html" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="../asp/default.html" target="_top">ASP </a>
+	<a class="topnav" href="../php/default.html" target="_top">PHP </a>
+	<a class="topnav" href="../sql/default.html" target="_top">SQL </a>	
+	<a class="topnav" href="../sitemap/default.html" target="_top">MORE...</a>
+</div>
+<div style="float:right;width:280px;word-spacing:6px;font-size:80%;padding-right:13px;padding-top:7px;color:#888888;white-space:nowrap;text-align:right;">
+	<a class="topnav" href="../sitemap/default.html#references" target="_top">REFERENCES</a> |
+	<a class="topnav" href="../sitemap/default.html#examples" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://w3schools.invisionzone.com/" target="_top">FORUM</a> |
+	<a class="topnav" href="../about/default.html" target="_top">ABOUT</a>	
+</div>
+</div>
+<div style="width:960px;height:94px;position:relative;margin-left:auto;margin-right:auto;margin:0px;padding:0px;overflow:hidden">
+<script type='text/javascript' src='../../partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-3440800076797949");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-3440800076797949", "MainLeaderboard");
+GA_googleAddSlot("ca-pub-3440800076797949", "SmallPS");
+GA_googleAddSlot("ca-pub-3440800076797949", "LargePS");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomRectangle");
+GA_googleAddSlot("ca-pub-3440800076797949", "SkyScraper");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomBanner");
+GA_googleAddSlot("ca-pub-3440800076797949", "TopRectangle");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- TopRectangle -->
+<script type='text/javascript'>
+GA_googleFillSlot("TopRectangle");
+</script>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- MainLeaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("MainLeaderboard");
+</script>
+</div></div>
+<div style="width:960px;padding:0px;margin:0px;">
+<div id="leftcolumn" style="width:170px;margin:0;padding:0;margin-top:5px;float:left;"><h2 class="left"><span class="left_h2">ASP.NET</span> Tutorial</h2>
+<a target="_top" href="default.html" >ASP.NET HOME</a><br />
+<a target="_top" href="aspnet.html" >ASP.NET Intro</a><br />
+<br />
+<h2 class="left"><span class="left_h2">Web Pages Demo</span></h2>
+<a target="_top" href="webpages_demo.html" >WebPages Demo</a><br />
+<a target="_top" href="webpages_webmatrix.html" >WebPages WebMatrix</a><br />
+<a target="_top" href="webpages_website.html" >WebPages WebSite</a><br />
+<a target="_top" href="webpages_navigation.html" >WebPages Navigation</a><br />
+<a target="_top" href="webpages_database.html" >WebPages Database</a><br />
+<a target="_top" href="webpages_login.html" >WebPages Login</a><br />
+<a target="_top" href="webpages_security.html" >WebPages Security</a><br />
+<br />
+<h2 class="left"><span class="left_h2">WP Tutorial</span></h2>
+<a target="_top" href="webpages_intro.html" >WebPages Intro</a><br />
+<a target="_top" href="webpages_razor.html" >WebPages Razor</a><br />
+<a target="_top" href="webpages_layout.html" >WebPages Layout</a><br />
+<a target="_top" href="webpages_folders.html" >WebPages Folders</a><br />
+<a target="_top" href="webpages_global.html" >WebPages Global</a><br />
+<a target="_top" href="webpages_forms.html" >WebPages Forms</a><br />
+<a target="_top" href="webpages_objects.html" >WebPages Objects</a><br />
+<a target="_top" href="webpages_files.html" >WebPages Files</a><br />
+<a target="_top" href="webpages_helpers.html" >WebPages Helpers</a><br />
+<a target="_top" href="webpages_webgrid.html" >WebPages WebGrid</a><br />
+<a target="_top" href="webpages_chart.html" >WebPages Charts</a><br />
+<a target="_top" href="webpages_email.html" >WebPages Email</a><br />
+<a target="_top" href="webpages_php.html" >WebPages PHP</a><br>
+<a target="_top" href="webpages_publish.html" >WebPages Publish</a><br />
+<a target="_top" href="webpages_examples.html" >WebPages Examples</a><br />
+<br />
+<h2 class="left"><span class="left_h2">WP References</span></h2>
+<a target="_top" href="webpages_ref_classes.html" >WebPages Classes</a><br />
+<a target="_top" href="webpages_ref_websecurity.html" >WebPages Security</a><br />
+<a target="_top" href="webpages_ref_database.html" >WebPages Database</a><br />
+<a target="_top" href="webpages_ref_webmail.html" >WebPages WebMail</a><br />
+<a target="_top" href="webpages_ref_helpers.html" >WebPages Helpers</a><br />
+<br />
+<h2 class="left"><span class="left_h2">ASP.NET Razor</span></h2>
+<a target="_top" href="razor_intro.html" >Razor Intro</a><br />
+<a target="_top" href="razor_syntax.html" >Razor Syntax</a><br />
+<a target="_top" href="razor_cs_variables.html" >Razor C# Variables</a><br />
+<a target="_top" href="razor_cs_loops.html" >Razor C# Loops</a><br />
+<a target="_top" href="razor_cs_logic.html" >Razor C# Logic</a><br />
+<a target="_top" href="razor_vb_variables.html" >Razor VB Variables</a><br />
+<a target="_top" href="razor_vb_loops.html" >Razor VB Loops</a><br />
+<a target="_top" href="razor_vb_logic.html" >Razor VB Logic</a><br />
+<br />
+<h2 class="left"><span class="left_h2">ASP.NET MVC</span></h2>
+<a target="_top" href="mvc_intro.html" >MVC Intro</a><br />
+<a target="_top" href="mvc_app.html" >MVC Application</a><br />
+<a target="_top" href="mvc_folders.html" >MVC Folders</a><br />
+<a target="_top" href="mvc_layout.html" >MVC Layout</a><br />
+<a target="_top" href="mvc_controllers.html" >MVC Controllers</a><br />
+<a target="_top" href="mvc_views.html" >MVC Views</a><br />
+<a target="_top" href="mvc_database.html" >MVC Database</a><br />
+<a target="_top" href="mvc_models.html" >MVC Models</a><br />
+<a target="_top" href="mvc_security.html" >MVC Security</a><br />
+<a target="_top" href="mvc_htmlhelpers.html" >MVC HTML Helpers</a><br />
+<a target="_top" href="mvc_publish.html" >MVC Publish</a><br />
+<a target="_top" href="mvc_reference.html" >MVC Reference</a><br />
+<br />
+<h2 class="left"><span class="left_h2">Web Forms Demo</span></h2>
+<a target="_top" href="aspnet_demo_intro.html" >WebForms Demo</a><br />
+<a target="_top" href="aspnet_demo_files.html" >WebForms Files</a><br />
+<a target="_top" href="aspnet_demo_menu.html" >WebForms Menu</a><br />
+<a target="_top" href="aspnet_demo_database.html" >WebForms Database</a><br />
+<br />
+<h2 class="left"><span class="left_h2">WF Tutorials</span></h2>
+<a target="_top" href="aspnet_intro.html" >WebForms Intro</a><br>
+<a target="_top" href="aspnet_pages.html" >WebForms Pages</a><br />
+<a target="_top" href="aspnet_controls.html" >WebForms Controls</a><br />
+<a target="_top" href="aspnet_events.html" style='font-weight:bold;'>WebForms Events</a><br />
+<a target="_top" href="aspnet_forms.html" >WebForms Forms</a><br />
+<a target="_top" href="aspnet_viewstate.html" >WebForms ViewState</a><br />
+<a target="_top" href="aspnet_textbox.html" >WebForms TextBox</a><br />
+<a target="_top" href="aspnet_button.html" >WebForms Button</a><br />
+<a target="_top" href="aspnet_databinding.html" >WebForms Data Binding</a><br />
+<a target="_top" href="aspnet_arraylist.html" >WebForms ArrayList</a><br />
+<a target="_top" href="aspnet_hashtable.html" >WebForms Hashtable</a><br />
+<a target="_top" href="aspnet_sortedlist.html" >WebForms SortedList</a><br />
+<a target="_top" href="aspnet_xml.html" >WebForms XML Files</a><br />
+<a target="_top" href="aspnet_repeater.html" >WebForms Repeater</a><br />
+<a target="_top" href="aspnet_datalist.html" >WebForms DataList</a><br />
+<a target="_top" href="aspnet_dbconnection.html" >WebForms DbConnection</a><br>
+<a target="_top" href="aspnet_masterpages.html" >WebForms Master Pages</a><br />
+<a target="_top" href="aspnet_navigation.html" >WebForms Navigation</a><br />
+<a target="_top" href="aspnet_examples.html" >WebForms Examples</a><br />
+<br />
+<h2 class="left"><span class="left_h2">WF References</span></h2>
+<a target="_top" href="aspnet_refhtmlcontrols.html" >WebForms HTML</a><br />
+<a target="_top" href="aspnet_refwebcontrols.html" >WebForms Controls</a><br />
+<a target="_top" href="aspnet_refvalidationcontrols.html" >WebForms Validation</a><br />
+
+
+
+
+
+</div>
+<div style="width:634px;margin:0px;padding:0px;background-color:#ffffff;color:#000000;padding-bottom:8px;padding-right:5px;padding-top:4px;float:left;">
+
+<h1>ASP.NET Web Forms <span class="color_h1">- Events</span></h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="aspnet_controls.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="aspnet_forms.html">Next Chapter &raquo;</a></div>
+</div>
+<hr />
+<p class="intro">An Event Handler is a subroutine that executes code for a given event.</p>
+<hr />
+
+<h2>ASP.NET - Event Handlers</h2>
+<p>Look at the following code:</p>
+
+<div class="code notranslate"><div>
+
+&lt;%<br />
+lbl1.Text=&quot;The date and time is &quot; &amp; now()<br />
+%&gt;<br /><br />
+&lt;html&gt;<br />
+&lt;body&gt;<br />
+&lt;form runat=&quot;server&quot;&gt;<br />
+&lt;h3&gt;&lt;asp:label id=&quot;lbl1&quot; runat=&quot;server&quot; /&gt;&lt;/h3&gt;<br />
+&lt;/form&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</div></div>
+
+<p>When will the code above be executed? The answer is: &quot;You don't know...&quot;</p>
+
+<hr />
+
+<h2>The Page_Load Event</h2>
+
+<p>The Page_Load event is one of many events that ASP.NET understands. The Page_Load event is triggered when a page loads, and ASP.NET will automatically 
+call the subroutine Page_Load, and execute the code inside it:</p>
+
+<div class="example">
+<h2 class="example">Example</h2>
+<div class="example_code notranslate">
+&lt;script runat=&quot;server&quot;&gt;<br />
+Sub Page_Load<br />
+lbl1.Text=&quot;The date and time is &quot; &amp; now()<br />
+End Sub<br />
+&lt;/script&gt;<br />
+<br />
+&lt;html&gt;<br />
+&lt;body&gt;<br />
+&lt;form runat=&quot;server&quot;&gt;<br />
+&lt;h3&gt;&lt;asp:label id=&quot;lbl1&quot; runat=&quot;server&quot; /&gt;&lt;/h3&gt;<br />
+&lt;/form&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+</div>
+<br /><a target="_blank" href="showasp231a.html?filename=demo_pageload" class="showbtn">Show example &raquo;</a>
+</div>
+<p><b>Note:</b> The Page_Load event contains no object references or event 
+arguments!</p>
+<hr />
+
+<h2>The Page.IsPostBack Property</h2>
+
+<p>
+The Page_Load subroutine runs EVERY time the page is loaded. If you want to 
+execute the code in the Page_Load subroutine only the FIRST time the page is 
+loaded, you can use the Page.IsPostBack property. If the Page.IsPostBack property is 
+false, the page is loaded for the first time, if it is 
+true, the page is posted back to the server (i.e. from a button click 
+on a form):</p>
+
+<div class="example">
+<h2 class="example">Example</h2>
+<div class="example_code notranslate">
+&lt;script runat=&quot;server&quot;&gt;<br />
+Sub Page_Load<br />
+if Not Page.IsPostBack then<br />
+&nbsp;&nbsp;lbl1.Text=&quot;The date and time is &quot; &amp; now()<br />
+end if<br />
+End Sub<br />
+<br />
+Sub submit(s As Object, e As EventArgs)<br />
+lbl2.Text=&quot;Hello World!&quot;<br />
+End Sub<br />
+&lt;/script&gt;<br />
+<br />
+&lt;html&gt;<br />
+&lt;body&gt;<br />
+&lt;form runat=&quot;server&quot;&gt;<br />
+&lt;h3&gt;&lt;asp:label id=&quot;lbl1&quot; runat=&quot;server&quot; /&gt;&lt;/h3&gt;<br />
+&lt;h3&gt;&lt;asp:label id=&quot;lbl2&quot; runat=&quot;server&quot; /&gt;&lt;/h3&gt;<br />
+&lt;asp:button text=&quot;Submit&quot; onclick=&quot;submit&quot; runat=&quot;server&quot; /&gt;<br />
+&lt;/form&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;
+</div>
+<br /><a target="_blank" href="showasp1614.html?filename=demo_pageispostback" class="showbtn">Show example &raquo;</a>
+</div>
+<p>The example above will write the &quot;The date and time is....&quot; message only the 
+first time the page is loaded. When a user clicks on the Submit button, the 
+submit subroutine will write &quot;Hello World!&quot; to the second label, but the date 
+and time in the first label will not change. </p>
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="aspnet_controls.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="aspnet_forms.html">Next Chapter &raquo;</a></div>
+</div>
+
+<hr />
+
+<!-- **** SPOTLIGHTS 1 **** -->
+<!-- SmallPS -->
+<script type='text/javascript'>
+GA_googleFillSlot("SmallPS");
+</script>
+<!-- **** SPOTLIGHTS 2 **** -->
+<!-- LargePS -->
+<script type='text/javascript'>
+GA_googleFillSlot("LargePS");
+</script>
+<!-- **** SPOTLIGHTS 3 **** -->
+<!-- BottomRectangle -->
+<div style="width:340px;margin:auto">
+<script type='text/javascript'>
+GA_googleFillSlot("BottomRectangle");
+</script>
+</div>
+
+<div style="width:470px;margin:auto;margin-top:5px;">
+<!-- BottomBanner -->
+<script type='text/javascript'>
+GA_googleFillSlot("BottomBanner");
+</script>
+</div>
+
+<div id="err_form" style="display:none">
+<h2>Your suggestion:</h2>
+<p><label for="err_email">Your E-mail (optional):</label> <input type="text" id="err_email" name="err_email" /></p>
+<p><label for="err_url">Page address:</label> <input type="text" disabled="disabled" id="err_url" name="err_url" /></p>
+<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+<p class="submit"><input type="button" value="Submit" onclick="sendErr()" /></p>
+<div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent" style="display:none">
+<h2>Thank you for your support.</h2>
+<div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+
+<div id="rightcolumn" style="width:150px;margin:0px;padding:0px;float:left">
+<table>
+<tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/id/w3schools/goto/w3schools">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/coupons">Best Hosting Coupons</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.justhost.com/track/w3schools/textlink">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/index.cfm?A=w3text">$3.98 Unlimited Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.website.com/">Premium Website Design</a>
+</td></tr>
+</table>
+<table>
+<tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML Editor - Free Trial!</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_400H">FREE Website BUILDER</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_400H">CREATE HTML Websites</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.edirecthost.com/main/home">EASY WEBSITE BUILDER</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="../cert/default.html">Get Certified in:<br />HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="../books/default.html">
+New Books:<br />HTML, CSS<br />
+JavaScript, and Ajax</a>
+</td></tr>
+</table>
+<table>
+<tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="../browsers/browsers_stats.html">Browser Statistics</a><br />
+<a target="_top" href="../browsers/browsers_os.html">Browser OS</a><br />
+<a target="_top" href="../browsers/browsers_display.html">Browser Display</a>
+</td></tr></table>
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table>
+<tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height:16px">
+<a href="#" onclick="sharethis();return false;">Share with &raquo;</a>
+</div>
+</td>
+</tr>
+</table>
+<table>
+<tr><td><br />
+<div style="width:124px;margin:auto">
+<!-- SkyScraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("SkyScraper");
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br />
+</div>
+<div style="width:100%;clear:both;margin:0;padding:0;background-color:transparent;background-image:url('../images/gradientbottom.jpg');background-repeat:repeat-x;position:relative;">
+<div id="footer" style="width:960px;margin-left:auto;margin-right:auto;height:110px;">
+<div style="float:left;width:200px;text-align:left;padding-left:3px;padding-top:11px;"><a href="../index.html">
+<img style="border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com" /></a>
+</div>
+<div style="word-spacing:6px;font-size:80%;padding-right:12px;padding-top:19px;float:right;width:600px;text-align:right;">
+<a href="#" onclick="displayError();return false">REPORT ERROR</a> |
+<a href="../default.html" target="_top">HOME</a> |
+<a href="#top" target="_top">TOP</a> |
+<a href='aspnet_eventsd86a.html?output=print' target="_blank">PRINT</a> |
+<a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+<a href="../about/default.html" target="_top">ABOUT</a>
+</div>
+<div style="padding-top:13px;color:#404040;clear:both;">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.<br />
+While using this site, you agree to have read and accepted our
+<a href="../about/about_copyright.html">terms of use</a> and
+<a href="../about/about_privacy.html">privacy policy</a>.<br />
+<a href="../about/about_copyright.html">Copyright 1999-2012</a> by Refsnes Data. All Rights Reserved.
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/aspnet/aspnet_events.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 06:49:51 GMT -->
+</html>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="match_parent"
+  android:layout_height="fill_parent"
+  >
+  <TextView android:layout_width="10dip"
+                  android:layout_height="match_parent"
+                  android:background="#FFE600"/>
+                  <TextView android:layout_width="3dip"
+                  android:layout_height="match_parent"
+                  android:background="#808080"/>
+  <LinearLayout  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                   android:layout_weight="1"  
+                  >
+   	<LinearLayout  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" 
+                  android:background="#ffffff"
+                  android:weightSum="1">
+          <LinearLayout  android:orientation="vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" 
+                  >
+              <ImageButton android:id="@+id/btn_info"
+               android:src="@drawable/info" 
+               android:layout_height="wrap_content"
+               android:background="#ffffff" 
+               android:padding="10dip"
+                android:onClick="MyClickHandler"
+               android:layout_width="wrap_content"></ImageButton>
+          <TextView android:layout_width="wrap_content" 
+                    android:id="@+id/textView2" 
+                    android:text="John Smith"
+                    android:paddingLeft="15dip"
+                    android:paddingTop="10dip"
+                    android:layout_height="wrap_content" 
+                    android:textColor="#000000"></TextView>
+              <TextView android:layout_width="wrap_content" 
+                    android:id="@+id/textView1" 
+                    android:text="9911661566"
+                    android:paddingLeft="15dip"
+                    android:layout_height="wrap_content" 
+                    android:textColor="#000000"></TextView>
+                  </LinearLayout>
+         <ImageView android:src="@drawable/h" 
+        		   android:id="@+id/imageView1" 
+        		   android:paddingLeft="50dip" 
+        		   android:paddingTop="15dip"
+        android:scaleType="fitStart" android:layout_width="180dp" android:layout_height="116dp" android:layout_weight="0.65"></ImageView>
+     </LinearLayout>
+  <TableLayout android:id="@+id/tableLayout1" 
+               android:layout_height="match_parent" 
+               android:layout_width="match_parent"
+               android:layout_weight="1"
+               android:background="@drawable/home_background">
+      <TableRow android:id="@+id/tableRow1" 
+      			android:layout_width="wrap_content" 
+      			android:layout_height="wrap_content"
+      			 android:layout_weight="1" >
+          <Button  android:layout_width="wrap_content"
+          		   android:background="@drawable/flash_becon" 
+          		   android:layout_height="50dip"  
+          		   android:id="@+id/btn_flash"
+          		   android:layout_marginLeft="10dip"
+          		   android:layout_marginRight="10dip"
+          		   android:layout_marginBottom="10dip"
+          		   android:layout_weight="1" 
+          		   android:onClick="MyClickHandler" 
+          		   android:clickable="true"></Button>
+
+          <Button
+              android:id="@+id/btn_siren"
+              android:layout_width="wrap_content"
+              android:layout_height="50dip"
+              android:layout_marginBottom="10dip"
+              android:layout_marginLeft="10dip"
+              android:layout_marginRight="10dip"
+              android:layout_weight="1"
+              android:background="@drawable/siren_whistle"
+              android:clickable="true"
+              android:longClickable="true"
+              android:onClick="MyClickHandler" >
+</Button>
+      </TableRow>
+      <TableRow android:id="@+id/tableRow2"
+      		    android:layout_width="wrap_content"  
+      		    android:layout_height="wrap_content" 
+      		     android:layout_weight="1" 
+			>
+          <Button android:layout_width="wrap_content" 
+                  android:background="@drawable/emergency" 
+                  android:layout_height="50dip"  
+                  android:id="@+id/btn_emergency"
+          		   android:layout_weight="1"
+          		    android:onClick="MyClickHandler" 
+          		   android:layout_marginLeft="10dip"
+          		   android:layout_marginRight="10dip"
+          		   android:layout_marginTop="10dip"
+          		   android:layout_marginBottom="10dip" ></Button>
+          <Button android:layout_width="wrap_content" android:background="@drawable/locater" android:id="@+id/btn_locater" android:layout_height="50dip"
+                   android:layout_weight="1"
+                    android:onClick="MyClickHandler"
+          		   android:layout_marginLeft="10dip"
+          		   android:layout_marginRight="10dip"
+          		   android:layout_marginTop="10dip"
+          		   android:layout_marginBottom="10dip" ></Button>
+      </TableRow>
+      <TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content"  android:layout_weight="1"  android:layout_height="wrap_content" >
+          <Button android:layout_width="wrap_content" android:background="@drawable/av_recorder" android:layout_height="50dip"  android:id="@+id/btn_recorder"
+          		   android:layout_weight="1" 
+          		   android:layout_marginLeft="10dip"
+          		   android:layout_marginRight="10dip"
+          		    android:onClick="MyClickHandler"
+          		    android:layout_marginTop="10dip"
+          		   android:layout_marginBottom="10dip" ></Button>
+          <Button android:layout_width="wrap_content" android:background="@drawable/other_feature" android:id="@+id/btn_other_feature" android:layout_height="50dip"
+                   android:layout_weight="1" 
+          		   android:layout_marginLeft="10dip"
+          		   android:layout_marginRight="10dip"
+          		   android:layout_marginTop="10dip"
+          		   android:onClick="MyClickHandler"
+          		   android:layout_marginBottom="10dip"></Button>
+      </TableRow>
+	      <TableRow android:id="@+id/tableRow4" 
+	                android:layout_width="wrap_content" 
+	                android:layout_height="wrap_content"
+	                android:gravity="center_horizontal"
+	                android:layout_weight="1" >
+	          <Button android:id="@+id/button7"
+					  android:background="@drawable/engage"
+					  android:onClick="MyClickHandler"
+	          		  android:layout_height="40dip" 
+	          		  android:layout_width="100dip" 
+	          		  android:layout_margin="20dip" ></Button>
+      </TableRow>
+  </TableLayout>  
+</LinearLayout>
+</LinearLayout>

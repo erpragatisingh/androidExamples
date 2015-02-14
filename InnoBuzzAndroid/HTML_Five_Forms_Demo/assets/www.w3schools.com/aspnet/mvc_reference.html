@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+<!-- Mirrored from www.w3schools.com/aspnet/mvc_reference.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 06:49:24 GMT -->
+<head>
+<title>ASP.NET MVC Reference</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<a id="top"></a>
+<div style="width:960px;margin-top:5px;margin-left:auto;margin-right:auto">
+<div style="width:960px;height:74px;margin:0;padding:0;">
+<div style="width:340px;text-align:left;float:left;">
+	<a href="../index.html"><img width="336" height="69" src="../images/w3schoolslogo.gif" alt="W3Schools.com" style="border:0;margin-top:5px;" /></a>
+</div>
+
+<div style="width:300px;float:right;text-align:right;margin-top:20px;margin-right:14px;margin-bottom:5px;">
+<div id="google_translate_element" style="display:none"></div>
+<div id="translate_link" style="margin-bottom:14px">
+<a href="#" class="topnav"
+onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+	<form style="font-size:11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.w3schools.com" />
+    <input onfocus="searchfield_focus(this)" style="width:150px;color:#808080;font-style:italic;margin:0;" 
+    type="text" name="as_q" size="20" value="Search w3schools.com" /><input type="submit" style="margin:0;" value="Search" title="Search" />
+	</form>
+</div>
+</div>
+<div id="topnav" style="clear:both;width:960px;height:25px;">
+<div style="float:left;width:400px;word-spacing:12px;font-size:90%;padding-left:15px;padding-top:6px;white-space:nowrap;text-align:left;">
+	<a class="topnav" href="../default.html" target="_top">HOME </a>
+	<a class="topnav" href="../html/default.html" target="_top">HTML </a>
+	<a class="topnav" href="../css/default.html" target="_top">CSS </a>
+	<a class="topnav" href="../xml/default.html" target="_top">XML </a>
+	<a class="topnav" href="../js/default.html" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="../asp/default.html" target="_top">ASP </a>
+	<a class="topnav" href="../php/default.html" target="_top">PHP </a>
+	<a class="topnav" href="../sql/default.html" target="_top">SQL </a>	
+	<a class="topnav" href="../sitemap/default.html" target="_top">MORE...</a>
+</div>
+<div style="float:right;width:280px;word-spacing:6px;font-size:80%;padding-right:13px;padding-top:7px;color:#888888;white-space:nowrap;text-align:right;">
+	<a class="topnav" href="../sitemap/default.html#references" target="_top">REFERENCES</a> |
+	<a class="topnav" href="../sitemap/default.html#examples" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://w3schools.invisionzone.com/" target="_top">FORUM</a> |
+	<a class="topnav" href="../about/default.html" target="_top">ABOUT</a>	
+</div>
+</div>
+<div style="width:960px;height:94px;position:relative;margin-left:auto;margin-right:auto;margin:0px;padding:0px;overflow:hidden">
+<script type='text/javascript' src='../../partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-3440800076797949");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-3440800076797949", "MainLeaderboard");
+GA_googleAddSlot("ca-pub-3440800076797949", "SmallPS");
+GA_googleAddSlot("ca-pub-3440800076797949", "LargePS");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomRectangle");
+GA_googleAddSlot("ca-pub-3440800076797949", "SkyScraper");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomBanner");
+GA_googleAddSlot("ca-pub-3440800076797949", "TopRectangle");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- TopRectangle -->
+<script type='text/javascript'>
+GA_googleFillSlot("TopRectangle");
+</script>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- MainLeaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("MainLeaderboard");
+</script>
+</div></div>
+<div style="width:960px;padding:0px;margin:0px;">
+<div id="leftcolumn" style="width:170px;margin:0;padding:0;margin-top:5px;float:left;"><h2 class="left"><span class="left_h2">ASP.NET</span> Tutorial</h2>
+<a target="_top" href="default.html" >ASP.NET HOME</a><br />
+<a target="_top" href="aspnet.html" >ASP.NET Intro</a><br />
+<br />
+<h2 class="left"><span class="left_h2">Web Pages Demo</span></h2>
+<a target="_top" href="webpages_demo.html" >WebPages Demo</a><br />
+<a target="_top" href="webpages_webmatrix.html" >WebPages WebMatrix</a><br />
+<a target="_top" href="webpages_website.html" >WebPages WebSite</a><br />
+<a target="_top" href="webpages_navigation.html" >WebPages Navigation</a><br />
+<a target="_top" href="webpages_database.html" >WebPages Database</a><br />
+<a target="_top" href="webpages_login.html" >WebPages Login</a><br />
+<a target="_top" href="webpages_security.html" >WebPages Security</a><br />
+<br />
+<h2 class="left"><span class="left_h2">WP Tutorial</span></h2>
+<a target="_top" href="webpages_intro.html" >WebPages Intro</a><br />
+<a target="_top" href="webpages_razor.html" >WebPages Razor</a><br />
+<a target="_top" href="webpages_layout.html" >WebPages Layout</a><br />
+<a target="_top" href="webpages_folders.html" >WebPages Folders</a><br />
+<a target="_top" href="webpages_global.html" >WebPages Global</a><br />
+<a target="_top" href="webpages_forms.html" >WebPages Forms</a><br />
+<a target="_top" href="webpages_objects.html" >WebPages Objects</a><br />
+<a target="_top" href="webpages_files.html" >WebPages Files</a><br />
+<a target="_top" href="webpages_helpers.html" >WebPages Helpers</a><br />
+<a target="_top" href="webpages_webgrid.html" >WebPages WebGrid</a><br />
+<a target="_top" href="webpages_chart.html" >WebPages Charts</a><br />
+<a target="_top" href="webpages_email.html" >WebPages Email</a><br />
+<a target="_top" href="webpages_php.html" >WebPages PHP</a><br>
+<a target="_top" href="webpages_publish.html" >WebPages Publish</a><br />
+<a target="_top" href="webpages_examples.html" >WebPages Examples</a><br />
+<br />
+<h2 class="left"><span class="left_h2">WP References</span></h2>
+<a target="_top" href="webpages_ref_classes.html" >WebPages Classes</a><br />
+<a target="_top" href="webpages_ref_websecurity.html" >WebPages Security</a><br />
+<a target="_top" href="webpages_ref_database.html" >WebPages Database</a><br />
+<a target="_top" href="webpages_ref_webmail.html" >WebPages WebMail</a><br />
+<a target="_top" href="webpages_ref_helpers.html" >WebPages Helpers</a><br />
+<br />
+<h2 class="left"><span class="left_h2">ASP.NET Razor</span></h2>
+<a target="_top" href="razor_intro.html" >Razor Intro</a><br />
+<a target="_top" href="razor_syntax.html" >Razor Syntax</a><br />
+<a target="_top" href="razor_cs_variables.html" >Razor C# Variables</a><br />
+<a target="_top" href="razor_cs_loops.html" >Razor C# Loops</a><br />
+<a target="_top" href="razor_cs_logic.html" >Razor C# Logic</a><br />
+<a target="_top" href="razor_vb_variables.html" >Razor VB Variables</a><br />
+<a target="_top" href="razor_vb_loops.html" >Razor VB Loops</a><br />
+<a target="_top" href="razor_vb_logic.html" >Razor VB Logic</a><br />
+<br />
+<h2 class="left"><span class="left_h2">ASP.NET MVC</span></h2>
+<a target="_top" href="mvc_intro.html" >MVC Intro</a><br />
+<a target="_top" href="mvc_app.html" >MVC Application</a><br />
+<a target="_top" href="mvc_folders.html" >MVC Folders</a><br />
+<a target="_top" href="mvc_layout.html" >MVC Layout</a><br />
+<a target="_top" href="mvc_controllers.html" >MVC Controllers</a><br />
+<a target="_top" href="mvc_views.html" >MVC Views</a><br />
+<a target="_top" href="mvc_database.html" >MVC Database</a><br />
+<a target="_top" href="mvc_models.html" >MVC Models</a><br />
+<a target="_top" href="mvc_security.html" >MVC Security</a><br />
+<a target="_top" href="mvc_htmlhelpers.html" >MVC HTML Helpers</a><br />
+<a target="_top" href="mvc_publish.html" >MVC Publish</a><br />
+<a target="_top" href="mvc_reference.html" style='font-weight:bold;'>MVC Reference</a><br />
+<br />
+<h2 class="left"><span class="left_h2">Web Forms Demo</span></h2>
+<a target="_top" href="aspnet_demo_intro.html" >WebForms Demo</a><br />
+<a target="_top" href="aspnet_demo_files.html" >WebForms Files</a><br />
+<a target="_top" href="aspnet_demo_menu.html" >WebForms Menu</a><br />
+<a target="_top" href="aspnet_demo_database.html" >WebForms Database</a><br />
+<br />
+<h2 class="left"><span class="left_h2">WF Tutorials</span></h2>
+<a target="_top" href="aspnet_intro.html" >WebForms Intro</a><br>
+<a target="_top" href="aspnet_pages.html" >WebForms Pages</a><br />
+<a target="_top" href="aspnet_controls.html" >WebForms Controls</a><br />
+<a target="_top" href="aspnet_events.html" >WebForms Events</a><br />
+<a target="_top" href="aspnet_forms.html" >WebForms Forms</a><br />
+<a target="_top" href="aspnet_viewstate.html" >WebForms ViewState</a><br />
+<a target="_top" href="aspnet_textbox.html" >WebForms TextBox</a><br />
+<a target="_top" href="aspnet_button.html" >WebForms Button</a><br />
+<a target="_top" href="aspnet_databinding.html" >WebForms Data Binding</a><br />
+<a target="_top" href="aspnet_arraylist.html" >WebForms ArrayList</a><br />
+<a target="_top" href="aspnet_hashtable.html" >WebForms Hashtable</a><br />
+<a target="_top" href="aspnet_sortedlist.html" >WebForms SortedList</a><br />
+<a target="_top" href="aspnet_xml.html" >WebForms XML Files</a><br />
+<a target="_top" href="aspnet_repeater.html" >WebForms Repeater</a><br />
+<a target="_top" href="aspnet_datalist.html" >WebForms DataList</a><br />
+<a target="_top" href="aspnet_dbconnection.html" >WebForms DbConnection</a><br>
+<a target="_top" href="aspnet_masterpages.html" >WebForms Master Pages</a><br />
+<a target="_top" href="aspnet_navigation.html" >WebForms Navigation</a><br />
+<a target="_top" href="aspnet_examples.html" >WebForms Examples</a><br />
+<br />
+<h2 class="left"><span class="left_h2">WF References</span></h2>
+<a target="_top" href="aspnet_refhtmlcontrols.html" >WebForms HTML</a><br />
+<a target="_top" href="aspnet_refwebcontrols.html" >WebForms Controls</a><br />
+<a target="_top" href="aspnet_refvalidationcontrols.html" >WebForms Validation</a><br />
+
+
+
+
+
+</div>
+<div style="width:634px;margin:0px;padding:0px;background-color:#ffffff;color:#000000;padding-bottom:8px;padding-right:5px;padding-top:4px;float:left;">
+
+<h1>ASP.NET MVC <span class="color_h1">- Reference</span></h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="mvc_publish.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="aspnet_demo_intro.html">Next Chapter &raquo;</a></div>
+</div>
+
+<hr />
+
+<h2>Classes</h2>
+		
+<table class="reference">
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
+AcceptVerbsAttribute</td>
+<td>Represents an attribute that specifies which HTTP 
+verbs an action method will respond to.</td>
+</tr>
+<tr>
+<td>
+ActionDescriptor</td>
+<td>Provides information about an action method, such as 
+its name, controller, parameters, attributes, and filters.</td>
+</tr>
+<tr>
+<td>
+ActionExecutedContext</td>
+<td>Provides the context for the 
+ActionExecuted method of the
+ActionFilterAttribute class.</td>
+</tr>
+<tr>
+<td>
+ActionExecutingContext</td>
+<td>Provides the context for the 
+ActionExecuting method of the
+ActionFilterAttribute class.</td>
+</tr>
+<tr>
+<td>
+ActionFilterAttribute</td>
+<td>Represents the base class for filter attributes.</td>
+</tr>
+<tr>
+<td>
+ActionMethodSelectorAttribute</td>
+<td>Represents an attribute that is used to influence the 
+selection of an action method.</td>
+</tr>
+<tr>
+<td>
+ActionNameAttribute</td>
+<td>Represents an attribute that is used for the name of 
+an action.</td>
+</tr>
+<tr>
+<td>
+ActionNameSelectorAttribute</td>
+<td>Represents an attribute that affects the selection of 
+an action method.</td>
+</tr>
+<tr>
+<td>
+ActionResult</td>
+<td>Encapsulates the result of an action method and is 
+used to perform a framework-level operation on behalf of the 
+action method.</td>
+</tr>
+<tr>
+<td>
+AdditionalMetadataAttribute</td>
+<td>Provides a class that implements the
+IMetadataAware interface in order to support additional 
+metadata. </td>
+</tr>
+<tr>
+<td>
+AjaxHelper</td>
+<td>Represents support for rendering HTML in AJAX 
+scenarios within a view.</td>
+</tr>
+<tr>
+<td>
+AjaxHelper(Of TModel)</td>
+<td>Represents support for rendering HTML in AJAX 
+scenarios within a strongly typed view.</td>
+</tr>
+<tr>
+<td>
+AjaxRequestExtensions</td>
+<td>Represents a class that extends the
+HttpRequestBase class by adding the ability to determine 
+whether an HTTP request is an AJAX request.</td>
+</tr>
+<tr>
+<td>
+AllowHtmlAttribute</td>
+<td>Allows a request to include HTML markup during model 
+binding by skipping request validation for the property. (It is 
+strongly recommended that your application explicitly check all 
+models where you disable request validation in order to prevent 
+script exploits.)</td>
+</tr>
+<tr>
+<td>
+AreaRegistration</td>
+<td>Provides a way to register one or more areas in an 
+ASP.NET MVC application.</td>
+</tr>
+<tr>
+<td>
+AreaRegistrationContext</td>
+<td>Encapsulates the information that is required in order 
+to register an area within an ASP.NET MVC application.</td>
+</tr>
+<tr>
+<td>
+AssociatedMetadataProvider</td>
+<td>Provides an abstract class to implement a metadata 
+provider.</td>
+</tr>
+<tr>
+<td>
+AssociatedValidatorProvider</td>
+<td>Provides an abstract class for classes that implement 
+a validation provider.</td>
+</tr>
+<tr>
+<td>
+AsyncController</td>
+<td>Provides the base class for asynchronous controllers.</td>
+</tr>
+<tr>
+<td>
+AsyncTimeoutAttribute</td>
+<td>Represents an attribute that is used to set the 
+timeout value, in milliseconds, for an asynchronous method.</td>
+</tr>
+<tr>
+<td>
+AuthorizationContext</td>
+<td>Encapsulates the information that is required for 
+using an
+AuthorizeAttribute attribute.</td>
+</tr>
+<tr>
+<td>
+AuthorizeAttribute</td>
+<td>Represents an attribute that is used to restrict 
+access by callers to an action method.</td>
+</tr>
+<tr>
+<td>
+BindAttribute</td>
+<td>Represents an attribute that is used to provide 
+details about how model binding to a parameter should occur.</td>
+</tr>
+<tr>
+<td>
+BuildManagerCompiledView</td>
+<td>Represents the base class for views that are compiled 
+by the BuildManager class before 
+being rendered by a view engine.</td>
+</tr>
+<tr>
+<td>
+BuildManagerViewEngine</td>
+<td>Provides a base class for view engines.</td>
+</tr>
+<tr>
+<td>
+ByteArrayModelBinder</td>
+<td>Maps a browser request to a byte array.</td>
+</tr>
+<tr>
+<td>
+ChildActionOnlyAttribute</td>
+<td>Represents an attribute that is used to indicate that 
+an action method should be called only as a child action.</td>
+</tr>
+<tr>
+<td>
+ChildActionValueProvider</td>
+<td>Represents a value provider for values from child 
+actions.</td>
+</tr>
+<tr>
+<td>
+ChildActionValueProviderFactory</td>
+<td>Represents a factory for creating value provider 
+objects for child actions.</td>
+</tr>
+<tr>
+<td>
+ClientDataTypeModelValidatorProvider</td>
+<td>Returns the client data-type model validators.</td>
+</tr>
+<tr>
+<td>
+CompareAttribute</td>
+<td>Provides an attribute that compares two properties of 
+a model.</td>
+</tr>
+<tr>
+<td>
+ContentResult</td>
+<td>Represents a user-defined content type that is the 
+result of an action method.</td>
+</tr>
+<tr>
+<td>
+Controller</td>
+<td>Provides methods that respond to HTTP requests that 
+are made to an ASP.NET MVC Web site.</td>
+</tr>
+<tr>
+<td>
+ControllerActionInvoker</td>
+<td>Represents a class that is responsible for invoking 
+the action methods of a controller.</td>
+</tr>
+<tr>
+<td>
+ControllerBase</td>
+<td>Represents the base class for all MVC controllers.</td>
+</tr>
+<tr>
+<td>
+ControllerBuilder</td>
+<td>Represents a class that is responsible for dynamically 
+building a controller.</td>
+</tr>
+<tr>
+<td>
+ControllerContext</td>
+<td>Encapsulates information about an HTTP request that 
+matches specified
+RouteBase and
+ControllerBase instances.</td>
+</tr>
+<tr>
+<td>
+ControllerDescriptor</td>
+<td>Encapsulates information that describes a controller, 
+such as its name, type, and actions.</td>
+</tr>
+<tr>
+<td>
+ControllerInstanceFilterProvider</td>
+<td>Adds the controller to the
+FilterProviderCollection instance.</td>
+</tr>
+<tr>
+<td>
+CustomModelBinderAttribute</td>
+<td>Represents an attribute that invokes a custom model 
+binder.</td>
+</tr>
+<tr>
+<td>
+DataAnnotationsModelMetadata</td>
+<td>Provides a container for common metadata, for the
+DataAnnotationsModelMetadataProvider class, and for the
+DataAnnotationsModelValidator class for a data model.</td>
+</tr>
+<tr>
+<td>
+DataAnnotationsModelMetadataProvider</td>
+<td>Implements the default model metadata provider for 
+ASP.NET MVC.</td>
+</tr>
+<tr>
+<td>
+DataAnnotationsModelValidator</td>
+<td>Provides a model validator.</td>
+</tr>
+<tr>
+<td>
+DataAnnotationsModelValidator(Of 
+TAttribute)</td>
+<td>Provides a model validator for a specified validation 
+type.</td>
+</tr>
+<tr>
+<td>
+<a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.dataannotationsmodelvalidatorprovider(v=vs.98).aspx">
+DataAnnotationsModelValidatorProvider</td>
+<td>Implements the default validation provider for ASP.NET 
+MVC.</td>
+</tr>
+<tr>
+<td>
+<a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.dataerrorinfomodelvalidatorprovider(v=vs.98).aspx">
+DataErrorInfoModelValidatorProvider</td>
+<td>Provides a container for the error-information model 
+validator.</td>
+</tr>
+<tr>
+<td>
+DefaultControllerFactory</td>
+<td>Represents the controller factory that is registered 
+by default.</td>
+</tr>
+<tr>
+<td>
+DefaultModelBinder</td>
+<td>Maps a browser request to a data object. This class 
+provides a concrete implementation of a model binder.</td>
+</tr>
+<tr>
+<td>
+DefaultViewLocationCache</td>
+<td>Represents a memory cache for view locations.</td>
+</tr>
+<tr>
+<td>
+DependencyResolver</td>
+<td>Provides a registration point for dependency resolvers 
+that implement
+IDependencyResolver or the Common Service Locator
+IServiceLocator interface.</td>
+</tr>
+<tr>
+<td>
+DependencyResolverExtensions</td>
+<td>Provides a type-safe implementation of
+GetService and
+GetServices.</td>
+</tr>
+<tr>
+<td>
+DictionaryValueProvider(Of TValue)</td>
+<td>Represents the base class for value providers whose 
+values come from a collection that implements the
+IDictionary(Of TKey, TValue) 
+interface.</td>
+</tr>
+<tr>
+<td>
+EmptyModelMetadataProvider</td>
+<td>Provides an empty metadata provider for data models 
+that do not require metadata.</td>
+</tr>
+<tr>
+<td>
+EmptyModelValidatorProvider</td>
+<td>Provides an empty validation provider for models that 
+do not require a validator.</td>
+</tr>
+<tr>
+<td>
+EmptyResult</td>
+<td>Represents a result that does nothing, such as a 
+controller action method that returns nothing.</td>
+</tr>
+<tr>
+<td>
+ExceptionContext</td>
+<td>Provides the context for using the
+HandleErrorAttribute class.</td>
+</tr>
+<tr>
+<td>
+ExpressionHelper</td>
+<td>Provides a helper class to get the model name from an 
+expression.</td>
+</tr>
+<tr>
+<td>
+FieldValidationMetadata</td>
+<td>Provides a container for client-side field validation 
+metadata.</td>
+</tr>
+<tr>
+<td>
+FileContentResult</td>
+<td>Sends the contents of a binary file to the response.</td>
+</tr>
+<tr>
+<td>
+FilePathResult</td>
+<td>Sends the contents of a file to the response.</td>
+</tr>
+<tr>
+<td>
+FileResult</td>
+<td>Represents a base class that is used to send binary 
+file content to the response.</td>
+</tr>
+<tr>
+<td>
+FileStreamResult</td>
+<td>Sends binary content to the response by using a
+Stream instance.</td>
+</tr>
+<tr>
+<td>
+Filter</td>
+<td>Represents a metadata class that contains a reference 
+to the implementation of one or more of the filter interfaces, 
+the filter's order, and the filter's scope.</td>
+</tr>
+<tr>
+<td>
+FilterAttribute</td>
+<td>Represents the base class for action and result filter 
+attributes.</td>
+</tr>
+<tr>
+<td>
+FilterAttributeFilterProvider</td>
+<td>Defines a filter provider for filter attributes.</td>
+</tr>
+<tr>
+<td>
+FilterInfo</td>
+<td>Encapsulates information about the available action 
+filters.</td>
+</tr>
+<tr>
+<td>
+FilterProviderCollection</td>
+<td>Represents the collection of filter providers for the 
+application.</td>
+</tr>
+<tr>
+<td>
+FilterProviders</td>
+<td>Provides a registration point for filters.</td>
+</tr>
+<tr>
+<td>
+FormCollection</td>
+<td>Contains the form value providers for the application.</td>
+</tr>
+<tr>
+<td>
+FormContext</td>
+<td>Encapsulates information that is required in order to 
+validate and process the input data from an HTML form.</td>
+</tr>
+<tr>
+<td>
+FormValueProvider</td>
+<td>Represents a value provider for form values that are 
+contained in a
+NameValueCollection object.</td>
+</tr>
+<tr>
+<td>
+FormValueProviderFactory</td>
+<td>Represents a class that is responsible for creating a 
+new instance of a form-value provider object.</td>
+</tr>
+<tr>
+<td>
+GlobalFilterCollection</td>
+<td>Represents a class that contains all the global 
+filters.</td>
+</tr>
+<tr>
+<td>
+GlobalFilters</td>
+<td>Represents the global filter collection.</td>
+</tr>
+<tr>
+<td>
+HandleErrorAttribute</td>
+<td>Represents an attribute that is used to handle an 
+exception that is thrown by an action method.</td>
+</tr>
+<tr>
+<td>
+HandleErrorInfo</td>
+<td>Encapsulates information for handling an error that 
+was thrown by an action method.</td>
+</tr>
+<tr>
+<td>
+HiddenInputAttribute</td>
+<td>Represents an attribute that is used to indicate 
+whether a property or field value should be rendered as a hidden
+input element.</td>
+</tr>
+<tr>
+<td>
+HtmlHelper</td>
+<td>Represents support for rendering HTML controls in a 
+view.</td>
+</tr>
+<tr>
+<td>
+HtmlHelper(Of TModel)</td>
+<td>Represents support for rendering HTML controls in a 
+strongly typed view.</td>
+</tr>
+<tr>
+<td>
+HttpDeleteAttribute</td>
+<td>Represents an attribute that is used to restrict an 
+action method so that the method handles only HTTP DELETE 
+requests.</td>
+</tr>
+<tr>
+<td>
+HttpFileCollectionValueProvider</td>
+<td>Represents a value provider to use with values that 
+come from a collection of HTTP files.</td>
+</tr>
+<tr>
+<td>
+HttpFileCollectionValueProviderFactory</td>
+<td>Represents a class that is responsible for creating a 
+new instance of an HTTP file collection value provider object.</td>
+</tr>
+<tr>
+<td>
+HttpGetAttribute</td>
+<td>Represents an attribute that is used to restrict an 
+action method so that the method handles only HTTP GET requests.</td>
+</tr>
+<tr>
+<td>
+HttpNotFoundResult</td>
+<td>Defines an object that is used to indicate that the 
+requested resource was not found.</td>
+</tr>
+<tr>
+<td>
+HttpPostAttribute</td>
+<td>Represents an attribute that is used to restrict an 
+action method so that the method handles only HTTP POST 
+requests.</td>
+</tr>
+<tr>
+<td>
+HttpPostedFileBaseModelBinder</td>
+<td>Binds a model to a posted file.</td>
+</tr>
+<tr>
+<td>
+HttpPutAttribute</td>
+<td>Represents an attribute that is used to restrict an 
+action method so that the method handles only HTTP PUT requests.</td>
+</tr>
+<tr>
+<td>
+HttpRequestExtensions</td>
+<td>Extends the
+HttpRequestBase class that contains the HTTP values that 
+were sent by a client during a Web request.</td>
+</tr>
+<tr>
+<td>
+HttpStatusCodeResult</td>
+<td>Provides a way to return an action result with a 
+specific HTTP response status code and description.</td>
+</tr>
+<tr>
+<td>
+HttpUnauthorizedResult</td>
+<td>Represents the result of an unauthorized HTTP request.</td>
+</tr>
+<tr>
+<td>
+JavaScriptResult</td>
+<td>Sends JavaScript content to the response.</td>
+</tr>
+<tr>
+<td>
+JsonResult</td>
+<td>Represents a class that is used to send JSON-formatted 
+content to the response.</td>
+</tr>
+<tr>
+<td>
+JsonValueProviderFactory</td>
+<td>Enables action methods to send and receive 
+JSON-formatted text and to model-bind the JSON text to 
+parameters of action methods.</td>
+</tr>
+<tr>
+<td>
+LinqBinaryModelBinder</td>
+<td>Maps a browser request to a LINQ
+Binary object.</td>
+</tr>
+<tr>
+<td>
+ModelBinderAttribute</td>
+<td>Represents an attribute that is used to associate a 
+model type to a model-builder type.</td>
+</tr>
+<tr>
+<td>
+ModelBinderDictionary</td>
+<td>Represents a class that contains all model binders for 
+the application, listed by binder type.</td>
+</tr>
+<tr>
+<td>
+ModelBinderProviderCollection</td>
+<td>Provides a container for model binder providers.</td>
+</tr>
+<tr>
+<td>
+ModelBinderProviders</td>
+<td>Provides a container for model binder providers.</td>
+</tr>
+<tr>
+<td>
+ModelBinders</td>
+<td>Provides global access to the model binders for the 
+application.</td>
+</tr>
+<tr>
+<td>
+ModelBindingContext</td>
+<td>Provides the context in which a model binder 
+functions.</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationEqualToRule</td>
+<td>Provides a container for an equality validation rule 
+that is sent to the browser.</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationRangeRule</td>
+<td>Provides a container for a range-validation rule that 
+is sent to the browser.</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationRegexRule</td>
+<td>Provides a container for a regular-expression client 
+validation rule that is sent to the browser.</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationRemoteRule</td>
+<td>Provides a container for a remote validation rule that 
+is sent to the browser.</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationRequiredRule</td>
+<td>Provides a container for client validation for 
+required field.</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationRule</td>
+<td>Provides a base class container for a client 
+validation rule that is sent to the browser.</td>
+</tr>
+<tr>
+<td>
+ModelClientValidationStringLengthRule</td>
+<td>Provides a container for a string-length validation 
+rule that is sent to the browser.</td>
+</tr>
+<tr>
+<td>
+ModelError</td>
+<td>Represents an error that occurs during model binding.</td>
+</tr>
+<tr>
+<td>
+ModelErrorCollection</td>
+<td>A collection of
+ModelError instances.</td>
+</tr>
+<tr>
+<td>
+ModelMetadata</td>
+<td>Provides a container for common metadata, for the
+ModelMetadataProvider class, and for the
+ModelValidator class for a data model.</td>
+</tr>
+<tr>
+<td>
+ModelMetadataProvider</td>
+<td>Provides an abstract base class for a custom metadata 
+provider.</td>
+</tr>
+<tr>
+<td>
+ModelMetadataProviders</td>
+<td>Provides a container for the current
+ModelMetadataProvider instance.</td>
+</tr>
+<tr>
+<td>
+ModelState</td>
+<td>Encapsulates the state of model binding to a property 
+of an action-method argument, or to the argument itself.</td>
+</tr>
+<tr>
+<td>
+ModelStateDictionary</td>
+<td>Represents the state of an attempt to bind a posted 
+form to an action method, which includes validation information.</td>
+</tr>
+<tr>
+<td>
+ModelValidationResult</td>
+<td>Provides a container for a validation result.</td>
+</tr>
+<tr>
+<td>
+ModelValidator</td>
+<td>Provides a base class for implementing validation 
+logic.</td>
+</tr>
+<tr>
+<td>
+ModelValidatorProvider</td>
+<td>Provides a list of validators for a model.</td>
+</tr>
+<tr>
+<td>
+ModelValidatorProviderCollection</td>
+<td>Provides a container for a list of validation 
+providers.</td>
+</tr>
+<tr>
+<td>
+ModelValidatorProviders</td>
+<td>Provides a container for the current validation 
+provider.</td>
+</tr>
+<tr>
+<td>
+MultiSelectList</td>
+<td>Represents a list of items that users can select more 
+than one item from.</td>
+</tr>
+<tr>
+<td>
+MvcFilter</td>
+<td>When implemented in a derived class, provides a 
+metadata class that contains a reference to the implementation 
+of one or more of the filter interfaces, the filter's order, and 
+the filter's scope.</td>
+</tr>
+<tr>
+<td>
+MvcHandler</td>
+<td>Selects the controller that will handle an HTTP 
+request.</td>
+</tr>
+<tr>
+<td>
+MvcHtmlString</td>
+<td>Represents an HTML-encoded string that should not be 
+encoded again.</td>
+</tr>
+<tr>
+<td>
+MvcHttpHandler</td>
+<td>Verifies and processes an HTTP request.</td>
+</tr>
+<tr>
+<td>
+MvcRouteHandler</td>
+<td>Creates an object that implements the
+IHttpHandler interface and passes the 
+request context to it.</td>
+</tr>
+<tr>
+<td>
+MvcWebRazorHostFactory</td>
+<td>Creates instances of
+MvcWebPageRazorHost files.</td>
+</tr>
+<tr>
+<td>
+NameValueCollectionExtensions</td>
+<td>Extends a NameValueCollection 
+object so that the collection can be copied to a specified 
+dictionary.</td>
+</tr>
+<tr>
+<td>
+NameValueCollectionValueProvider</td>
+<td>Represents the base class for value providers whose 
+values come from a
+NameValueCollection object.</td>
+</tr>
+<tr>
+<td>
+NoAsyncTimeoutAttribute</td>
+<td>Provides a convenience wrapper for the
+AsyncTimeoutAttribute attribute.</td>
+</tr>
+<tr>
+<td>
+NonActionAttribute</td>
+<td>Represents an attribute that is used to indicate that 
+a controller method is not an action method.</td>
+</tr>
+<tr>
+<td>
+OutputCacheAttribute</td>
+<td>Represents an attribute that is used to mark an action 
+method whose output will be cached.</td>
+</tr>
+<tr>
+<td>
+ParameterBindingInfo</td>
+<td>Encapsulates information for binding action-method 
+parameters to a data model.</td>
+</tr>
+<tr>
+<td>
+ParameterDescriptor</td>
+<td>Contains information that describes a parameter.</td>
+</tr>
+<tr>
+<td>
+PartialViewResult</td>
+<td>Represents a base class that is used to send a partial 
+view to the response.</td>
+</tr>
+<tr>
+<td>
+PreApplicationStartCode</td>
+<td>Provides a registration point for ASP.NET Razor 
+pre-application start code.</td>
+</tr>
+<tr>
+<td>
+QueryStringValueProvider</td>
+<td>Represents a value provider for query strings that are 
+contained in a
+NameValueCollection object.</td>
+</tr>
+<tr>
+<td>
+QueryStringValueProviderFactory</td>
+<td>Represents a class that is responsible for creating a 
+new instance of a query-string value-provider object.</td>
+</tr>
+<tr>
+<td>
+RangeAttributeAdapter</td>
+<td>Provides an adapter for the
+RangeAttribute attribute.</td>
+</tr>
+<tr>
+<td>
+RazorView</td>
+<td>Represents the class used to create views that have 
+Razor syntax.</td>
+</tr>
+<tr>
+<td>
+RazorViewEngine</td>
+<td>Represents a view engine that is used to render a Web 
+page that uses the ASP.NET Razor syntax.</td>
+</tr>
+<tr>
+<td>
+RedirectResult</td>
+<td>Controls the processing of application actions by 
+redirecting to a specified URI.</td>
+</tr>
+<tr>
+<td>
+RedirectToRouteResult</td>
+<td>Represents a result that performs a redirection by 
+using the specified route values dictionary.</td>
+</tr>
+<tr>
+<td>
+ReflectedActionDescriptor</td>
+<td>Contains information that describes a reflected action 
+method.</td>
+</tr>
+<tr>
+<td>
+ReflectedControllerDescriptor</td>
+<td>Contains information that describes a reflected 
+controller.</td>
+</tr>
+<tr>
+<td>
+ReflectedParameterDescriptor</td>
+<td>Contains information that describes a reflected 
+action-method parameter.</td>
+</tr>
+<tr>
+<td>
+RegularExpressionAttributeAdapter</td>
+<td>Provides an adapter for the
+RegularExpressionAttribute attribute.</td>
+</tr>
+<tr>
+<td>
+RemoteAttribute</td>
+<td>Provides an attribute that uses the jQuery validation 
+plug-in remote validator. </td>
+</tr>
+<tr>
+<td>
+RequiredAttributeAdapter</td>
+<td>Provides an adapter for the
+RequiredAttributeAttribute attribute.</td>
+</tr>
+<tr>
+<td>
+RequireHttpsAttribute</td>
+<td>Represents an attribute that forces an unsecured HTTP 
+request to be re-sent over HTTPS.</td>
+</tr>
+<tr>
+<td>
+ResultExecutedContext</td>
+<td>Provides the context for the
+OnResultExecuted method of the
+ActionFilterAttribute class.</td>
+</tr>
+<tr>
+<td>
+ResultExecutingContext</td>
+<td>Provides the context for the
+OnResultExecuting method of the
+ActionFilterAttribute class.</td>
+</tr>
+<tr>
+<td>
+RouteCollectionExtensions</td>
+<td>Extends a
+RouteCollection object for MVC routing.</td>
+</tr>
+<tr>
+<td>
+RouteDataValueProvider</td>
+<td>Represents a value provider for route data that is 
+contained in an object that implements the
+IDictionary(Of TKey, TValue) 
+interface.</td>
+</tr>
+<tr>
+<td>
+RouteDataValueProviderFactory</td>
+<td>Represents a factory for creating route-data value 
+provider objects.</td>
+</tr>
+<tr>
+<td>
+SelectList</td>
+<td>Represents a list that lets users select one item.</td>
+</tr>
+<tr>
+<td>
+SelectListItem</td>
+<td>Represents the selected item in an instance of the
+SelectList class.</td>
+</tr>
+<tr>
+<td>
+SessionStateAttribute</td>
+<td>Specifies the session state of the controller.</td>
+</tr>
+<tr>
+<td>
+SessionStateTempDataProvider</td>
+<td>Provides session-state data to the current
+TempDataDictionary object.</td>
+</tr>
+<tr>
+<td>
+StringLengthAttributeAdapter</td>
+<td>Provides an adapter for the
+StringLengthAttribute attribute.</td>
+</tr>
+<tr>
+<td>
+TempDataDictionary</td>
+<td>Represents a set of data that persists only from one 
+request to the next.</td>
+</tr>
+<tr>
+<td>
+TemplateInfo</td>
+<td>Encapsulates information about the current template 
+context.</td>
+</tr>
+<tr>
+<td>
+UrlHelper</td>
+<td>Contains methods to build URLs for ASP.NET MVC within 
+an application.</td>
+</tr>
+<tr>
+<td>
+UrlParameter</td>
+<td>Represents an optional parameter that is used by the
+MvcHandler class during routing.</td>
+</tr>
+<tr>
+<td>
+ValidatableObjectAdapter</td>
+<td>Provides an object adapter that can be validated.</td>
+</tr>
+<tr>
+<td>
+ValidateAntiForgeryTokenAttribute</td>
+<td>Represents an attribute that is used to prevent 
+forgery of a request.</td>
+</tr>
+<tr>
+<td>
+ValidateInputAttribute</td>
+<td>Represents an attribute that is used to mark action 
+methods whose input must be validated.</td>
+</tr>
+<tr>
+<td>
+ValueProviderCollection</td>
+<td>Represents the collection of value-provider objects 
+for the application.</td>
+</tr>
+<tr>
+<td>
+ValueProviderDictionary</td>
+<td><strong>Obsolete. </strong>Represents a dictionary of 
+value providers for the application.</td>
+</tr>
+<tr>
+<td>
+ValueProviderFactories</td>
+<td>Represents a container for value-provider factory 
+objects.</td>
+</tr>
+<tr>
+<td>
+ValueProviderFactory</td>
+<td>Represents a factory for creating value-provider 
+objects.</td>
+</tr>
+<tr>
+<td>
+ValueProviderFactoryCollection</td>
+<td>Represents the collection of value-provider factories 
+for the application.</td>
+</tr>
+<tr>
+<td>
+ValueProviderResult</td>
+<td>Represents the result of binding a value (such as from 
+a form post or query string) to an action-method argument 
+property, or to the argument itself.</td>
+</tr>
+<tr>
+<td>
+ViewContext</td>
+<td>Encapsulates information that is related to rendering 
+a view.</td>
+</tr>
+<tr>
+<td>
+ViewDataDictionary</td>
+<td>Represents a container that is used to pass data 
+between a controller and a view.</td>
+</tr>
+<tr>
+<td>
+ViewDataDictionary(Of TModel)</td>
+<td>Represents a container that is used to pass strongly 
+typed data between a controller and a view.</td>
+</tr>
+<tr>
+<td>
+ViewDataInfo</td>
+<td>Encapsulates information about the current template 
+content that is used to develop templates and about HTML helpers 
+that interact with templates.</td>
+</tr>
+<tr>
+<td>
+ViewEngineCollection</td>
+<td>Represents a collection of view engines that are 
+available to the application.</td>
+</tr>
+<tr>
+<td>
+ViewEngineResult</td>
+<td>Represents the result of locating a view engine.</td>
+</tr>
+<tr>
+<td>
+ViewEngines</td>
+<td>Represents a collection of view engines that are 
+available to the application.</td>
+</tr>
+<tr>
+<td>
+ViewMasterPage</td>
+<td>Represents the information that is needed to build a 
+master view page.</td>
+</tr>
+<tr>
+<td>
+ViewMasterPage(Of TModel)</td>
+<td>Represents the information that is required in order 
+to build a strongly typed master view page.</td>
+</tr>
+<tr>
+<td>
+ViewPage</td>
+<td>Represents the properties and methods that are needed 
+to render a view as a Web Forms page.</td>
+</tr>
+<tr>
+<td>
+ViewPage(Of TModel)</td>
+<td>Represents the information that is required in order 
+to render a strongly typed view as a Web Forms page.</td>
+</tr>
+<tr>
+<td>
+ViewResult</td>
+<td>Represents a class that is used to render a view by 
+using an IView instance that is returned by an
+IViewEngine object.</td>
+</tr>
+<tr>
+<td>
+ViewResultBase</td>
+<td>Represents a base class that is used to provide the 
+model to the view and then render the view to the response.</td>
+</tr>
+<tr>
+<td>
+ViewStartPage</td>
+<td>Provides an abstract class that can be used to 
+implement a view start (master) page.</td>
+</tr>
+<tr>
+<td>
+ViewTemplateUserControl</td>
+<td>Provides a container for
+TemplateInfo objects.</td>
+</tr>
+<tr>
+<td>
+ViewTemplateUserControl(Of TModel)</td>
+<td>Provides a container for
+TemplateInfo objects.</td>
+</tr>
+<tr>
+<td>
+ViewType</td>
+<td>Represents the type of a view.</td>
+</tr>
+<tr>
+<td>
+ViewUserControl</td>
+<td>Represents the information that is needed to build a 
+user control.</td>
+</tr>
+<tr>
+<td>
+ViewUserControl(Of TModel)</td>
+<td>Represents the information that is required in order 
+to build a strongly typed user control.</td>
+</tr>
+<tr>
+<td>
+VirtualPathProviderViewEngine</td>
+<td>Represents an abstract base-class implementation of 
+the
+IViewEngine interface.</td>
+</tr>
+<tr>
+<td>
+WebFormView</td>
+<td>Represents the information that is needed to build a 
+Web Forms page in ASP.NET MVC.</td>
+</tr>
+<tr>
+<td>
+WebFormViewEngine</td>
+<td>Represents a view engine that is used to render a Web 
+Forms page to the response.</td>
+</tr>
+<tr>
+<td>
+WebViewPage</td>
+<td>Represents the properties and methods that are needed 
+in order to render a view that uses ASP.NET Razor syntax.</td>
+</tr>
+<tr>
+<td>
+WebViewPage(Of TModel)</td>
+<td>Represents the properties and methods that are needed 
+in order to render a view that uses ASP.NET Razor syntax.</td>
+</tr>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Interfaces</h2>
+
+<table class="reference">
+<tr>
+<th>Interface</th>
+<th>Description</th>
+</tr>
+<tr> 
+<td>
+IActionFilter</td>
+<td>Defines the methods that are used in an action filter.</td>
+</tr>
+<tr> 
+<td>
+IActionInvoker</td>
+<td>Defines the contract for an action invoker, which is 
+used to invoke an action in response to an HTTP request.</td>
+</tr>
+<tr> 
+<td>
+IAuthorizationFilter</td>
+<td>Defines the methods that are required for an 
+authorization filter.</td>
+</tr>
+<tr> 
+<td>
+IClientValidatable</td>
+<td>Provides a way for the ASP.NET MVC validation 
+framework to discover at run time whether a validator has 
+support for client validation.</td>
+</tr>
+<tr> 
+<td>
+IController</td>
+<td>Defines the methods that are required for a 
+controller.</td>
+</tr>
+<tr> 
+<td>
+IControllerActivator</td>
+<td>Provides fine-grained control over how controllers are 
+instantiated using dependency injection.</td>
+</tr>
+<tr> 
+<td>
+IControllerFactory</td>
+<td>Defines the methods that are required for a controller 
+factory.</td>
+</tr>
+<tr> 
+<td>
+IDependencyResolver</td>
+<td>Defines the methods that simplify service location and 
+dependency resolution.</td>
+</tr>
+<tr> 
+<td>
+IExceptionFilter</td>
+<td>Defines the methods that are required for an exception 
+filter.</td>
+</tr>
+<tr> 
+<td>
+IFilterProvider</td>
+<td>Provides an interface for finding filters.</td>
+</tr>
+<tr> 
+<td>
+IMetadataAware</td>
+<td>Provides an interface for exposing attributes to the
+AssociatedMetadataProvider class.</td>
+</tr>
+<tr> 
+<td>
+IModelBinder</td>
+<td>Defines the methods that are required for a model 
+binder.</td>
+</tr>
+<tr> 
+<td>
+IModelBinderProvider</td>
+<td>Defines methods that enable dynamic implementations of 
+model binding for classes that implement the
+IModelBinder interface. </td>
+</tr>
+<tr> 
+<td>
+IMvcFilter</td>
+<td>Defines members that specify the order of filters and 
+whether multiple filters are allowed.</td>
+</tr>
+<tr> 
+<td>
+IResultFilter</td>
+<td>Defines the methods that are required for a result 
+filter.</td>
+</tr>
+<tr> 
+<td>
+IRouteWithArea</td>
+<td>Associates a route with an area in an ASP.NET MVC 
+application.</td>
+</tr>
+<tr> 
+<td>
+ITempDataProvider</td>
+<td>Defines the contract for temporary-data providers that 
+store data that is viewed on the next request.</td>
+</tr>
+<tr> 
+<td>
+IUnvalidatedValueProvider</td>
+<td>Represents an
+IValueProvider interface that can skip request validation.</td>
+</tr>
+<tr> 
+<td>
+IValueProvider</td>
+<td>Defines the methods that are required for a value 
+provider in ASP.NET MVC.</td>
+</tr>
+<tr> 
+<td>
+IView</td>
+<td>Defines the methods that are required for a view.</td>
+</tr>
+<tr> 
+<td>
+IViewDataContainer</td>
+<td>Defines the methods that are required for a view data 
+dictionary.</td>
+</tr>
+<tr> 
+<td>
+IViewEngine</td>
+<td>Defines the methods that are required for a view 
+engine.</td>
+</tr>
+<tr> 
+<td>
+IViewLocationCache</td>
+<td>Defines the methods that are required in order to 
+cache view locations in memory.</td>
+</tr>
+<tr> 
+<td>
+IViewPageActivator</td>
+<td>Provides fine-grained control </td>
+</tr>
+</table>
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="mvc_publish.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="aspnet_demo_intro.html">Next Chapter &raquo;</a></div>
+</div>
+<a class="chapter" href="aspnet_intro.html">
+
+<hr />
+
+<!-- **** SPOTLIGHTS 1 **** -->
+<!-- SmallPS -->
+<script type='text/javascript'>
+GA_googleFillSlot("SmallPS");
+</script>
+<!-- **** SPOTLIGHTS 2 **** -->
+<!-- LargePS -->
+<script type='text/javascript'>
+GA_googleFillSlot("LargePS");
+</script>
+<!-- **** SPOTLIGHTS 3 **** -->
+<!-- BottomRectangle -->
+<div style="width:340px;margin:auto">
+<script type='text/javascript'>
+GA_googleFillSlot("BottomRectangle");
+</script>
+</div>
+
+<div style="width:470px;margin:auto;margin-top:5px;">
+<!-- BottomBanner -->
+<script type='text/javascript'>
+GA_googleFillSlot("BottomBanner");
+</script>
+</div>
+
+<div id="err_form" style="display:none">
+<h2>Your suggestion:</h2>
+<p><label for="err_email">Your E-mail (optional):</label> <input type="text" id="err_email" name="err_email" /></p>
+<p><label for="err_url">Page address:</label> <input type="text" disabled="disabled" id="err_url" name="err_url" /></p>
+<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+<p class="submit"><input type="button" value="Submit" onclick="sendErr()" /></p>
+<div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent" style="display:none">
+<h2>Thank you for your support.</h2>
+<div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+
+<div id="rightcolumn" style="width:150px;margin:0px;padding:0px;float:left">
+<table>
+<tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/id/w3schools/goto/w3schools">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/coupons">Best Hosting Coupons</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.justhost.com/track/w3schools/textlink">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/index.cfm?A=w3text">$3.98 Unlimited Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.website.com/">Premium Website Design</a>
+</td></tr>
+</table>
+<table>
+<tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML Editor - Free Trial!</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_400H">FREE Website BUILDER</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_400H">CREATE HTML Websites</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.edirecthost.com/main/home">EASY WEBSITE BUILDER</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="../cert/default.html">Get Certified in:<br />HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="../books/default.html">
+New Books:<br />HTML, CSS<br />
+JavaScript, and Ajax</a>
+</td></tr>
+</table>
+<table>
+<tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="../browsers/browsers_stats.html">Browser Statistics</a><br />
+<a target="_top" href="../browsers/browsers_os.html">Browser OS</a><br />
+<a target="_top" href="../browsers/browsers_display.html">Browser Display</a>
+</td></tr></table>
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table>
+<tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height:16px">
+<a href="#" onclick="sharethis();return false;">Share with &raquo;</a>
+</div>
+</td>
+</tr>
+</table>
+<table>
+<tr><td><br />
+<div style="width:124px;margin:auto">
+<!-- SkyScraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("SkyScraper");
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br />
+</div>
+<div style="width:100%;clear:both;margin:0;padding:0;background-color:transparent;background-image:url('../images/gradientbottom.jpg');background-repeat:repeat-x;position:relative;">
+<div id="footer" style="width:960px;margin-left:auto;margin-right:auto;height:110px;">
+<div style="float:left;width:200px;text-align:left;padding-left:3px;padding-top:11px;"><a href="../index.html">
+<img style="border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com" /></a>
+</div>
+<div style="word-spacing:6px;font-size:80%;padding-right:12px;padding-top:19px;float:right;width:600px;text-align:right;">
+<a href="#" onclick="displayError();return false">REPORT ERROR</a> |
+<a href="../default.html" target="_top">HOME</a> |
+<a href="#top" target="_top">TOP</a> |
+<a href='mvc_referenced86a.html?output=print' target="_blank">PRINT</a> |
+<a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+<a href="../about/default.html" target="_top">ABOUT</a>
+</div>
+<div style="padding-top:13px;color:#404040;clear:both;">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.<br />
+While using this site, you agree to have read and accepted our
+<a href="../about/about_copyright.html">terms of use</a> and
+<a href="../about/about_privacy.html">privacy policy</a>.<br />
+<a href="../about/about_copyright.html">Copyright 1999-2012</a> by Refsnes Data. All Rights Reserved.
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/aspnet/mvc_reference.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 06:49:26 GMT -->
+</html>

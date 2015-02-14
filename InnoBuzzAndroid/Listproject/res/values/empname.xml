@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emp">
+    <item name="yogesh">Yogesh</item>   
+    <item name="rohit">rohit</item>    
+    <item name="manish">manish</item>    
+    <item name="rohan">rohan</item>    
+    <item name="hitesh">hitesh</item>    
+    <item name="Naveen">Naveen</item>     
+    </string-array>
+    
+</resources>

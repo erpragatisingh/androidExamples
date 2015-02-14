@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">IIMT World !</string>
+    <string name="app_name">IIMT Zone </string>
+    <string name="sql">create table statuses(_id int primary key,yabma_created_at int,yamba_user text,yamba_text text)</string>
+    <string name="displayCourse">Select Course</string>
+
+    <string-array name="Course">
+        <item> MCA </item>
+        <item> MBA </item>
+        <item> PGDM </item>
+        <item> Btech </item>
+        <item>B Pharma </item>
+        <item> BCA </item>
+        <item> BBA </item>
+    </string-array>
+
+</resources>

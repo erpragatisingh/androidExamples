@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ch.adiuvaris.enigma"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/appName" >
+        <activity
+            android:label="@string/appName"
+            android:name=".EnigmaPuzzle" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="Enigma Settings"
+            android:name=".GamePrefs" >
+        </activity>
+        <activity
+            android:label="Enigma Help"
+            android:name=".GameHelp" >
+        </activity>
+
+        <supports-screens
+            android:anyDensity="true"
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:resizeable="true"
+            android:smallScreens="true">
+        </supports-screens>
+    </application>
+
+</manifest>

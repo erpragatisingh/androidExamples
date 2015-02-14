@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Action_bar_tabActivity!</string>
+    <string name="app_name">Action_bar_tab</string>
+
+</resources>

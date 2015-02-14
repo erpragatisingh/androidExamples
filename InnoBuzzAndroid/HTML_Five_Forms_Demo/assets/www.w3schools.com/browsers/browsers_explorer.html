@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/browsers/browsers_explorer.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 07:06:44 GMT -->
+<head>
+<title>Internet Explorer Browser</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<a id="top"></a>
+<div style="width:960px;margin-top:5px;margin-left:auto;margin-right:auto">
+<div style="width:960px;height:74px;margin:0;padding:0;">
+<div style="width:340px;text-align:left;float:left;">
+	<a href="../index.html"><img width="336" height="69" src="../images/w3schoolslogo.gif" alt="W3Schools.com" style="border:0;margin-top:5px;" /></a>
+</div>
+
+<div style="width:300px;float:right;text-align:right;margin-top:20px;margin-right:14px;margin-bottom:5px;">
+<div id="google_translate_element" style="display:none"></div>
+<div id="translate_link" style="margin-bottom:14px">
+<a href="#" class="topnav"
+onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+	<form style="font-size:11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.w3schools.com" />
+    <input onfocus="searchfield_focus(this)" style="width:150px;color:#808080;font-style:italic;margin:0;" 
+    type="text" name="as_q" size="20" value="Search w3schools.com" /><input type="submit" style="margin:0;" value="Search" title="Search" />
+	</form>
+</div>
+</div>
+<div id="topnav" style="clear:both;width:960px;height:25px;">
+<div style="float:left;width:400px;word-spacing:12px;font-size:90%;padding-left:15px;padding-top:6px;white-space:nowrap;text-align:left;">
+	<a class="topnav" href="../default.html" target="_top">HOME </a>
+	<a class="topnav" href="../html/default.html" target="_top">HTML </a>
+	<a class="topnav" href="../css/default.html" target="_top">CSS </a>
+	<a class="topnav" href="../xml/default.html" target="_top">XML </a>
+	<a class="topnav" href="../js/default.html" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="../asp/default.html" target="_top">ASP </a>
+	<a class="topnav" href="../php/default.html" target="_top">PHP </a>
+	<a class="topnav" href="../sql/default.html" target="_top">SQL </a>	
+	<a class="topnav" href="../sitemap/default.html" target="_top">MORE...</a>
+</div>
+<div style="float:right;width:280px;word-spacing:6px;font-size:80%;padding-right:13px;padding-top:7px;color:#888888;white-space:nowrap;text-align:right;">
+	<a class="topnav" href="../sitemap/default.html#references" target="_top">REFERENCES</a> |
+	<a class="topnav" href="../sitemap/default.html#examples" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://w3schools.invisionzone.com/" target="_top">FORUM</a> |
+	<a class="topnav" href="../about/default.html" target="_top">ABOUT</a>	
+</div>
+</div>
+<div style="width:960px;height:94px;position:relative;margin-left:auto;margin-right:auto;margin:0px;padding:0px;overflow:hidden">
+<script type='text/javascript' src='../../partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-3440800076797949");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-3440800076797949", "MainLeaderboard");
+GA_googleAddSlot("ca-pub-3440800076797949", "SmallPS");
+GA_googleAddSlot("ca-pub-3440800076797949", "LargePS");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomRectangle");
+GA_googleAddSlot("ca-pub-3440800076797949", "SkyScraper");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomBanner");
+GA_googleAddSlot("ca-pub-3440800076797949", "TopRectangle");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- TopRectangle -->
+<script type='text/javascript'>
+GA_googleFillSlot("TopRectangle");
+</script>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- MainLeaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("MainLeaderboard");
+</script>
+</div></div>
+<div style="width:960px;padding:0px;margin:0px;">
+<div id="leftcolumn" style="width:170px;margin:0;padding:0;margin-top:5px;float:left;"><h2 class="left"><span class="left_h2">Browsers</span></h2>
+<a target="_top" href="default.html" >Browser HOME</a><br />
+<a target="_top" href="browsers_stats.html" >Browser Statistics</a><br />
+<a target="_top" href="browsers_os.html" >Browser OS</a><br />
+<a target="_top" href="browsers_display.html" >Browser Display</a><br />
+<a target="_top" href="browsers_mobile.html" >Browser Mobile</a><br />
+<a target="_top" href="browsers_explorer.html" style='font-weight:bold;'>Browser Explorer</a><br />
+<a target="_top" href="browsers_firefox.html" >Browser Firefox</a><br />
+<a target="_top" href="browsers_chrome.html" >Browser Chrome</a><br />
+<a target="_top" href="browsers_safari.html" >Browser Safari</a><br />
+<a target="_top" href="browsers_opera.html" >Browser Opera</a><br />
+<a target="_top" href="browsers_mozilla.html" >Browser Mozilla</a><br />
+<a target="_top" href="browsers_netscape.html" >Browser Netscape</a><br /></div>
+<div style="width:634px;margin:0px;padding:0px;background-color:#ffffff;color:#000000;padding-bottom:8px;padding-right:5px;padding-top:4px;float:left;">
+
+<h1>The <span class="color_h1">Internet Explorer</span> Browser</h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="browsers_mobile.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="browsers_firefox.html">Next Chapter &raquo;</a></div>
+</div>
+<hr />
+<h2>Internet Explorer</h2>
+<img src="pic_ie_large.jpg" alt="Internet Explorer" style="float:left;margin-right:4px;" />
+<p>Internet Explorer is a free web browser from Microsoft.<p>Internet Explorer 
+was released in 1995 and is one of the most popular browsers today.<p>
+<p><a target="_blank" href="http://www.microsoft.com/windows/internet-explorer/">Download Internet Explorer</a></p>
+<hr />
+
+<h2>Internet Explorer Statistics</h2>
+<p>The following table is a breakdown of the Internet Explorer numbers from our <a href="browsers_stats.html">Browsers Statistics</a>:</p>
+
+<table class="reference">
+    <tr>
+    <th align="left" width="16%">2012</th>
+    <th align="right" width="14%">Total</th>
+    <th align="right" width="14%">IE 10</th>
+    <th align="right" width="14%">IE 9</th>
+    <th align="right" width="14%">IE 8</th>
+    <th align="right" width="14%">IE 7</th>      
+    <th align="right" width="14%">IE 6</th>
+    </tr>
+    <tr>
+    <td align="left">May</td>
+    <td align="right">18.1 %</td>
+    <td align="right">0.1 %</td>
+    <td align="right">6.5 %</td>
+    <td align="right">8.8 %</td>
+    <td align="right">2.1 %</td>
+    <td align="right">0.6 %</td>
+    </tr>
+    <tr>
+    <td align="left">April</td>
+    <td align="right">18.3 %</td>
+    <td align="right">0.1 %</td>
+    <td align="right">6.4 %</td>
+    <td align="right">8.8 %</td>
+    <td align="right">2.3 %</td>
+    <td align="right">0.7 %</td>
+    </tr>
+    <tr>
+    <td align="left">March</td>
+    <td align="right">18.9 %</td>
+    <td align="right">0.0 %</td>
+    <td align="right">6.1 %</td>
+    <td align="right">9.4 %</td>
+    <td align="right">2.5 %</td>
+    <td align="right">0.9 %</td>
+    </tr>
+	<tr>
+    <td align="left">February</td>
+    <td align="right">19.5 %</td>
+    <td align="right">0.0 %</td>
+    <td align="right">5.7 %</td>
+    <td align="right">10.2 %</td>
+    <td align="right">2.6 %</td>
+    <td align="right">1.0 %</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">20.1 %</td>
+    <td align="right">0.1 %</td>
+    <td align="right">5.3 %</td>
+    <td align="right">10.5 %</td>
+    <td align="right">3.1 %</td>
+    <td align="right">1.1 %</td>
+    </tr>
+	<tr>
+    <td align="left">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <th align="left">2011</th>
+    <th align="right">Total</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">IE 9</th>
+    <th align="right">IE 8</th>
+    <th align="right">IE 7</th>      
+    <th align="right">IE 6</th>
+    </tr>
+	<tr>
+    <td align="left">December</td>
+    <td align="right">20.2 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">5.1 %</td>
+    <td align="right">10.7 %</td>
+    <td align="right">3.2 %</td>
+    <td align="right">1.2 %</td>
+    </tr>
+	<tr>
+    <td align="left">November&nbsp;</td>
+    <td align="right">21.2 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">5.1 %</td>
+    <td align="right">11.5 %</td>
+    <td align="right">3.4 %</td>
+    <td align="right">1.2 %</td>
+    </tr>
+	<tr>
+    <td align="left">October</td>
+    <td align="right">21.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">5.1 %</td>
+    <td align="right">11.8 %</td>
+    <td align="right">3.5 %</td>
+    <td align="right">1.3 %</td>
+    </tr>
+	<tr>
+    <td align="left">September</td>
+    <td align="right">22.9 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">4.8 %</td>
+    <td align="right">12.4 %</td>
+    <td align="right">3.9 %</td>
+    <td align="right">1.8 %</td>
+    </tr>
+	<tr>
+    <td align="left">August</td>
+    <td align="right">22.5 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">4.2 %</td>
+    <td align="right">11.9 %</td>
+    <td align="right">4.2 %</td>
+    <td align="right">2.0 %</td>
+    </tr>
+	<tr>
+    <td align="left">July</td>
+    <td align="right">22.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">3.9 %</td>
+    <td align="right">11.7 %</td>
+    <td align="right">4.1 %</td>
+    <td align="right">2.3 %</td>
+    </tr>
+	<tr>
+    <td align="left">June</td>
+    <td align="right">23.2 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">3.6 %</td>
+    <td align="right">12.9 %</td>
+    <td align="right">4.4 %</td>
+    <td align="right">2.3 %</td>
+    </tr>
+	<tr>
+    <td align="left">May</td>
+    <td align="right">24.9 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">3.1 %</td>
+    <td align="right">14.1 %</td>
+    <td align="right">5.3 %</td>
+    <td align="right">2.4 %</td>
+    </tr>
+	<tr>
+    <td align="left">April</td>
+    <td align="right">24.3 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">2.1 %</td>
+    <td align="right">14.8 %</td>
+    <td align="right">4.9 %</td>
+    <td align="right">2.5 %</td>
+    </tr>
+	<tr>
+    <td align="left">March</td>
+    <td align="right">25.8 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">1.1 %</td>
+    <td align="right">16.3 %</td>
+    <td align="right">5.4 %</td>
+    <td align="right">3.0 %</td>
+    </tr>
+	<tr>
+    <td align="left">February</td>
+    <td align="right">26.5 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">0.6 %</td>
+    <td align="right">16.7 %</td>
+    <td align="right">5.7 %</td>
+    <td align="right">3.5 %</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">26.6 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">0.5 %</td>
+    <td align="right">16.6 %</td>
+    <td align="right">5.7 %</td>
+    <td align="right">3.8 %</td>
+    </tr>
+	<tr>
+    <td align="left">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+  <tr>
+    <th align="left">2010</th>
+    <th align="right">Total</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">IE 9</th>
+    <th align="right">IE 8</th>
+    <th align="right">IE 7</th>      
+    <th align="right">IE 6</th>
+    </tr>
+	<tr>
+    <td align="left">December</td>
+    <td align="right">27.5 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">0.5 %</td>
+    <td align="right">16.5 %</td>
+    <td align="right">6.1 %</td>
+    <td align="right">4.4 %</td>
+    </tr>
+	<tr>
+    <td align="left">November</td>
+    <td align="right">28.6 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">0.4 %</td>
+    <td align="right">17.6 %</td>
+    <td align="right">6.5 %</td>
+    <td align="right">4.1 %</td>
+    </tr>
+	<tr>
+    <td align="left">October</td>
+    <td align="right">29.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">0.4 %</td>
+    <td align="right">17.3 %</td>
+    <td align="right">7.2 %</td>
+    <td align="right">4.8 %</td>
+    </tr>
+	<tr>
+    <td align="left">September</td>
+    <td align="right">31.1 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">0.2 %</td>
+    <td align="right">17.3 %</td>
+    <td align="right">8.0 %</td>
+    <td align="right">5.6 %</td>
+    </tr>
+	<tr>
+    <td align="left">August</td>
+    <td align="right">30.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">16.2 %</td>
+    <td align="right">7.8 %</td>
+    <td align="right">6.7 %</td>
+    </tr>
+	<tr>
+    <td align="left">July</td>
+    <td align="right">30.4 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">15.6 %</td>
+    <td align="right">7.6 %</td>
+    <td align="right">7.2 %</td>
+    </tr>
+	<tr>
+    <td align="left">June</td>
+    <td align="right">31.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">15.7 %</td>
+    <td align="right">8.1 %</td>
+    <td align="right">7.2 %</td>
+    </tr>
+	<tr>
+    <td align="left">May</td>
+    <td align="right">32.2 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">16.0 %</td>
+    <td align="right">9.1 %</td>
+    <td align="right">7.1 %</td>
+    </tr>
+	<tr>
+    <td align="left">April</td>
+    <td align="right">33.4 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">16.2 %</td>
+    <td align="right">9.3 %</td>
+    <td align="right">7.9 %</td>
+    </tr>
+	<tr>
+    <td align="left">March</td>
+    <td align="right">34.9 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">15.3 %</td>
+    <td align="right">10.7 %</td>
+    <td align="right">8.9 %</td>
+    </tr>
+	<tr>
+    <td align="left">February</td>
+    <td align="right">35.3 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">14.7 %</td>
+    <td align="right">11.0 %</td>
+    <td align="right">9.6 %</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">36.2 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">14.3 %</td>
+    <td align="right">11.7 %</td>
+    <td align="right">10.2 %</td>
+    </tr>
+	<tr>
+    <td align="left">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <th align="left">2009</th>
+    <th align="right">Total</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">IE 8</th>
+    <th align="right">IE 7</th>      
+    <th align="right">IE 6</th>
+    </tr>
+	<tr>
+    <td align="left">December</td>
+    <td align="right">37.2 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">13.5 %</td>
+    <td align="right">12.8 %</td>
+    <td align="right">10.9 %</td>
+    </tr>
+	<tr>
+    <td align="left">November</td>
+    <td align="right">37.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">13.3 %</td>
+    <td align="right">13.3 %</td>
+    <td align="right">11.1 %</td>
+    </tr>
+	<tr>
+    <td align="left">October</td>
+    <td align="right">37.5 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">12.8 %</td>
+    <td align="right">14.1 %</td>
+    <td align="right">10.6 %</td>
+    </tr>
+  	<tr>
+    <td align="left">September</td>
+    <td align="right">39.6 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">12.2 %</td>
+    <td align="right">15.3 %</td>
+    <td align="right">12.1 %</td>
+    </tr>
+	<tr>
+    <td align="left">August</td>
+    <td align="right">39.3 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">10.6 %</td>
+    <td align="right">15.1 %</td>
+    <td align="right">13.6 %</td>
+    </tr>
+	<tr>
+    <td align="left">July</td>
+    <td align="right">39.4 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">9.1 %</td>
+    <td align="right">15.9 %</td>
+    <td align="right">14.4 %</td>
+    </tr>
+	<tr>
+    <td align="left">June</td>
+    <td align="right">40.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">7.1 %</td>
+    <td align="right">18.7 %</td>
+    <td align="right">14.9 %</td>
+    </tr>
+	<tr>
+    <td align="left">May</td>
+    <td align="right">41.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">5.2 %</td>
+    <td align="right">21.3 %</td>
+    <td align="right">14.5 %</td>
+    </tr>
+	<tr>
+    <td align="left">April</td>
+    <td align="right">42.1 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">3.5 %</td>
+    <td align="right">23.2 %</td>
+    <td align="right">15.4 %</td>
+    </tr>
+	<tr>
+    <td align="left">March</td>
+    <td align="right">43.3 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">1.4 %</td>
+    <td align="right">24.9 %</td>
+    <td align="right">17.0 %</td>
+    </tr>
+	<tr>
+    <td align="left">February</td>
+    <td align="right">43.6 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">0.8 %</td>
+    <td align="right">25.4 %</td>
+    <td align="right">17.4 %</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">44.8 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">0.6 %</td>
+    <td align="right">25.7 %</td>
+    <td align="right">18.5 %</td>
+    </tr>
+	<tr>
+    <td align="left">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+	<tr>
+    <th align="left">2008</th>
+    <th align="right">Total</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">IE 7</th>
+    <th align="right">IE 6</th>
+    <th align="right">IE 5</th>
+    </tr>
+	<tr>
+    <td align="left">December</td>
+    <td align="right">46.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">26.1 %</td>
+    <td align="right">19.6 %</td>
+    <td align="right">0.3 %</td>
+    </tr>
+	<tr>
+    <td align="left">November</td>
+    <td align="right">47.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">26.6 %</td>
+    <td align="right">20.0 %</td>
+    <td align="right">0.4 %</td>
+    </tr>
+	<tr>
+    <td align="left">October</td>
+    <td align="right">47.4 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">26.9 %</td>
+    <td align="right">20.2 %</td>
+    <td align="right">0.3 %</td>
+    </tr>
+	<tr>
+    <td align="left">September</td>
+    <td align="right">49.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">26.3 %</td>
+    <td align="right">22.3 %</td>
+    <td align="right">0.4 %</td>
+    </tr>
+	<tr>
+    <td align="left">August</td>
+    <td align="right">51.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">26.0 %</td>
+    <td align="right">24.5 %</td>
+    <td align="right">0.5 %</td>
+    </tr>
+	<tr>
+    <td align="left">July</td>
+    <td align="right">52.4 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">26.4 %</td>
+    <td align="right">25.3 %</td>
+    <td align="right">0.7 %</td>
+    </tr>
+	<tr>
+    <td align="left">June</td>
+    <td align="right">54.2 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">27.0 %</td>
+    <td align="right">26.5 %</td>
+    <td align="right">0.7 %</td>
+    </tr>
+	<tr>
+    <td align="left">May</td>
+    <td align="right">54.4 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">26.5 %</td>
+    <td align="right">27.3 %</td>
+    <td align="right">0.6 %</td>
+    </tr>
+	<tr>
+    <td align="left">April</td>
+    <td align="right">54.8 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">24.9 %</td>
+    <td align="right">28.9 %</td>
+    <td align="right">1.0 %</td>
+    </tr>
+	<tr>
+    <td align="left">March</td>
+    <td align="right">53.9 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">23.3 %</td>
+    <td align="right">29.5 %</td>
+    <td align="right">1.1 %</td>
+    </tr>
+	<tr>
+    <td align="left">February</td>
+    <td align="right">54.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">22.7 %</td>
+    <td align="right">30.7 %</td>
+    <td align="right">1.3 %</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">54.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">21.2 %</td>
+    <td align="right">32.0 %</td>
+    <td align="right">1.5 %</td>
+    </tr>
+	<tr>
+    <td align="left">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+	<tr>
+    <th align="left">2007</th>
+    <th align="right">Total</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">IE 7</th>
+    <th align="right">IE 6</th>
+    <th align="right">IE 5</th>
+    </tr>
+	<tr>
+    <td align="left">November</td>
+    <td align="right">56.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">20.8 %</td>
+    <td align="right">33.6 %</td>
+    <td align="right">1.6 %</td>
+    </tr>
+	<tr>
+    <td align="left">September</td>
+    <td align="right">57.2 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">20.8 %</td>
+    <td align="right">34.9 %</td>
+    <td align="right">1.5 %</td>
+    </tr>
+	<tr>
+    <td align="left">July</td>
+    <td align="right">58.5 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">20.1 %</td>
+    <td align="right">36.9 %</td>
+    <td align="right">1.5 %</td>
+    </tr>
+	<tr>
+    <td align="left">May</td>
+    <td align="right">58.9 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">19.2 %</td>
+    <td align="right">38.1 %</td>
+    <td align="right">1.6 %</td>
+    </tr>
+	<tr>
+    <td align="left">March</td>
+    <td align="right">58.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">18.0 %</td>
+    <td align="right">38.7 %</td>
+    <td align="right">2.0 %</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">58.6 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">13.3 %</td>
+    <td align="right">42.3 %</td>
+    <td align="right">3.0 %</td>
+    </tr>
+	<tr>
+    <td align="left">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    </tr>
+	<tr>
+    <th align="left">2006</th>
+    <th align="right">Total</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">IE 7</th>
+    <th align="right">IE 6</th>
+    <th align="right">IE 5</th>
+    </tr>
+	<tr>
+    <td align="left">November</td>
+    <td align="right">60.6 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">7.1 %</td>
+    <td align="right">49.9 %</td>
+    <td align="right">3.6 %</td>
+    </tr>
+	<tr>
+    <td align="left">September</td>
+    <td align="right">62.1 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">2.5 %</td>
+    <td align="right">55.6 %</td>
+    <td align="right">4.0 %</td>
+    </tr>
+	<tr>
+    <td align="left">July</td>
+    <td align="right">62.4 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">1.9 %</td>
+    <td align="right">56.3 %</td>
+    <td align="right">4.2 %</td>
+    </tr>
+	<tr>
+    <td align="left">May</td>
+    <td align="right">63.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">1.1 %</td>
+    <td align="right">57.4 %</td>
+    <td align="right">4.5 %</td>
+    </tr>
+	<tr>
+    <td align="left">March</td>
+    <td align="right">64.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">0.6 %</td>
+    <td align="right">58.8 %</td>
+    <td align="right">5.3 %</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">66.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">0.2 %</td>
+    <td align="right">60.3 %</td>
+    <td align="right">5.5 %</td>
+    </tr>
+	<tr>
+    <td align="left">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+	<tr>
+    <th align="left">2005</th>
+    <th align="right">Total</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">IE 6</th>
+    <th align="right">IE 5</th>
+    </tr>
+	<tr>
+    <td align="left">November</td>
+    <td align="right">68.9 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">62.7 %</td>
+    <td align="right">6.2 %</td>
+    </tr>
+	<tr>
+    <td align="left">September</td>
+    <td align="right">75.5 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">69.8 %</td>
+    <td align="right">5.7 %</td>
+    </tr>
+	<tr>
+    <td align="left">July</td>
+    <td align="right">73.8 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">67.9 %</td>
+    <td align="right">5.9 %</td>
+    </tr>
+	<tr>
+    <td align="left">May</td>
+    <td align="right">71.6 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">64.8 %</td>
+    <td align="right">6.8 %</td>
+    </tr>
+	<tr>
+    <td align="left">March</td>
+    <td align="right">72.5 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">63.6 %</td>
+    <td align="right">8.9 %</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">74.5 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">64.8 %</td>
+    <td align="right">9.7 %</td>
+    </tr>
+	<tr>
+    <td align="left">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    </tr>
+	<tr>
+    <th align="left">2004</th>
+    <th align="right">Total</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">IE 6</th>
+    <th align="right">IE 5</th>
+    </tr>
+	<tr>
+    <td align="left">November</td>
+    <td align="right">76.2 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">66.0 %</td>
+    <td align="right">10.2 %</td>
+    </tr>
+	<tr>
+    <td align="left">September</td>
+    <td align="right">79.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">67.8 %</td>
+    <td align="right">11.2 %</td>
+    </tr>
+	<tr>
+    <td align="left">July</td>
+    <td align="right">80.4 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">67.2 %</td>
+    <td align="right">13.2 %</td>
+    </tr>
+	<tr>
+    <td align="left">May</td>
+    <td align="right">81.9 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">68.1 %</td>
+    <td align="right">13.8 %</td>
+    </tr>
+	<tr>
+    <td align="left">March</td>
+    <td align="right">82.8 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">68.2 %</td>
+    <td align="right">14.6 %</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">84.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">68.9 %</td>
+    <td align="right">15.8 %</td>
+    </tr>
+	<tr>
+    <td align="left">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    </tr>
+	<tr>
+    <th align="left">2003</th>
+    <th align="right">Total</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">IE 6</th>
+    <th align="right">IE 5</th>
+    </tr>
+	<tr>
+    <td align="left">November</td>
+    <td align="right">84.9 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">71.2 %</td>
+    <td align="right">13.7 %</td>
+    </tr>
+	<tr>
+    <td align="left">September</td>
+    <td align="right">86.6 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">69.7 %</td>
+    <td align="right">16.9 %</td>
+    </tr>
+	<tr>
+    <td align="left">July</td>
+    <td align="right">87.2 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">66.9 %</td>
+    <td align="right">20.3 %</td>
+    </tr>
+	<tr>
+    <td align="left">May</td>
+    <td align="right">87.7 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">65.0 %</td>
+    <td align="right">22.7 %</td>
+    </tr>
+	<tr>
+    <td align="left">March</td>
+    <td align="right">88.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">63.4 %</td>
+    <td align="right">24.6 %</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">84.6 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">55.3 %</td>
+    <td align="right">29.3 %</td>
+    </tr>
+	<tr>
+    <td align="left">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    </tr>
+	<tr>
+    <th align="left">2002</th>
+    <th align="right">Total</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">&nbsp;</th>
+    <th align="right">IE 6</th>
+    <th align="right">IE 5</th>
+    <th align="right">IE4</th>
+    </tr>
+	<tr>
+    <td align="left">November</td>
+    <td align="right">83.4 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">53.5 %</td>
+    <td align="right">29.9 %</td>
+    <td align="right">&nbsp;</td>
+    </tr>
+	<tr>
+    <td align="left">September</td>
+    <td align="right">83.5 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">49.1 %</td>
+    <td align="right">34.4 %</td>
+    <td align="right">&nbsp;</td>
+    </tr>
+	<tr>
+    <td align="left">July</td>
+    <td align="right">85.0 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">44.4 %</td>
+    <td align="right">40.1 %</td>
+    <td align="right">0.5%</td>
+    </tr>
+	<tr>
+    <td align="left">May</td>
+    <td align="right">87.4 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">40.7 %</td>
+    <td align="right">46.0 %</td>
+    <td align="right">0.7%</td>
+    </tr>
+	<tr>
+    <td align="left">March</td>
+    <td align="right">86.8 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">36.7 %</td>
+    <td align="right">49.4 %</td>
+    <td align="right">0.7%</td>
+    </tr>
+	<tr>
+    <td align="left">January</td>
+    <td align="right">86.8 %</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">&nbsp;</td>
+    <td align="right">30.1 %</td>
+    <td align="right">55.7 %</td>
+    <td align="right">1.0%</td>
+    </tr>
+	</table>
+<p>These statistics are based on W3Schools users.</p>
+<hr />
+
+<h2>Internet Explorer 9</h2>
+<p>Internet Explorer 9 was released in March 2011.</p>
+<p>New features:</p>
+<ul>
+	<li><b>Revamped Interface</b> - Gives you the basic controls and puts the 
+	focus on site viewing</li>
+	<li><b>Breezing Fast Speed</b> - IE9 is much faster than its previous IE 
+	versions. Hardware-accelerated text, video and graphics speed up 
+	performance that makes websites perform like programs installed on your 
+	computer. Also, IE9 uses video card to make everything faster</li>
+	<li><b>Pin Websites To Windows 7 Taskbar</b> - Microsoft have partnership 
+	with sites like Facebook, Twitter and Pandora which allows you to see 
+	own taskbar complete with jumplist support</li>
+	<li><b>Unified Address Bar</b> - The address bar is a unified box for 
+	navigating the site or start a search</li>
+	<li><b>Redesigned New Tab Page</b> - Gives a quick access to the sites you 
+	visit often. You can also reopen closed tabs, or your 
+	last browsing session, or start a new InPrivate browsing session</li>
+	<li><b>Improved Add-on Management</b> - A new feature called Add-on 
+	Performance Adviser gives you an idea about which add-on is slowing down 
+	your browsers and allows you to remove it</li>
+	<li><b>Better Privacy Features</b> - The tracking protection feature enables 
+	you to limit the sites that can track your information</li>
+	<li><b>Better HTML5/CSS3 Support</b> - IE9 also supports SVG and 
+	Canvas graphics</li>
+	<li><b>New Download Manager</b> - Allows you to view files that are 
+	downloading through your browser, and notifies when a file is 
+	malicious or contains viruses. It also helps you to pause any of the 
+	download and resume it later.</li>
+	<li><b>Enhanced Tab Management</b> - You can easily move tabs between 
+	windows by tearing them from one window to another. After 
+	placing your tab in a new windows it won’t reload the page.</li>
+</ul>
+<hr />
+
+<h2>Internet Explorer 8</h2>
+<p>Internet Explorer 8 was released in March 2009.</p>
+<p>New features:</p>
+<ul>
+	<li><b>Accelerators</b> - quick access to web services. E.g. On a restaurant web site, 
+	click within the page to get maps, news, information, or share it on Facebook</li>
+	<li><b>Web Slice</b> - keep up with changes to the sites you care about most</li>
+	<li><b>Compatibility View</b> - shows the page as in IE7</li>
+	<li><b>Search Suggestions - </b>get suggested content as you type</li>
+	<li><b>New Tab features</b> - reopen accidentally closed tabs, 
+	and group related tabs together with color codes</li>
+	<li><b>Tab isolation</b> - prevents a faulty web site from crashing the 
+	whole browser. Only the tab with the error will close</li>
+	<li><b>InPrivate Browsing</b> - browse the web without saving any data 
+	(like passwords, cookies, browsing history, etc.)</li>
+	<li><b>SmartScreen Filter</b> - protects you against installation of malware, or 
+	malicious software which can compromise your data, privacy, and identity, 
+	and also damaging your computer and valuable data</li>
+</ul>
+<p>IE 8 has full support for CSS 2.1. In addition, it 
+has fixed many cross-browser inconsistencies such as get/set/removeAttribute, 
+default attributes, Attribute object and the &lt;q&gt; tag.</p>
+<hr />
+
+<h2>Internet Explorer 7</h2>
+<p>Internet Explorer 7.0 was released in November 2006. IE7 was the standard 
+browser in Windows XP with Service Pack 2.</p>
+<p>New features:</p>
+<ul>
+	<li><b>Advanced printing - </b>automatically scales a webpage for printing</li>
+	<li><b>Instant Search box</b></li>
+	<li><b>Favorites Center</b></li>
+	<li><b>RSS feeds</b> - automatically detects RSS feeds</li>
+	<li><b>Tabbed browsing</b> - view multiple sites in a single browser window</li>
+	<li><b>Quick Tabs</b></li>
+	<li><b>Tab Groups</b></li>
+	<li><b>Page zoom</b></li>
+</ul>
+<hr />
+
+<h2>Internet Explorer for Macintosh</h2>
+<p>Microsoft ended support for Internet Explorer for Mac on December 31st, 
+2005.</p>
+<p>Mac 
+users are recommended to use other browsers, such as 
+<a href="browsers_safari.html">Apple's Safari</a>.</p>
+<hr />
+
+<h2>Older Internet Explorer Versions</h2>
+<p><b>IE 6.0</b> (released in 2001). Was the standard browser in Windows XP.</p>
+<p><b>IE 5.5</b>  (released in 2000) Support for XML/XSL,
+CSS, print preview and HTC behaviors.</p>
+<p><b>IE 5.0</b>   (released in 1999) The first major browser with XML support.</p>
+<p><b>IE 4.0</b>  (released in 1997). Support for CSS and DOM.</p>
+<p><b>IE 3.0</b>  (released in 1996) is now used by less than 0.1%.</p>
+<p><b>IE 2.0</b>  (released in 1995). It is too old. Nobody uses it.</p>
+<p><b>IE 1.0</b> (released in 1995). Does anyone remember it?</p>
+<hr />
+
+<h2>Microsoft Internet Explorer Resources</h2>
+<p><a target="_blank" href="http://support.microsoft.com/">Microsoft's Support 
+Site</a><br />
+Microsoft's support website has a searchable knowledge database, articles, forums, 
+and tutorials full of solutions and tips for a better experience.</p>
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="browsers_mobile.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="browsers_firefox.html">Next Chapter &raquo;</a></div>
+</div>
+
+<hr />
+
+<!-- **** SPOTLIGHTS 1 **** -->
+<!-- SmallPS -->
+<script type='text/javascript'>
+GA_googleFillSlot("SmallPS");
+</script>
+<!-- **** SPOTLIGHTS 2 **** -->
+<!-- LargePS -->
+<script type='text/javascript'>
+GA_googleFillSlot("LargePS");
+</script>
+<!-- **** SPOTLIGHTS 3 **** -->
+<!-- BottomRectangle -->
+<div style="width:340px;margin:auto">
+<script type='text/javascript'>
+GA_googleFillSlot("BottomRectangle");
+</script>
+</div>
+
+<div style="width:470px;margin:auto;margin-top:5px;">
+<!-- BottomBanner -->
+<script type='text/javascript'>
+GA_googleFillSlot("BottomBanner");
+</script>
+</div>
+
+<div id="err_form" style="display:none">
+<h2>Your suggestion:</h2>
+<p><label for="err_email">Your E-mail (optional):</label> <input type="text" id="err_email" name="err_email" /></p>
+<p><label for="err_url">Page address:</label> <input type="text" disabled="disabled" id="err_url" name="err_url" /></p>
+<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+<p class="submit"><input type="button" value="Submit" onclick="sendErr()" /></p>
+<div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent" style="display:none">
+<h2>Thank you for your support.</h2>
+<div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+
+<div id="rightcolumn" style="width:150px;margin:0px;padding:0px;float:left">
+<table>
+<tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/id/w3schools/goto/w3schools">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/coupons">Best Hosting Coupons</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.justhost.com/track/w3schools/textlink">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/index.cfm?A=w3text">$3.98 Unlimited Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.website.com/">Premium Website Design</a>
+</td></tr>
+</table>
+<table>
+<tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML Editor - Free Trial!</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_400H">FREE Website BUILDER</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_400H">CREATE HTML Websites</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.edirecthost.com/main/home">EASY WEBSITE BUILDER</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="../cert/default.html">Get Certified in:<br />HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="../books/default.html">
+New Books:<br />HTML, CSS<br />
+JavaScript, and Ajax</a>
+</td></tr>
+</table>
+<table>
+<tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="browsers_stats.html">Browser Statistics</a><br />
+<a target="_top" href="browsers_os.html">Browser OS</a><br />
+<a target="_top" href="browsers_display.html">Browser Display</a>
+</td></tr></table>
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table>
+<tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height:16px">
+<a href="#" onclick="sharethis();return false;">Share with &raquo;</a>
+</div>
+</td>
+</tr>
+</table>
+<table>
+<tr><td><br />
+<div style="width:124px;margin:auto">
+<!-- SkyScraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("SkyScraper");
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br />
+</div>
+<div style="width:100%;clear:both;margin:0;padding:0;background-color:transparent;background-image:url('../images/gradientbottom.jpg');background-repeat:repeat-x;position:relative;">
+<div id="footer" style="width:960px;margin-left:auto;margin-right:auto;height:110px;">
+<div style="float:left;width:200px;text-align:left;padding-left:3px;padding-top:11px;"><a href="../index.html">
+<img style="border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com" /></a>
+</div>
+<div style="word-spacing:6px;font-size:80%;padding-right:12px;padding-top:19px;float:right;width:600px;text-align:right;">
+<a href="#" onclick="displayError();return false">REPORT ERROR</a> |
+<a href="../default.html" target="_top">HOME</a> |
+<a href="#top" target="_top">TOP</a> |
+<a href='browsers_explorerd86a.html?output=print' target="_blank">PRINT</a> |
+<a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+<a href="../about/default.html" target="_top">ABOUT</a>
+</div>
+<div style="padding-top:13px;color:#404040;clear:both;">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.<br />
+While using this site, you agree to have read and accepted our
+<a href="../about/about_copyright.html">terms of use</a> and
+<a href="../about/about_privacy.html">privacy policy</a>.<br />
+<a href="../about/about_copyright.html">Copyright 1999-2012</a> by Refsnes Data. All Rights Reserved.
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/browsers/browsers_explorer.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 07:06:46 GMT -->
+</html>

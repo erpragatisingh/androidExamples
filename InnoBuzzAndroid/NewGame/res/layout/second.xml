@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:weightSum="1"
+     >
+<LinearLayout 
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"  
+    android:layout_weight="0.3"
+    >      
+ <TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="You have only 5 chances to find the right number "
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textSize="15sp">
+   </TextView>    
+    
+ </LinearLayout>   
+    
+<LinearLayout 
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"  
+     android:layout_weight="0.5"
+    
+    >    
+    <TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Guess the number and enter below:"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textSize="15sp">
+   </TextView>
+   
+    <EditText 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter your number here"
+        android:layout_gravity="center"
+        android:id="@+id/ed1">
+    </EditText>
+
+      
+    <TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Check Your luck"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:paddingTop="10dp"
+        >
+    </TextView> 
+    <Button 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/btn3"
+        android:text="Click Me "
+        android:layout_gravity="center">
+    </Button>
+    
+    <TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/cha" 
+        android:text="you hava 5 chance left"
+        android:layout_gravity="center"/>
+    </LinearLayout>
+    
+	<LinearLayout 
+	    android:layout_height="wrap_content"
+	    android:layout_width="fill_parent"
+	    android:layout_weight="0.2"
+	    android:id="@+id/prolin">
+    
+	</LinearLayout>
+	
+</LinearLayout>

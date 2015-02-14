@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/css/css_examples.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 05:25:03 GMT -->
+<head>
+
+<title>CSS Examples</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<a id="top"></a>
+<div style="width:960px;margin-top:5px;margin-left:auto;margin-right:auto">
+<div style="width:960px;height:74px;margin:0;padding:0;">
+<div style="width:340px;text-align:left;float:left;">
+	<a href="../index.html"><img width="336" height="69" src="../images/w3schoolslogo.gif" alt="W3Schools.com" style="border:0;margin-top:5px;" /></a>
+</div>
+
+<div style="width:300px;float:right;text-align:right;margin-top:20px;margin-right:14px;margin-bottom:5px;">
+<div id="google_translate_element" style="display:none"></div>
+<div id="translate_link" style="margin-bottom:14px">
+<a href="#" class="topnav"
+onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+	<form style="font-size:11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.w3schools.com" />
+    <input onfocus="searchfield_focus(this)" style="width:150px;color:#808080;font-style:italic;margin:0;" 
+    type="text" name="as_q" size="20" value="Search w3schools.com" /><input type="submit" style="margin:0;" value="Search" title="Search" />
+	</form>
+</div>
+</div>
+<div id="topnav" style="clear:both;width:960px;height:25px;">
+<div style="float:left;width:400px;word-spacing:12px;font-size:90%;padding-left:15px;padding-top:6px;white-space:nowrap;text-align:left;">
+	<a class="topnav" href="../default.html" target="_top">HOME </a>
+	<a class="topnav" href="../html/default.html" target="_top">HTML </a>
+	<a class="topnav" href="default.html" target="_top">CSS </a>
+	<a class="topnav" href="../xml/default.html" target="_top">XML </a>
+	<a class="topnav" href="../js/default.html" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="../asp/default.html" target="_top">ASP </a>
+	<a class="topnav" href="../php/default.html" target="_top">PHP </a>
+	<a class="topnav" href="../sql/default.html" target="_top">SQL </a>	
+	<a class="topnav" href="../sitemap/default.html" target="_top">MORE...</a>
+</div>
+<div style="float:right;width:280px;word-spacing:6px;font-size:80%;padding-right:13px;padding-top:7px;color:#888888;white-space:nowrap;text-align:right;">
+	<a class="topnav" href="../sitemap/default.html#references" target="_top">REFERENCES</a> |
+	<a class="topnav" href="../sitemap/default.html#examples" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://w3schools.invisionzone.com/" target="_top">FORUM</a> |
+	<a class="topnav" href="../about/default.html" target="_top">ABOUT</a>	
+</div>
+</div>
+<div style="width:960px;height:94px;position:relative;margin-left:auto;margin-right:auto;margin:0px;padding:0px;overflow:hidden">
+<script type='text/javascript' src='../../partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-3440800076797949");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-3440800076797949", "MainLeaderboard");
+GA_googleAddSlot("ca-pub-3440800076797949", "SmallPS");
+GA_googleAddSlot("ca-pub-3440800076797949", "LargePS");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomRectangle");
+GA_googleAddSlot("ca-pub-3440800076797949", "SkyScraper");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomBanner");
+GA_googleAddSlot("ca-pub-3440800076797949", "TopRectangle");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- TopRectangle -->
+<script type='text/javascript'>
+GA_googleFillSlot("TopRectangle");
+</script>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- MainLeaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("MainLeaderboard");
+</script>
+</div></div>
+<div style="width:960px;padding:0px;margin:0px;">
+<div id="leftcolumn" style="width:170px;margin:0;padding:0;margin-top:5px;float:left;"><h2 class="left"><span class="left_h2">CSS</span> Basic</h2>
+<a target="_top" href="default.html" >CSS HOME</a><br />
+<a target="_top" href="css_intro.html" >CSS Introduction</a><br />
+<a target="_top" href="css_syntax.html" >CSS Syntax</a><br />
+<a target="_top" href="css_id_class.html" >CSS Id &amp; Class</a><br />
+<a target="_top" href="css_howto.html" >CSS How To</a><br />
+<br />
+<h2 class="left"><span class="left_h2">CSS</span> Styling</h2>
+<a target="_top" href="css_background.html" >Styling Backgrounds</a><br />
+<a target="_top" href="css_text.html" >Styling Text</a><br />
+<a target="_top" href="css_font.html" >Styling Fonts</a><br />
+<a target="_top" href="css_link.html" >Styling Links</a><br />
+<a target="_top" href="css_list.html" >Styling Lists</a><br />
+<a target="_top" href="css_table.html" >Styling Tables</a><br />
+<br />
+<h2 class="left"><span class="left_h2">CSS</span> Box Model</h2>
+<a target="_top" href="css_boxmodel.html" >CSS Box Model</a><br />
+<a target="_top" href="css_border.html" >CSS Border</a><br />
+<a target="_top" href="css_outline.html" >CSS Outline</a><br />
+<a target="_top" href="css_margin.html" >CSS Margin</a><br />
+<a target="_top" href="css_padding.html" >CSS Padding</a><br />
+<br />
+<h2 class="left"><span class="left_h2">CSS</span> Advanced</h2>
+<a target="_top" href="css_grouping_nesting.html" >CSS Grouping/Nesting</a><br />
+<a target="_top" href="css_dimension.html" >CSS Dimension</a><br />
+<a target="_top" href="css_display_visibility.html" >CSS Display</a><br />
+<a target="_top" href="css_positioning.html" >CSS Positioning</a><br />
+<a target="_top" href="css_float.html" >CSS Floating</a><br />
+<a target="_top" href="css_align.html" >CSS Align</a><br />
+<a target="_top" href="css_pseudo_classes.html" >CSS Pseudo-class</a><br />
+<a target="_top" href="css_pseudo_elements.html" >CSS Pseudo-element</a><br />
+<a target="_top" href="css_navbar.html" >CSS Navigation Bar</a><br />
+<a target="_top" href="css_image_gallery.html" >CSS Image Gallery</a><br />
+<a target="_top" href="css_image_transparency.html" >CSS Image Opacity</a><br />
+<a target="_top" href="css_image_sprites.html" >CSS Image Sprites</a><br />
+<a target="_top" href="css_mediatypes.html" >CSS Media Types</a><br />
+<a target="_top" href="css_attribute_selectors.html" >CSS Attribute Selectors</a><br />
+<a target="_top" href="css_summary.html" >CSS Summary</a><br />
+<br />
+<h2 class="left"><span class="left_h2">CSS</span> Examples</h2>
+<a target="_top" href="css_examples.html" style='font-weight:bold;'>CSS Examples</a><br />
+<br />
+<h2 class="left"><span class="left_h2">CSS</span> Quiz</h2>
+<a target="_top" href="css_quiz.html" >CSS Quiz</a><br />
+<a target="_top" href="css_exam.html" >CSS Certificate</a><br />
+<br />
+<h2 class="left"><span class="left_h2">CSS</span> References</h2>
+<a target="_top" href="../cssref/default.html" >CSS Reference</a><br />
+<a target="_top" href="../cssref/css_selectors.html" >CSS Selectors</a><br />
+<a target="_top" href="../cssref/css_ref_aural.html" >CSS Reference Aural</a><br />
+<a target="_top" href="../cssref/css_websafe_fonts.html" >CSS Web Safe Fonts</a><br />
+<a target="_top" href="../cssref/css_units.html" >CSS Units</a><br />
+<a target="_top" href="../cssref/css_colors.html" >CSS Colors</a><br />
+<a target="_top" href="../cssref/css_colors_legal.html" >CSS Color Values</a><br />
+<a target="_top" href="../cssref/css_colornames.html" >CSS Color Names</a><br />
+<a target="_top" href="../cssref/css_colorsfull.html" >CSS Color HEX</a><br /></div>
+<div style="width:634px;margin:0px;padding:0px;background-color:#ffffff;color:#000000;padding-bottom:8px;padding-right:5px;padding-top:4px;float:left;">
+
+<h1>CSS <span class="color_h1">Examples</span></h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="css_summary.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="css_quiz.html">Next Chapter &raquo;</a></div>
+</div>
+<hr />
+
+<p><b>CSS Backgrounds</b></p>
+<p><a target="_blank" href="tryit3c26.html?filename=trycss_background-color_body">Set the background color of a page</a><br />
+<a target="_blank" href="tryit3e53.html?filename=trycss_background-color_elements">Set the background color of different elements</a><br />
+<a target="_blank" href="tryitba26.html?filename=trycss_background-image">Set an image as the background of a page</a><br />
+<a target="_blank" href="tryit4614.html?filename=trycss_background-image_bad">Bad background image</a><br />
+<a target="_blank" href="tryit5773.html?filename=trycss_background-image_gradient2">How to repeat a background image only horizontally</a><br />
+<a target="_blank" href="tryit6009.html?filename=trycss_background-image_position">How to position a background image</a><br />
+<a target="_blank" href="tryit2839.html?filename=trycss_background-attachment">A fixed background image (this image will not scroll with the rest of the page)</a><br />
+<a target="_blank" href="tryitaf20.html?filename=trycss_background_shorthand">All the background properties in one declaration</a><br />
+<a target="_blank" href="tryitac88.html?filename=trycss_background_shorthand2">Advanced background example</a></p>
+<p><a class="example" href="css_background.html">Background properties explained</a></p>
+<hr />
+
+<p><b>CSS Text</b></p>
+<p><a target="_blank" href="tryita86c.html?filename=trycss_color">Set the text color of different elements</a><br />
+<a target="_blank" href="tryit89c0.html?filename=trycss_text-align_all">Align the text</a><br />
+<a target="_blank" href="tryitd447.html?filename=trycss_text-decoration_link">Remove the line under links</a><br />
+<a target="_blank" href="tryit6cff.html?filename=trycss_text-decoration">Decorate the text</a><br />
+<a target="_blank" href="tryitea05.html?filename=trycss_text-transform">Control the letters in a text</a><br />
+<a target="_blank" href="tryit6d5c.html?filename=trycss_text-indent">Indent text</a><br />
+<a target="_blank" href="tryit3123.html?filename=trycss_letter-spacing">Specify the space between characters</a><br />
+<a target="_blank" href="tryit44c1.html?filename=trycss_line-height">Specify the space between lines</a><br />
+<a target="_blank" href="tryit6f15.html?filename=trycss_text_direction">Set the text direction of an element</a><br />
+<a target="_blank" href="tryit6926.html?filename=trycss_text_word-spacing">Increase the white space between words</a><br />
+<a target="_blank" href="tryit96c9.html?filename=trycss_text_white-space">Disable text wrapping inside an element</a><br />
+<a target="_blank" href="tryit0c65.html?filename=trycss_vertical-align">Vertical alignment of an image inside text</a></p>
+<p><a class="example" href="css_text.html">Text properties explained</a></p>
+<hr />
+
+<p><b>CSS Fonts</b></p>
+<p><a target="_blank" href="tryit4238.html?filename=trycss_font-family">Set the font of a text</a><br />
+<a target="_blank" href="tryit17d0.html?filename=trycss_font-size">Set the size of the font</a><br />
+<a target="_blank" href="tryitbc1d.html?filename=trycss_font-size_px">Set the size of the font in px</a><br />
+<a target="_blank" href="tryit2806.html?filename=trycss_font-size_em">Set the size of the font in em</a><br />
+<a target="_blank" href="tryitff7e.html?filename=trycss_font-size_percent_em">Set the size of the font in percent and em</a><br />
+<a target="_blank" href="tryit74fb.html?filename=trycss_font-style">Set the style of the font</a><br />
+<a target="_blank" href="tryit193f.html?filename=trycss_font-variant">Set the variant of the font</a><br />
+<a target="_blank" href="tryitf616.html?filename=trycss_font-weight">Set the boldness of the font</a><br />
+<a target="_blank" href="tryit46ae.html?filename=trycss_font">All the font properties in one declaration</a></p>
+<p><a class="example" href="css_font.html">Font properties explained</a></p>
+<hr />
+
+<p><b>CSS Links</b></p>
+<p><a target="_blank" href="tryit9cfd.html?filename=trycss_link">Add different colors to visited/unvisited links</a><br />
+<a target="_blank" href="tryit56a1.html?filename=trycss_link_decoration">Use of text-decoration on links</a><br />
+<a target="_blank" href="tryitafeb.html?filename=trycss_link_background">Specify a background color for links</a><br />
+<a target="_blank" href="tryitb066.html?filename=trycss_link2">Add other styles to hyperlinks</a><br />
+<a target="_blank" href="tryit051c.html?filename=trycss_link_advanced">Advanced - Create link boxes</a></p>
+<p><a class="example" href="css_link.html">Link properties explained</a></p>
+<hr />
+
+<p><b>CSS Lists</b></p>
+<p><a target="_blank" href="tryit3139.html?filename=trycss_list-style-type_all">All the different list item markers in lists</a><br />
+<a target="_blank" href="tryitf2b7.html?filename=trycss_list-style-image">Set an image as the list-item marker</a><br />
+<a target="_blank" href="tryit3334.html?filename=trycss_list-style-image_crossbrow">Set an image as the list-item marker - Crossbrowser solution</a><br />
+<a target="_blank" href="tryitc76e.html?filename=trycss_list-style">All list properties in one declaration</a></p>
+<p><a class="example" href="css_list.html">List properties explained</a></p>
+<hr />
+
+<p><b>CSS Tables</b></p>
+<p><a target="_blank" href="tryit7d2f.html?filename=trycss_table_border">Specify a black border for table, th, and td elements</a><br />
+<a target="_blank" href="tryit0bfc.html?filename=trycss_table_border-collapse">Use of border-collapse</a><br />
+<a target="_blank" href="tryitfa95.html?filename=trycss_table_width">Specify the width and height of a table</a><br />
+<a target="_blank" href="tryitefd0.html?filename=trycss_table_align">Set the horizontal alignment of content (text-align)</a><br />
+<a target="_blank" href="tryitb6fe.html?filename=trycss_table_vertical-align">Set the vertical alignment of content (vertical-align)</a><br />
+<a target="_blank" href="tryite0b2.html?filename=trycss_table_padding">Specify the padding for th and td elements</a><br />
+<a target="_blank" href="tryitf3ff.html?filename=trycss_table_color">Specify the color of the table borders</a><br />
+<a target="_blank" href="tryit7a2e.html?filename=trycss_table_caption-side">Set the position of the table caption</a><br />
+<a target="_blank" href="tryitfbac.html?filename=trycss_table_fancy">Create a fancy table</a></p>
+<p><a class="example" href="css_table.html">Table properties explained</a></p>
+<hr />
+
+<p><b>CSS Box Model</b></p>
+<p><a target="_blank" href="tryitb31c.html?filename=trycss_boxmodel_width">Specify an element with a total width of 250px</a><br />
+<a target="_blank" href="tryite33e.html?filename=trycss_boxmodel_width_doctype">Specify an element with a total width of 250px - Crossbrowser solution</a></p>
+<p><a class="example" href="css_boxmodel.html">Box model explained</a></p>
+<hr />
+
+<p><b>CSS Border</b></p>
+<p><a target="_blank" href="tryitd1e6.html?filename=trycss_border-width">Set the width of the four borders</a><br />
+<a target="_blank" href="tryitc992.html?filename=trycss_border-top-width">Set the width of the top border</a><br />
+<a target="_blank" href="tryit8400.html?filename=trycss_border-bottom-width">Set the width of the bottom border</a><br />
+<a target="_blank" href="tryit23e2.html?filename=trycss_border-left-width">Set the width of the left border</a><br />
+<a target="_blank" href="tryit953c.html?filename=trycss_border-right-width">Set the width of the right border</a><br />
+<br />
+<a target="_blank" href="tryitaf4a.html?filename=trycss_border-style">Set the style of the four borders</a><br />
+<a target="_blank" href="tryitac0d.html?filename=trycss_border-top-style">Set the style of the top border</a><br />
+<a target="_blank" href="tryit785f.html?filename=trycss_border-bottom-style">Set the style of the bottom border</a><br />
+<a target="_blank" href="tryita499.html?filename=trycss_border-left-style">Set the style of the left border</a><br />
+<a target="_blank" href="tryitfea9.html?filename=trycss_border-right-style">Set the style of the right border</a><br />
+<br />
+<a target="_blank" href="tryitad55.html?filename=trycss_border-color">Set the color of the four borders</a><br />
+<a target="_blank" href="tryite53c.html?filename=trycss_border-top-color">Set the color of the top border</a><br />
+<a target="_blank" href="tryitb7f0.html?filename=trycss_border-bottom-color">Set the color of the bottom border</a><br />
+<a target="_blank" href="tryit5b68.html?filename=trycss_border-left-color">Set the color of the left border</a><br />
+<a target="_blank" href="tryit313f.html?filename=trycss_border-right-color">Set the color of the right border</a><br />
+<br />
+<a target="_blank" href="tryit2a57.html?filename=trycss_border">All the border properties in one declaration</a><br />
+<br />
+<a target="_blank" href="tryit4a2c.html?filename=trycss_border-style2">Set different borders on each side</a><br />
+<a target="_blank" href="tryit9f9d.html?filename=trycss_border-top">All the top border properties in one declaration</a><br />
+<a target="_blank" href="tryitae57.html?filename=trycss_border-bottom">All the bottom border properties in one declaration</a><br />
+<a target="_blank" href="tryitf929.html?filename=trycss_border-left">All the left border properties in one declaration</a><br />
+<a target="_blank" href="tryita259.html?filename=trycss_border-right">All the right border properties in one declaration</a></p>
+<p><a class="example" href="css_border.html">Border properties explained</a></p>
+<hr />
+
+<p><b>CSS Outline</b></p>
+<p><a target="_blank" href="tryit681b.html?filename=trycss_outline">Draw a line around an element (outline)</a><br />
+<a target="_blank" href="tryitda6b.html?filename=trycss_outline-style">Set the style of an outline</a><br />
+<a target="_blank" href="tryitd231.html?filename=trycss_outline-color">Set the color of an outline</a><br />
+<a target="_blank" href="tryit8da9.html?filename=trycss_outline-width">Set the width of an outline</a></p>
+<p><a class="example" href="css_outline.html">Outline properties explained</a></p>
+<hr />
+
+<p><b>CSS Margin</b></p>
+<p><a target="_blank" href="tryit89c4.html?filename=trycss_margin_sides">Specify margins for an element</a><br />
+<a target="_blank" href="tryit46c7.html?filename=trycss_margin_shorthand">The margin shorthand property</a><br />
+<a target="_blank" href="tryit40bc.html?filename=trycss_margin-top">Set the top margin of a text using a cm value</a><br />
+<a target="_blank" href="tryit39e1.html?filename=trycss_margin-bottom_percent">Set the bottom margin of a text using a percent value</a><br />
+<a target="_blank" href="tryit5f72.html?filename=trycss_margin-left">Set the left margin of a text using a cm value</a></p>
+<p><a class="example" href="css_margin.html">Margin properties explained</a></p>
+<hr />
+
+<p><b>CSS Padding</b></p>
+<p><a target="_blank" href="tryite883.html?filename=trycss_padding-left">Set the left padding of an element</a><br />
+<a target="_blank" href="tryita159.html?filename=trycss_padding-right">Set the right padding of an element</a><br />
+<a target="_blank" href="tryit6b9f.html?filename=trycss_padding-top">Set the top padding of an element</a><br />
+<a target="_blank" href="tryit3989.html?filename=trycss_padding-bottom">Set the bottom padding of an element</a><br />
+<a target="_blank" href="tryit6a03.html?filename=trycss_padding">All the padding properties in one declaration</a></p>
+<p><a class="example" href="css_padding.html">Padding properties explained</a></p>
+<hr />
+
+<p><b>CSS Grouping and Nesting</b></p>
+<p><a target="_blank" href="tryit7b98.html?filename=trycss_grouping">Group selectors</a><br />
+<a target="_blank" href="tryit2f40.html?filename=trycss_nesting">Nested (descendant) selectors</a></p>
+<p><a class="example" href="css_grouping_nesting.html">Grouping and nesting explained</a></p>
+<hr />
+
+<p><b>CSS Dimension</b></p>
+<p><a target="_blank" href="tryit3394.html?filename=trycss_dim_height">Set the height of an image using a pixel value</a><br />
+<a target="_blank" href="tryit892a.html?filename=trycss_dim_height_percent">Set the height of an image using percent</a><br />
+<a target="_blank" href="tryit434f.html?filename=trycss_dim_width">Set the width of an element using a pixel value</a><br />
+<a target="_blank" href="tryit72bb.html?filename=trycss_dim_width_percent">Set the width of an element using percent</a><br />
+<a target="_blank" href="tryit68b0.html?filename=trycss_dim_max-height">Set the maximum height of an element</a><br />
+<a target="_blank" href="tryit470c.html?filename=trycss_dim_max-width">Set the maximum width of an element using a pixel value</a><br />
+<a target="_blank" href="tryitb253.html?filename=trycss_dim_max-width_percent">Set the maximum width of an element using percent</a><br />
+<a target="_blank" href="tryit1884.html?filename=trycss_dim_min-height">Set the minimum height of an element</a><br />
+<a target="_blank" href="tryit99e0.html?filename=trycss_dim_min-width">Set the minimum width of an element using a pixel value</a><br />
+<a target="_blank" href="tryit819b.html?filename=trycss_dim_min-width_percent">Set the minimum width of an element using percent</a></p>
+<p><a class="example" href="css_dimension.html">Dimension properties explained</a></p>
+<hr />
+
+<p><b>CSS Display</b></p>
+<p>
+<a target="_blank" href="tryitfccc.html?filename=trycss_visibility_hidden">How to hide an element (visibility:hidden)</a><br />
+<a target="_blank" href="tryit3fbf.html?filename=trycss_display_none">How to not display an element (display:none)</a><br />
+<a target="_blank" href="tryit6bea.html?filename=trycss_display">How to display an element as an inline element</a><br />
+<a target="_blank" href="tryitc72e.html?filename=trycss_display_block">How to display an element as a block element</a><br />
+<a target="_blank" href="tryit2ec9.html?filename=trycss_visibility_collapse">How to make a table element collapse</a></p>
+<p><a class="example" href="css_display_visibility.html">Display properties explained</a></p>
+<hr />
+
+<p><b>CSS Positioning</b></p>
+<p><a target="_blank" href="tryit8c3e.html?filename=trycss_position_fixed">Position an element relative to the browser window</a><br />
+<a target="_blank" href="tryitdd82.html?filename=trycss_position_relative">Position an element relative to its normal position</a><br />
+<a target="_blank" href="tryit3149.html?filename=trycss_position_absolute">Position an element with an absolute value</a><br />
+<a target="_blank" href="tryit089e.html?filename=trycss_zindex">Overlapping elements</a><br />
+<a target="_blank" href="tryit1049.html?filename=trycss_clip">Set the shape of an element</a><br />
+<a target="_blank" href="tryit7cb5.html?filename=trycss_overflow">How to create a scroll bar when an element's content is too big to fit</a><br />
+<a target="_blank" href="tryitcad1.html?filename=trycss_pos_overflow_auto">How to set the browser to automatically handle overflow</a><br />
+<a target="_blank" href="tryita6c7.html?filename=trycss_position_top">Set the top edge of an image using a pixel value</a><br />
+<a target="_blank" href="tryit660b.html?filename=trycss_position_bottom">Set the bottom edge of an image using a pixel value</a><br />
+<a target="_blank" href="tryit5d11.html?filename=trycss_position_left">Set the left edge of an image using a pixel value</a><br />
+<a target="_blank" href="tryitb1ac.html?filename=trycss_position_right">Set the right edge of an image using a pixel value</a><br />
+<a target="_blank" href="tryit8646.html?filename=trycss_cursor">Change the cursor</a></p>
+<p><a class="example" href="css_positioning.html">Positioning properties explained</a></p>
+<hr />
+
+<p><b>CSS Floating</b></p>
+<p><a target="_blank" href="tryit3410.html?filename=trycss_float">A simple use of the float property</a><br />
+<a target="_blank" href="tryitdc63.html?filename=trycss_float2">An image with border and margins that floats to the right in a paragraph</a><br />
+<a target="_blank" href="tryit34c1.html?filename=trycss_float3">An image with a caption that floats to the right</a><br />
+<a target="_blank" href="tryitfb5c.html?filename=trycss_float4">Let the first letter of a paragraph float to the left</a><br />
+<a target="_blank" href="tryit0bb7.html?filename=trycss_float_elements">Create an image gallery with the float property</a><br />
+<a target="_blank" href="tryitab25.html?filename=trycss_float_clear">Turn of float - with the clear property</a><br />
+<a target="_blank" href="tryitdd3c.html?filename=trycss_float5">Creating a horizontal menu</a><br />
+<a target="_blank" href="tryitcc8a.html?filename=trycss_float6">Creating a homepage without tables</a></p>
+<p><a class="example" href="css_float.html">Float properties explained</a></p>
+<hr />
+
+<p><b>CSS Aligning Elements</b></p>
+<p><a target="_blank" href="tryit5e0e.html?filename=trycss_align_container">Center aligning with margin</a><br />
+<a target="_blank" href="tryitc326.html?filename=trycss_align_pos">Left/Right aligning with position</a><br />
+<a target="_blank" href="tryit795e.html?filename=trycss_align_pos_crossbrowser">Left/Right aligning with position - Crossbrowser solution</a><br />
+<a target="_blank" href="tryitae98.html?filename=trycss_align_float">Left/Right aligning with float</a><br />
+<a target="_blank" href="tryitdee4.html?filename=trycss_align_float_crossbrowser">Left/Right aligning with float - Crossbrowser solution</a></p>
+<p><a class="example" href="css_align.html">Align properties explained</a></p>
+<hr />
+
+<p><b>CSS Generated Content</b></p>
+<p><a target="_blank" href="tryit471f.html?filename=trycss_gen_content">Insert the URL in parenthesis after each link with the content property</a><br />
+<a target="_blank" href="tryitf8c5.html?filename=trycss_gen_counter-reset">Numbering sections and sub-sections with "Section 1", "1.1", "1.2", etc.</a><br />
+<a target="_blank" href="tryitb74f.html?filename=trycss_gen_quotes">Specify the quotation marks with the quotes property</a></p>
+<hr />
+
+<p><b>CSS Pseudo-classes</b></p>
+<p><a target="_blank" href="tryit9cfd.html?filename=trycss_link">Add different colors to a hyperlink</a><br />
+<a target="_blank" href="tryitb066.html?filename=trycss_link2">Add other styles to hyperlinks</a><br />
+<a target="_blank" href="tryitde22.html?filename=trycss_link_focus">Use of :focus</a><br />
+<a target="_blank" href="tryit00a0.html?filename=trycss_first-child1">:first-child - match the first p element</a><br />
+<a target="_blank" href="tryit3ae1.html?filename=trycss_first-child2">:first-child - match the first i element in all p elements</a><br />
+<a target="_blank" href="tryitdf75.html?filename=trycss_first-child3">:first-child - Match all i elements in all first child p elements</a><br />
+<a target="_blank" href="tryit0a95.html?filename=trycss_lang">Use of :lang</a></p>
+<p><a class="example" href="css_pseudo_classes.html">Pseudo-classes explained</a></p>
+<hr />
+
+<p><b>CSS Pseudo-elements</b></p>
+<p><a target="_blank" href="tryit4276.html?filename=trycss_firstletter">Make the first letter special in a text</a><br />
+<a target="_blank" href="tryit63b5.html?filename=trycss_firstline">Make the first line special in a text</a><br />
+<a target="_blank" href="tryit82af.html?filename=trycss_firstline_letter">Make the first letter and first line special</a><br />
+<a target="_blank" href="tryit8e8b.html?filename=trycss_before">Use :before to insert some content before an element</a><br />
+<a target="_blank" href="tryitcb70.html?filename=trycss_after">Use :after to insert some content after an element</a></p>
+<p><a class="example" href="css_pseudo_elements.html">Pseudo-elements explained</a></p>
+<hr />
+
+<p><b>CSS Navigation Bars</b></p>
+<p><a target="_blank" href="tryitd35f.html?filename=trycss_navbar_vertical_advanced">Fully styled vertical navigation bar</a><br />
+<a target="_blank" href="tryit9494.html?filename=trycss_navbar_horizontal_float_advanced">Fully styled horizontal navigation bar</a></p>
+<p><a class="example" href="css_navbar.html">Navigation bars explained</a></p>
+<hr />
+
+<p><b>CSS Image Gallery</b></p>
+<p><a target="_blank" href="tryit46de.html?filename=trycss_image_gallery">Image gallery</a></p>
+<p><a class="example" href="css_image_gallery.html">Image gallery explained</a></p>
+<hr />
+
+<p><b>CSS Image Opacity</b></p>
+<p><a target="_blank" href="tryitfbfe.html?filename=trycss_image_transparency">Creating transparent images - mouseover effect</a><br />
+<a target="_blank" href="tryit0893.html?filename=trycss_transparency">Creating a transparent box with text on a background image</a></p>
+<p><a class="example" href="css_image_transparency.html">Image opacity explained</a></p>
+<hr />
+
+<p><b>CSS Image Sprites</b></p>
+<p><a target="_blank" href="tryit0e1d.html?filename=trycss_sprites_img">An image sprite</a><br />
+<a target="_blank" href="tryit9e9c.html?filename=trycss_sprites_nav">An image sprite - a navigation list</a><br />
+<a target="_blank" href="tryit7636.html?filename=trycss_sprites_hover_nav">An image sprite with hover effect</a></p>
+<p><a class="example" href="css_image_sprites.html">Image sprites explained</a></p>
+<hr />
+
+<p><b>CSS Attribute Selectors</b></p>
+<p><a target="_blank" href="tryitd5ab.html?filename=trycss_attselector_att">Select elements with a title attribute</a><br />
+<a target="_blank" href="tryited26.html?filename=trycss_attselector_value">Select elements with title=a specific value</a><br />
+<a target="_blank" href="tryit6f0a.html?filename=trycss_attselector_valuelist_space">Select elements with title=a specific value (even if the attribute has space-separated values)</a><br />
+<a target="_blank" href="tryitfb58.html?filename=trycss_attselector_valuelist_hyphen">Select elements with title=a specific value (even if the attribute has hyphen-separated values)</a></p>
+<p><a class="example" href="css_attribute_selectors.html">Attribute selectors explained</a></p>
+
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="css_summary.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="css_quiz.html">Next Chapter &raquo;</a></div>
+</div>
+
+<hr />
+
+<!-- **** SPOTLIGHTS 1 **** -->
+<!-- SmallPS -->
+<script type='text/javascript'>
+GA_googleFillSlot("SmallPS");
+</script>
+<!-- **** SPOTLIGHTS 2 **** -->
+<!-- LargePS -->
+<script type='text/javascript'>
+GA_googleFillSlot("LargePS");
+</script>
+<!-- **** SPOTLIGHTS 3 **** -->
+<!-- BottomRectangle -->
+<div style="width:340px;margin:auto">
+<script type='text/javascript'>
+GA_googleFillSlot("BottomRectangle");
+</script>
+</div>
+
+<div style="width:470px;margin:auto;margin-top:5px;">
+<!-- BottomBanner -->
+<script type='text/javascript'>
+GA_googleFillSlot("BottomBanner");
+</script>
+</div>
+
+<div id="err_form" style="display:none">
+<h2>Your suggestion:</h2>
+<p><label for="err_email">Your E-mail (optional):</label> <input type="text" id="err_email" name="err_email" /></p>
+<p><label for="err_url">Page address:</label> <input type="text" disabled="disabled" id="err_url" name="err_url" /></p>
+<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+<p class="submit"><input type="button" value="Submit" onclick="sendErr()" /></p>
+<div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent" style="display:none">
+<h2>Thank you for your support.</h2>
+<div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+
+<div id="rightcolumn" style="width:150px;margin:0px;padding:0px;float:left">
+<table>
+<tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/id/w3schools/goto/w3schools">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/coupons">Best Hosting Coupons</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.justhost.com/track/w3schools/textlink">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/index.cfm?A=w3text">$3.98 Unlimited Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.website.com/">Premium Website Design</a>
+</td></tr>
+</table>
+<table>
+<tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML Editor - Free Trial!</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_400H">FREE Website BUILDER</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_400H">CREATE HTML Websites</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.edirecthost.com/main/home">EASY WEBSITE BUILDER</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="../cert/default.html">Get Certified in:<br />HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="../books/default.html">
+New Books:<br />HTML, CSS<br />
+JavaScript, and Ajax</a>
+</td></tr>
+</table>
+<table>
+<tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="../browsers/browsers_stats.html">Browser Statistics</a><br />
+<a target="_top" href="../browsers/browsers_os.html">Browser OS</a><br />
+<a target="_top" href="../browsers/browsers_display.html">Browser Display</a>
+</td></tr></table>
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table>
+<tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height:16px">
+<a href="#" onclick="sharethis();return false;">Share with &raquo;</a>
+</div>
+</td>
+</tr>
+</table>
+<table>
+<tr><td><br />
+<div style="width:124px;margin:auto">
+<!-- SkyScraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("SkyScraper");
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br />
+</div>
+<div style="width:100%;clear:both;margin:0;padding:0;background-color:transparent;background-image:url('../images/gradientbottom.jpg');background-repeat:repeat-x;position:relative;">
+<div id="footer" style="width:960px;margin-left:auto;margin-right:auto;height:110px;">
+<div style="float:left;width:200px;text-align:left;padding-left:3px;padding-top:11px;"><a href="../index.html">
+<img style="border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com" /></a>
+</div>
+<div style="word-spacing:6px;font-size:80%;padding-right:12px;padding-top:19px;float:right;width:600px;text-align:right;">
+<a href="#" onclick="displayError();return false">REPORT ERROR</a> |
+<a href="../default.html" target="_top">HOME</a> |
+<a href="#top" target="_top">TOP</a> |
+<a href='css_examplesd86a.html?output=print' target="_blank">PRINT</a> |
+<a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+<a href="../about/default.html" target="_top">ABOUT</a>
+</div>
+<div style="padding-top:13px;color:#404040;clear:both;">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.<br />
+While using this site, you agree to have read and accepted our
+<a href="../about/about_copyright.html">terms of use</a> and
+<a href="../about/about_privacy.html">privacy policy</a>.<br />
+<a href="../about/about_copyright.html">Copyright 1999-2012</a> by Refsnes Data. All Rights Reserved.
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/css/css_examples.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 05:27:30 GMT -->
+</html>

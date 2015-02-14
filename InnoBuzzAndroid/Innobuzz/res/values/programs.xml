@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="programs">
+        <item name="EthicalHacking">Ethical Hacking</item>
+        <item name="NetworkSecurity">Network Security</item>
+        <item name="MalwareAnalysis">Malware Analysis</item>
+        <item name="ExploitWriting">Exploit Writing</item>
+        <item name="WebAppSecurity">Web App Security</item>
+        <item name="ReverseEngineering">Reverse Engineering</item>
+        <item name="PHP/MySQL">PHP/MySQL</item>
+        <item name="Android">Android</item>
+        <item name="SEO">SEO</item>
+    </string-array>
+    
+    
+</resources>

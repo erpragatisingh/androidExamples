@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, Audio_Record_Play_DemoActivity!</string>
+    <string name="app_name">Audio_Record_Play_Demo</string>
+
+</resources>

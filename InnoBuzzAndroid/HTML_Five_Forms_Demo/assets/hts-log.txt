@@ -1,0 +1,25 @@
+HTTrack3.45-4+htsswf+htsjava launched on Wed, 13 Jun 2012 09:55:16 at http://www.w3schools.com/ +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2010], %s -->" -%l "en, en, *" http://www.w3schools.com/ -O1 "C:\My Web Sites\Myschool" +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+09:59:19	Warning: 	file not stored in cache due to bogus state (incomplete type): www.w3schools.com/err_sup.asp
+10:21:34	Error: 	"Not Found" (404) at link www.w3schools.com/sitemap/sitemap_examples.asp (from www.w3schools.com/)
+10:21:34	Error: 	"Not Found" (404) at link www.w3schools.com/sitemap/sitemap_references.asp (from www.w3schools.com/)
+11:13:01	Error: 	"Forbidden" (403) at link translate.google.com/translate_a/element.js?cb=googleTranslateElementInit (from www.w3schools.com/html/default.asp)
+11:29:58	Warning: 	file not stored in cache due to bogus state (broken size): www.w3schools.com/html5/mov_bbb.webm
+12:02:54	Warning: 	file not stored in cache due to bogus state (incomplete type): www.w3schools.com/php/getuser.php?q=
+12:02:56	Warning: 	file not stored in cache due to bogus state (incomplete type): www.w3schools.com/php/getcd.php?q=
+13:10:51	Info: 	Exit requested by shell or user
+13:10:51	Error: 	"" (0) at link www.w3schools.com/cssref/css3_pr_box-flex-group.asp (from www.w3schools.com/cssref/default.asp)
+13:10:51	Info: 	Exit requested by shell or user
+
+HTTrack Website Copier/3.45-4 mirror complete in 3 hours 15 minutes 36 seconds : 7646 links scanned, 7629 files written (156673399 bytes overall) [159291852 bytes received at 13572 bytes/sec], 176003 bytes transfered using HTTP compression in 57 files, ratio 35%
+(4 errors, 4 warnings, 2 messages)
+* * MIRROR ABORTED! * *
+The current temporary cache is required for any update operation and only contains data downloaded during the present aborted session.
+The former cache might contain more complete information; if you do not want to lose that information, you have to restore it and delete the current cache.
+This can easily be done here by erasing the hts-cache/new.* files]

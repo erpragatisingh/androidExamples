@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+<!-- Mirrored from www.w3schools.com/aspnet/default.asp?output=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 06:51:35 GMT -->
+<head>
+<title>ASP.NET Tutorial</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p>
+
+<h1>ASP.NET <span class="color_h1">Tutorial</span></h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="../default.html">&laquo; W3Schools Home</a></div>
+<div class="next"><a class="chapter" href="aspnet.html">Next Chapter &raquo;</a></div>
+</div>
+<br />
+
+<div class="tutintro">
+<img src="../images/w3aspnet.gif" alt="ASP.NET" />
+<p>ASP.NET is a development framework for building web pages and web 
+sites with HTML, CSS, JavaScript and server scripting.</p>
+<p>ASP.NET supports three different development models:<br>
+Web Pages, MVC (Model View Controller), and Web Forms:</p>
+</div>
+
+<table width="100%" cellpadding="4" cellspacing="0" border="0">
+
+<tr>
+<td width="32%" valign="center" align="center" style="color:white;background:#73ad21">
+<span style="font-size:20px">Web Pages</span><br>
+<span style="font-size:15px">Single Pages Model</span>
+</td>
+<td width="1%"></td>
+<td width="32%" valign="center" align="center" style="color:white;background:#73ad21">
+<span style="font-size:20px">MVC</span><br>
+<span style="font-size:15px">Model View Controller</span>
+</td>
+<td width="1%"></td>
+<td width="33%" valign="center" align="center" style="color:white;background:#73ad21">
+<span style="font-size:20px">Web Forms</span><br>
+<span style="font-size:15px">Event Driven Model</span>
+</td>
+</tr>
+
+<tr>
+<td align="center" valign="top" style="border:1px solid gray">
+<br>Simplest ASP.NET model.<br><br>Similar to PHP and classic ASP.<br><br>Built-in 
+templates and helpers for database, video, graphics, 
+social media and more.</td>
+<td>&nbsp;</td>
+<td align="center" valign="top" style="border:1px solid gray">
+<br>MVC separates web applications into 3 different components:<br><br>Models 
+for data<br />
+Views for display<br>
+Controllers for input<br>
+</td>
+<td>&nbsp;</td>
+<td align="center" valign="top" style="border:1px solid gray">
+<br>The traditional ASP.NET event driven development model:<br><br>Web 
+pages with added server controls, server events, and 
+server code.
+</td>
+</tr>
+</table>
+<br />
+
+<table width="100%" cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td width="32%" valign="center" align="center" style="font-size:20px;color:white;background:#73ad21">
+WebMatrix</td>
+<td width="1%"></td>
+<td width="67%" valign="center" align="center" style="font-size:20px;color:white;background:#73ad21">
+Visual Web Developer</td>
+</tr>
+<tr>
+<td width="32%" align="center" valign="top" style="border:1px solid gray">
+
+<br>Web Editor for Web Pages<br><br></td>
+<td width="1%"></td>
+<td width="67%" align="center" valign="top" style="border:1px solid gray">
+<br>Development tool tailor made for MVC and Web Forms<br><br>
+</td>
+</tr>
+</table>
+
+<br />
+<table width="100%" cellpadding="4" cellspacing="0" border="0">
+<tr>
+<td valign="center" align="center" style="font-size:20px;color:white;background:#73ad21">ASP.NET 
+Framework</td>
+</tr>
+<tr>
+<td style="border:1px solid gray" align="center">
+<br />
+.NET is a framework for developing 
+virtually any type of computer application.
+<br>
+<br />The ASP.NET framework is the part of .NET designed 
+for creating web applications.
+</td>
+</tr>
+</table>
+
+<hr />
+<h2>Web Pages Tutorial</h2>
+<p><strong>If you are new to ASP.NET, Web Pages is the perfect place to start. 
+</strong> </p>
+<p>Web Pages is the easiest development model for developing ASP.NET web sites.</p>
+<p>In our Web Pages tutorial you will learn how to combine HTML, CSS, JavaScript 
+and server code, using the latest Razor server markup syntax with Visual Basic 
+or C#.</p>
+<p>You will also learn how to extend your web pages with programmable Web 
+Helpers, including database, video, graphics, social networking and much more. </p>
+<p><a href="webpages_demo.html">Start learning ASP.NET Web Pages now!</a></p>
+
+<hr />
+<h2>MVC Tutorial</h2>
+<p>MVC is a model for building web applications using a MVC (Model 
+View Controller) design.</p>
+<p><strong>If you want a lighter alternative to traditional ASP.NET, MVC is the place to start.</strong></p>
+<p>In our MVC tutorial you will learn how to build web applications using a 
+lightweight 
+development model, integrated 
+with all existing ASP.NET features, such as Master Pages, Security, and 
+Authentication.</p>
+<p><a href="mvc_intro.html">Start learning ASP.NET MVC now!</a></p>
+<hr />
+<h2>Web Forms Tutorial</h2>
+<p>Web Forms is the traditional ASP.NET model, based on event driven Web Forms and post 
+backs.</p>
+<p>Over the years, developers have used ASP.NET Web Forms to create many of the 
+largest websites in the world.</p>
+<p><strong>If you want to study the design model used by many web developers over the 
+last 10 years, this is the place to start.</strong></p>
+<p><a href="aspnet_demo_intro.html">Start learning ASP.NET Web Forms now!</a></p>
+<hr />
+<h2>Who Are These Tutorials For?</h2>
+<p>The tutorials above are for anyone who wants to learn to build websites on 
+the Microsoft ASP.NET platform, from hobby-related sites, to new, modern, and 
+fully commercial webs.</p>
+<p>Even if you are new to web programming, you should be able to follow the 
+tutorials, but it will helps if you have a basic understanding of HTML and CSS.</p>
+<p>It will also help if you have a basic understanding of scripting languages 
+like JavaScript or VB (Visual Basic).</p>
+<p>Do you have a preference for VB over C#? Do you want to learn both languages? 
+The good news are: In the W3Schools tutorials most code examples are in both 
+languages.</p>
+<p>If you are a professional web developer with prior ASP.NET experience, you 
+can still learn a lot, since these tutorials covers a lot new concepts of 
+ASP.NET, like HTML5, CSS3, JQuery, and more.</p>
+
+<br />
+
+<div class="chapter">
+<div class="prev"><a class="chapter" href="../default.html">&laquo; W3Schools Home</a></div>
+<div class="next"><a class="chapter" href="aspnet.html">Next Chapter &raquo;</a></div>
+</div>
+
+<p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/aspnet/default.asp?output=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 06:51:35 GMT -->
+</html>

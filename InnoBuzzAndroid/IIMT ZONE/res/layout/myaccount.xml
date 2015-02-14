@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back" >
+
+    <TextView
+        android:id="@+id/txtEnroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextEnroll"
+        android:layout_alignBottom="@+id/editTextEnroll"
+        android:layout_alignParentLeft="true"
+        android:text="Enrollment No."
+        android:textColor="#111"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextEnroll"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txtEnroll" />
+
+    <TextView
+        android:id="@+id/txtCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editTextEnroll"
+        android:layout_marginTop="10dp"
+        android:text="Course"
+        android:textColor="#111"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTextEnroll"
+        android:layout_toRightOf="@+id/txtEnroll"
+        android:prompt="@string/displayCourse" />
+
+    <TextView
+        android:id="@+id/txtFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spCourse"
+        android:layout_marginTop="10dp"
+        android:text="Fee"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextFee"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/spCourse"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spCourse"
+        android:inputType="numberDecimal" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextFee"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Installment"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#111"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgInstallment"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:orientation="horizontal"
+        android:textColor="#111"
+        android:textStyle="bold" >
+
+        <RadioButton
+            android:id="@+id/rbOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="PayInstallment"
+            android:text="One"
+            android:textColor="#111"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="PayInstallment"
+            android:text="Two"
+            android:textColor="#111"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="PayInstallment"
+            android:text="Three"
+            android:textColor="#111"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <TableLayout
+        android:id="@+id/tblInstallment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rgInstallment" >
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txtBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tblInstallment"
+        android:layout_marginTop="10dp"
+        android:text="Balance"
+        android:textColor="#111"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/editTextBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/editTextFee"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tblInstallment"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal"
+        android:visibility="invisible" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtBalance"
+        android:layout_marginTop="20dp"
+        android:background="#CC6600"
+        android:onClick="InsertData"
+        android:text="Submit"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:layout_toRightOf="@+id/txtFee"
+        android:onClick="home"
+        android:src="@drawable/home" />
+
+</RelativeLayout>

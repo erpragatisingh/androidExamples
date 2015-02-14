@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="mystyle" parent="@android:style/TextAppearance.Large" >
+        
+        <item name="android:textColor">#FF00FF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

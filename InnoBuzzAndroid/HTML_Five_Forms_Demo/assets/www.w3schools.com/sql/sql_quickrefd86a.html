@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/sql/sql_quickref.asp?output=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 07:40:43 GMT -->
+<head>
+
+<title>SQL Quick Reference</title>
+ 
+<link rel="shortcut icon" href="http://www.w3schools.com/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Well organized easy to understand SQL tutorial with lots of examples. Including PHP, ASP, ADO, Oracle, Access, SQL Server. Related: HTML, JavaScript, XML, XQuery" />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","http://www.w3schools.com/err_sup.asp",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://www.w3schools.com/stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='http://www.w3schools.com/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='http://www.w3schools.com/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.js?0=0&amp;0=0&amp;0=0'></script>
+
+<p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p>
+
+<h1>SQL <span class="color_h1">Quick Reference</span> From W3Schools</h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="http://www.w3schools.com/sql/sql_func_format.asp">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="http://www.w3schools.com/sql/sql_hosting.asp">Next Chapter &raquo;</a></div>
+</div>
+<hr />
+<table class="reference">
+    <tr>
+      <th width="27%" align="left" valign="top">SQL Statement</th>
+      <th width="73%" align="left" valign="top">Syntax</th>
+    </tr>
+    <tr>
+      <td align="left" valign="top">AND / OR</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE condition<br />
+		AND|OR condition</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">ALTER TABLE</td>
+      <td align="left" valign="top">ALTER TABLE table_name <br />
+		ADD column_name datatype<p>or</p>
+		<p>ALTER TABLE table_name <br />
+		DROP COLUMN column_name</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">AS (alias)</td>
+      <td align="left" valign="top">SELECT column_name AS column_alias<br />
+		FROM table_name<p>or</p>
+		<p>SELECT column_name<br />
+		FROM table_name&nbsp; AS table_alias</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">BETWEEN</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE column_name<br />
+		BETWEEN value1 AND value2</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">CREATE DATABASE</td>
+      <td align="left" valign="top">CREATE DATABASE database_name</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">CREATE TABLE</td>
+      <td align="left" valign="top">CREATE TABLE table_name<br />
+		(<br />
+		column_name1 data_type,<br />
+		column_name2 data_type,<br />
+		column_name2 data_type,<br />
+		...<br />
+		)</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">CREATE INDEX</td>
+      <td align="left" valign="top">CREATE INDEX index_name<br />
+		ON table_name (column_name)<p>or</p>
+		<p>CREATE UNIQUE INDEX index_name<br />
+		ON table_name (column_name)</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">CREATE VIEW</td>
+      <td align="left" valign="top">CREATE VIEW view_name AS<br />
+		SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE condition</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">DELETE</td>
+      <td align="left" valign="top">DELETE FROM table_name<br />
+		WHERE some_column=some_value<p>or</p>
+		<p>DELETE FROM table_name <br />
+		(<b>Note: </b>Deletes the entire table!!)</p>
+		<p>DELETE * FROM table_name <br />
+		(<b>Note: </b>Deletes the entire table!!)</p></td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">DROP DATABASE</td>
+      <td align="left" valign="top">DROP DATABASE database_name</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">DROP INDEX</td>
+      <td align="left" valign="top">DROP INDEX table_name.index_name (SQL 
+		Server)<br />
+		DROP INDEX index_name ON table_name (MS Access)<br />
+		DROP INDEX index_name (DB2/Oracle)<br />
+		ALTER TABLE table_name<br />
+		DROP INDEX index_name (MySQL)</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">DROP TABLE</td>
+      <td align="left" valign="top">DROP TABLE table_name</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">GROUP BY</td>
+      <td align="left" valign="top">SELECT column_name, 
+		aggregate_function(column_name)<br />
+		FROM table_name<br />
+		WHERE column_name operator value<br />
+		GROUP BY column_name</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">HAVING</td>
+      <td align="left" valign="top">SELECT column_name, 
+		aggregate_function(column_name)<br />
+		FROM table_name<br />
+		WHERE column_name operator value<br />
+		GROUP BY column_name<br />
+		HAVING aggregate_function(column_name) operator value</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">IN</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE column_name<br />
+		IN (value1,value2,..)</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">INSERT INTO</td>
+      <td align="left" valign="top">INSERT INTO table_name<br />
+		VALUES (value1, value2, value3,....)<p><i>or</i></p>
+		<p>INSERT INTO table_name<br />
+		(column1, column2, column3,...)<br />
+		VALUES (value1, value2, value3,....)</p></td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">INNER JOIN</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name1<br />
+		INNER JOIN table_name2 <br />
+		ON table_name1.column_name=table_name2.column_name</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">LEFT JOIN</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name1<br />
+		LEFT JOIN table_name2 <br />
+		ON table_name1.column_name=table_name2.column_name</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">RIGHT JOIN</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name1<br />
+		RIGHT JOIN table_name2 <br />
+		ON table_name1.column_name=table_name2.column_name</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">FULL JOIN</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name1<br />
+		FULL JOIN table_name2 <br />
+		ON table_name1.column_name=table_name2.column_name</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">LIKE</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE column_name
+		LIKE pattern</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">ORDER BY</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name<br />
+		ORDER BY column_name [ASC|DESC]</td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">SELECT</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name</td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">SELECT *</td>
+      <td align="left" valign="top">SELECT *<br />
+		FROM table_name</td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">SELECT DISTINCT</td>
+      <td align="left" valign="top">SELECT DISTINCT column_name(s)<br />
+		FROM table_name</td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">SELECT INTO</td>
+      <td align="left" valign="top">SELECT *<br />
+		INTO new_table_name [IN externaldatabase]<br />
+		FROM old_table_name<p><i>or</i></p>
+		<p>SELECT column_name(s)<br />
+		INTO new_table_name [IN externaldatabase]<br />
+		FROM old_table_name</p></td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">SELECT TOP</td>
+      <td align="left" valign="top">SELECT TOP number|percent column_name(s)<br />
+		FROM table_name</td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">TRUNCATE TABLE</td>
+      <td align="left" valign="top">TRUNCATE TABLE table_name</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">UNION</td>
+      <td align="left" valign="top">SELECT column_name(s) FROM table_name1<br />
+		UNION<br />
+		SELECT column_name(s) FROM table_name2</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">UNION ALL</td>
+      <td align="left" valign="top">SELECT column_name(s) FROM table_name1<br />
+		UNION ALL<br />
+		SELECT column_name(s) FROM table_name2</td>
+    </tr>
+	<tr>
+      <td align="left" valign="top">UPDATE</td>
+      <td align="left" valign="top">UPDATE table_name<br />
+		SET column1=value, column2=value,...<br />
+		WHERE some_column=some_value</td>
+    </tr>
+    <tr>
+      <td align="left" valign="top">WHERE</td>
+      <td align="left" valign="top">SELECT column_name(s)<br />
+		FROM table_name<br />
+		WHERE column_name operator value</td>
+    </tr>
+    </table>
+<p><b>Source : http://www.w3schools.com/sql/sql_quickref.asp</b></p>
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="http://www.w3schools.com/sql/sql_func_format.asp">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="http://www.w3schools.com/sql/sql_hosting.asp">Next Chapter &raquo;</a></div>
+</div>
+
+<p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/sql/sql_quickref.asp?output=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 07:40:43 GMT -->
+</html>

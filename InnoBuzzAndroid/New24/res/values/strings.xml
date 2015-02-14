@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, HomeScreenActivity!</string>
+    <string name="app_name">PROTECT24</string>
+    <string name="schedule_call">Schedule A Fake Call</string>
+    <string name="compass">Compass</string>
+    <string name="my_info">My Info</string>
+    <string name="save_call">Save</string>
+    <string name="caller">Caller:</string>
+    <string name="schedule_time">Schedule Time:</string>
+    <string name="other_f">Other Features</string>
+    <string name="back">Back</string>
+    <string name="other_fe">Other Fe..</string>
+</resources>

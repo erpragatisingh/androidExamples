@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/web/default.asp?output=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 07:06:41 GMT -->
+<head>
+
+<title>Web Building Primer</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p>
+
+<h1>Web Building <span class="color_h1">Primer</span></h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="../default.html">&laquo; W3Schools Home</a></div>
+<div class="next"><a class="chapter" href="web_www.html">Next Chapter &raquo;</a></div>
+</div>
+<br />
+<div class="tutintro">
+<img src="../images/w3webbuilding.gif" alt="Web Building" />
+<p>The building blocks of the web:</p>
+<p>HTML and CSS</p>
+<p>Client Scripting - JavaScript and the DOM</p>
+<p>Server Scripting - ASP, PHP</p>
+<p>XML and SQL</p>
+</div>
+
+<h2 class="tutheader">Table of Contents</h2>
+<p><a href="web_www.html">WWW - The World Wide Web</a><br />
+The Web is a network of computers all over the world. How does it work?</p>
+<p><a href="web_html.html">HTML - The Markup Language for the Web</a> <br />
+HTML is the language of the web. It uses &quot;markup tags&quot; to define the content of 
+web pages. </p>
+<p><a href="web_css.html">CSS - Cascading Style Sheets</a> <br />
+CSS define how HTML elements are formatted and displayed. </p>
+<p><a href="web_javascript.html">JavaScript - Programming the Browser</a> <br />
+JavaScript is the language used for programming the browser.</p>
+<p><a href="web_xml.html">XML - Extensible Markup Language</a> <br />
+XML is a common language for data transmission, and data storing.</p>
+<p><a href="web_scripting.html">PHP and ASP - Server Side Programming</a> <br />
+With server-side scripting, you can (amongst many other things) access databases and 
+display the results in a browser.</p>
+<p><a href="web_sql.html">SQL - Structured Query Language</a> <br />
+SQL is the standard for querying and updating databases like SQL 
+Server, Oracle, and MySQL.</p>
+<p><a href="web_design.html">Web Design</a><br />
+About designing a web site. About users and their equipments.</p>
+<p><a href="web_standards.html">Web Standards</a><br />
+About web standards and the World Wide Web consortium.</p>
+<p><a href="web_validate.html">Web Page Validation</a><br />
+This chapter lets you validate your HTML, XHTML, CSS, XML, and WMP
+pages.</p>
+<p><a href="web_semantic.html">Web Semantic</a><br />
+This chapter is about the &quot;Semantic Web&quot;.</p>
+<p><a href="web_glossary.html">Web Glossary</a><br />
+This is an alphabetical list of internet glossary terms.</p>
+<p><a href="web_search.html">Web Search</a><br />
+About SEO (Search Engine Optimization)</p>
+<hr />
+
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="../default.html">&laquo; W3Schools Home</a></div>
+<div class="next"><a class="chapter" href="web_www.html">Next Chapter &raquo;</a></div>
+</div>
+
+<p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/web/default.asp?output=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 07:06:41 GMT -->
+</html>

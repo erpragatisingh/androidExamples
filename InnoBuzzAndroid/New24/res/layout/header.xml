@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+  <RelativeLayout
+      android:id="@+id/relativeLayout1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/header_bg" >
+
+      <TextView
+          android:id="@+id/headername"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_toLeftOf="@+id/Save_call"
+          android:padding="10dp"
+          android:text="@string/schedule_call"
+          android:textColor="#ffffff"
+          android:textSize="20dp" />
+
+      <Button
+          android:id="@+id/Save_call"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/headername"
+          android:layout_alignBottom="@+id/headername"
+          android:layout_alignParentRight="true"
+          android:background="@drawable/header_shape"
+          android:padding="5dp"
+          android:text="@string/save_call"
+          android:textColor="#ffffff" />
+
+      <Button
+          android:id="@+id/backbutton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/headername"
+          android:layout_alignBottom="@+id/headername"
+          android:layout_alignParentLeft="true"
+          android:background="@drawable/header_shape"
+          android:padding="5dp"
+          android:singleLine="true"
+          android:text="@string/other_fe"
+          android:textColor="#ffffff" />
+
+  </RelativeLayout>
+
+</LinearLayout>

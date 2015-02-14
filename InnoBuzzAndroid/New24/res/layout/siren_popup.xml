@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_element"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+     >
+ 
+       <TextView
+           android:id="@+id/text1"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center_horizontal"
+           android:text="Turn On" />
+
+       <Button
+           android:id="@+id/siren_btn"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dip"
+           android:padding="10dip"
+           android:background ="@drawable/butoon_roundedge" 
+           android:text="Siren" 
+           android:textColor="#ffffff"
+           />
+
+       <Button
+           android:id="@+id/whistle_btn"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dip"
+           android:padding="10dip"
+           android:background ="@drawable/butoon_roundedge"
+           android:text="Whistle"
+           android:onClick="Dilog_btn_handler"
+           android:textColor="#ffffff"
+          />
+         
+       <Button
+           android:id="@+id/cancel__btn"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:background ="@drawable/butoon_roundedge" 
+           android:layout_margin="10dip"
+           android:padding="10dip"
+           android:textColor="#ffffff"
+           android:onClick="Dilog_btn_handler"
+           android:text="Cancel" />
+</LinearLayout>

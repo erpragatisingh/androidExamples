@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:weightSum="1">
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="0.42" android:orientation="horizontal">
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/textView1" android:layout_width="0dp" android:background="#aa0000" android:text=" Red" android:minHeight="1dp" android:layout_weight="0.94" android:layout_height="match_parent"></TextView>
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text=" yellow" android:layout_width="0dp" android:id="@+id/textView2" android:background="#aaaa00" android:layout_weight="1.00" android:layout_height="match_parent"></TextView>
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/textView3" android:layout_weight="1" android:layout_width="0dp" android:background="#00aa00" android:text="  green" android:layout_height="match_parent"></TextView>
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/textView4" android:layout_weight="1" android:layout_width="0dp" android:background="#0000aa" android:text="   blue" android:layout_height="match_parent"></TextView>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout2" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="match_parent" android:orientation="vertical">
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="red one" android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/textView5"></TextView>
+        <TextView android:layout_marginTop="10dp" android:textAppearance="?android:attr/textAppearanceLarge" android:text="yello one" android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/textView6"></TextView>
+        <TextView android:layout_marginTop="10dp" android:textAppearance="?android:attr/textAppearanceLarge" android:text="green one" android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/textView7"></TextView>
+        <TextView android:layout_marginTop="10dp" android:textAppearance="?android:attr/textAppearanceLarge" android:text="blue one" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView8"></TextView>
+    </LinearLayout>
+    
+</LinearLayout>

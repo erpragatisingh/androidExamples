@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ListViewActivity!</string>
+    <string name="app_name">ListView</string>
+    <string-array name="cities">
+        <item>Bath</item>
+        <item>Birmingham</item>
+        <item>Bradford</item>
+        <item>Bristal</item>
+        <item>Cambridge</item>
+        <item>Canterbury</item>
+    </string-array>
+</resources>

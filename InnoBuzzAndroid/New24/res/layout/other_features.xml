@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/home_background" >
+
+    <include
+        android:id="@+id/include1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <Button
+        android:id="@+id/for_scheduling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/other_feature_buttonshpe"
+        android:text="@string/schedule_call" />
+
+    <Button
+        android:id="@+id/for_campass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/other_feature_buttonshpe"
+        android:text="@string/compass" />
+
+    <Button
+        android:id="@+id/for_myinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/other_feature_buttonshpe"
+        android:text="@string/my_info" />
+
+</LinearLayout>

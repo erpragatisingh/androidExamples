@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="innostyle" parent="@android:style/TextAppearance.Medium" >
+        <item name="android:textSize">20sp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">#FFFFFF</item>
+    
+    </style>
+    
+    
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="appName">"EnigmaPuzzle"</string>
+    <string name="gameInactive">"Verwenden Sie das Menü,\num ein Spiel im Level %1$d zu starten"</string>
+    <string name="gameSolved">"Gratulation\nSie lösten das Puzzle in\n%1$d Sekunden mit %2$d Zügen"</string>
+    <string name="gameActive">"%1$d Züge in %2$d Sekunden"</string>
+    <string name="gameStarted">"Drehen Sie die Scheiben,\num das Originalbild wieder herzustellen"</string>
+    <string name="menuNewGame">"Neues Spiel"</string>
+    <string name="menuStopGame">"Stop"</string>
+    <string name="menuSettings">"Einstellungen"</string>
+    <string name="menuLevelUp">"Level hoch"</string>
+    <string name="menuHelp">"Hilfe"</string>
+    <string name="menuLevelDown">"Level runter"</string>
+    <string name="slTitle">"Enigma - Allgemeine Einstellungen"</string>
+    <string name="slStartupLevel">"Level beim Start"</string>
+    <string name="slGameSettings">"Spiel Einstellungen"</string>
+    <string name="slTurns">"Dreher bei neuem Spiel"</string>
+    <string name="slShowTurns">"Dreher zeigen"</string>
+    <string name="slDisplaySettings">"Anezeige Einstellungen"</string>
+    <string name="slDelay">"Rotationsverzögerung"</string>
+    <string name="slSteps">"Rotationsschritte"</string>
+    <string name="slSwings">"Überschwingschritte"</string>
+    <string name="slShowSwings">"Überschwingen zeigen"</string>
+    <string name="helpTitle">"Enigma Hilfe"</string>
+    <string name="helpIntro">"Willkommen beim Enigma Puzzle – ein Spiel so schwierig wie der Rubik-Würfel. Dieses Puzzle wurde von Douglas A. Engel erfunden und es bestand ursprünglich aus zwei sich durchdringenden Scheiben in einer Plastikhalterung."</string>
+    <string name="helpPlay">"Das Spiel"</string>
+    <string name="helpPlay1">"In der Mitte des Programmfensters sehen Sie die eigentliche Spielfläche. Sie besteht aus zwei kreisrunden Scheiben, die sich in der Mitte etwas überschneiden. Auf jeder Scheibe befinden sich sechs Steine im Wechsel mit sechs Knochen. Die Steine sehen wie übergewichtige Dreiecke, die Knochen wie unterernährte Rechtecke aus."</string>
+    <string name="helpPlay2">"Da sich die Scheiben durchdringen, haben sie zwei Steine und einen Knochen gemeinsam. Wird eine Scheibe, sagen wir die obere, nun um 60 Grad gedreht, dann werden ein Stein und ein Knochen, die vorher auch zur unteren Scheibe gehört haben, durch einen neuen Stein und einen neuen Knochen ersetzt."</string>
+    <string name="helpPlay3">"Gleich neben der Spielfläche sind vier Schalter mit kleinen Pfeilen angeordnet. Mit diesen Schaltern können die beiden Scheiben gedreht werden. Der Pfeil, der nach rechts oben zeigt, bedeutet zum Beispiel, dass die obere Scheibe um 60 Grad nach links gedreht werden soll."</string>
+    <string name="helpPlay4">"Die Drehungen sind auch mit dem Touchscreen möglich. Dazu müssen Sie eine Scheibe antippen, eine Bewegung in die gewünschte Richtung ausführen und dann den Bildschirm loslassen."</string>
+    <string name="helpGame">"Spielen"</string>
+    <string name="helpGame1">"Im Menü finden Sie die Funktion 'Neues Spiel', um ein neues Spiel im aktuellen Level zu starten. Dazu werden die Scheiben ein paar Mal zufällig in verschiedene Richtungen gedreht. Je nach Einstellung, werden die Drehungen angezeigt oder nicht. Nun müssen Sie die Scheiben durch Drehen wieder in die ursprüngliche Stellung zurück bringen. Mit der ersten Aktion beginnt die Zeit zu laufen."</string>
+    <string name="helpGame2">"Sie können ein laufendes Spiel unterbrechen, indem Sie die Aktion 'Zurück' wählen. Bei einem neuen Start von EnigmaPuzzle geht das Spiel beim unterbrochenen Stand weiter. Sie können ein Spiel auch ganz abbrechen. Dazu verwenden Sie den Menüpunkt 'Stop'"</string>
+    <string name="helpGame3">"Wenn Sie ein Level schaffen, wird automatisch in den nächsten Level gesprungen. Sie können den zu verwendenen Level aber auch via Menü einstellen."</string>
+        
+</resources>

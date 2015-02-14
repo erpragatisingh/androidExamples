@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/RelativeLayout1" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1" android:layout_height="match_parent"
+     android:layout_width="wrap_content" android:orientation="vertical">
+     
+    <TextView android:freezesText="true" android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:keepScreenOn="true" android:id="@+id/textView1" android:layout_height="wrap_content" 
+        android:layout_width="match_parent" android:text="Registration" android:textStyle="bold"
+         android:layout_alignParentTop="true" android:layout_alignParentLeft="true"></TextView>
+    
+    <EditText android:id="@+id/editText1" android:layout_height="wrap_content"
+         android:layout_width="wrap_content" android:layout_below="@+id/textView2" 
+         android:layout_alignParentLeft="true" android:layout_alignParentRight="true">
+        <requestFocus></requestFocus>
+    </EditText>
+    
+    <TextView android:textAppearance="?android:attr/textAppearanceLarge"
+         android:id="@+id/textView3" android:layout_height="wrap_content"
+          android:layout_width="wrap_content" android:layout_below="@+id/editText1" 
+          android:layout_alignParentLeft="true" android:text="Last Name">
+        
+    </TextView>
+    
+    
+    <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/textView2" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_below="@+id/textView1" android:layout_alignParentLeft="true" android:text="First Name"></TextView>
+    <EditText android:id="@+id/editText2" android:layout_width="wrap_content" android:layout_height="wrap_content"
+         android:layout_below="@+id/textView3" android:layout_alignParentLeft="true" android:layout_marginTop="16dp" 
+         android:layout_alignParentRight="true"></EditText>
+    
+    <Button android:layout_height="wrap_content" android:layout_width="wrap_content"
+         android:text="Show All Records" android:id="@+id/button2" android:layout_below="@+id/button1"
+          android:layout_alignParentLeft="true" android:layout_marginTop="16dp" android:layout_alignParentRight="true">
+        
+    </Button>
+    
+    <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="OK" android:id="@+id/button1" android:layout_below="@+id/editText2" android:layout_alignParentLeft="true" android:layout_marginTop="46dp" android:layout_alignParentRight="true"></Button>
+</RelativeLayout>

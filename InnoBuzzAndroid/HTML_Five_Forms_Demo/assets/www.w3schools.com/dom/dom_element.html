@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/dom/dom_element.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 06:57:38 GMT -->
+<head>
+
+<title>XML DOM - Element object</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<a id="top"></a>
+<div style="width:960px;margin-top:5px;margin-left:auto;margin-right:auto">
+<div style="width:960px;height:74px;margin:0;padding:0;">
+<div style="width:340px;text-align:left;float:left;">
+	<a href="../index.html"><img width="336" height="69" src="../images/w3schoolslogo.gif" alt="W3Schools.com" style="border:0;margin-top:5px;" /></a>
+</div>
+
+<div style="width:300px;float:right;text-align:right;margin-top:20px;margin-right:14px;margin-bottom:5px;">
+<div id="google_translate_element" style="display:none"></div>
+<div id="translate_link" style="margin-bottom:14px">
+<a href="#" class="topnav"
+onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+	<form style="font-size:11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.w3schools.com" />
+    <input onfocus="searchfield_focus(this)" style="width:150px;color:#808080;font-style:italic;margin:0;" 
+    type="text" name="as_q" size="20" value="Search w3schools.com" /><input type="submit" style="margin:0;" value="Search" title="Search" />
+	</form>
+</div>
+</div>
+<div id="topnav" style="clear:both;width:960px;height:25px;">
+<div style="float:left;width:400px;word-spacing:12px;font-size:90%;padding-left:15px;padding-top:6px;white-space:nowrap;text-align:left;">
+	<a class="topnav" href="../default.html" target="_top">HOME </a>
+	<a class="topnav" href="../html/default.html" target="_top">HTML </a>
+	<a class="topnav" href="../css/default.html" target="_top">CSS </a>
+	<a class="topnav" href="../xml/default.html" target="_top">XML </a>
+	<a class="topnav" href="../js/default.html" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="../asp/default.html" target="_top">ASP </a>
+	<a class="topnav" href="../php/default.html" target="_top">PHP </a>
+	<a class="topnav" href="../sql/default.html" target="_top">SQL </a>	
+	<a class="topnav" href="../sitemap/default.html" target="_top">MORE...</a>
+</div>
+<div style="float:right;width:280px;word-spacing:6px;font-size:80%;padding-right:13px;padding-top:7px;color:#888888;white-space:nowrap;text-align:right;">
+	<a class="topnav" href="../sitemap/default.html#references" target="_top">REFERENCES</a> |
+	<a class="topnav" href="../sitemap/default.html#examples" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://w3schools.invisionzone.com/" target="_top">FORUM</a> |
+	<a class="topnav" href="../about/default.html" target="_top">ABOUT</a>	
+</div>
+</div>
+<div style="width:960px;height:94px;position:relative;margin-left:auto;margin-right:auto;margin:0px;padding:0px;overflow:hidden">
+<script type='text/javascript' src='../../partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-3440800076797949");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-3440800076797949", "MainLeaderboard");
+GA_googleAddSlot("ca-pub-3440800076797949", "SmallPS");
+GA_googleAddSlot("ca-pub-3440800076797949", "LargePS");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomRectangle");
+GA_googleAddSlot("ca-pub-3440800076797949", "SkyScraper");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomBanner");
+GA_googleAddSlot("ca-pub-3440800076797949", "TopRectangle");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- TopRectangle -->
+<script type='text/javascript'>
+GA_googleFillSlot("TopRectangle");
+</script>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- MainLeaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("MainLeaderboard");
+</script>
+</div></div>
+<div style="width:960px;padding:0px;margin:0px;">
+<div id="leftcolumn" style="width:170px;margin:0;padding:0;margin-top:5px;float:left;"><h2 class="left"><span class="left_h2">XML DOM</span> Tutorial</h2>
+<a target="_top" href="default.html" >DOM HOME</a><br />
+<a target="_top" href="dom_intro.html" >DOM Introduction</a><br />
+<a target="_top" href="dom_nodes.html" >DOM Nodes</a><br />
+<a target="_top" href="dom_nodetree.html" >DOM Node Tree</a><br />
+<a target="_top" href="dom_parser.html" >DOM Parser</a><br />
+<a target="_top" href="dom_loadxmldoc.html" >DOM Load Function</a><br />
+<a target="_top" href="dom_methods.html" >DOM Methods</a><br />
+<a target="_top" href="dom_nodes_access.html" >DOM Accessing</a><br />
+<a target="_top" href="dom_nodes_info.html" >DOM Node Info</a><br />
+<a target="_top" href="dom_nodes_nodelist.html" >DOM Node List</a><br />
+<a target="_top" href="dom_nodes_traverse.html" >DOM Traversing</a><br />
+<a target="_top" href="dom_mozilla_vs_ie.html" >DOM Browsers</a><br />
+<a target="_top" href="dom_nodes_navigate.html" >DOM Navigating</a><br />
+<br />
+<h2 class="left"><span class="left_h2">Manipulate</span> Nodes</h2>
+<a target="_top" href="dom_nodes_get.html" >DOM Get Values</a><br />
+<a target="_top" href="dom_nodes_set.html" >DOM Change Nodes</a><br />
+<a target="_top" href="dom_nodes_remove.html" >DOM Remove Nodes</a><br />
+<a target="_top" href="dom_nodes_replace.html" >DOM Replace Nodes</a><br />
+<a target="_top" href="dom_nodes_create.html" >DOM Create Nodes</a><br />
+<a target="_top" href="dom_nodes_add.html" >DOM Add Nodes</a><br />
+<a target="_top" href="dom_nodes_clone.html" >DOM Clone Nodes</a><br />
+<a target="_top" href="dom_httprequest.html" >DOM XMLHttpRequest</a><br />
+<br />
+
+<h2 class="left"><span class="left_h2">XML DOM</span> Reference</h2>
+<a target="_top" href="dom_nodetype.html" >DOM Node Types</a><br />
+<a target="_top" href="dom_node.html" >DOM Node</a><br />
+<a target="_top" href="dom_nodelist.html" >DOM NodeList</a><br />
+<a target="_top" href="dom_namednodemap.html" >DOM NamedNodeMap</a><br />
+<a target="_top" href="dom_document.html" >DOM Document</a><br />
+<a target="_top" href="dom_documentimplementation.html" >DOM DocumentImpl</a><br />
+<a target="_top" href="dom_documenttype.html" >DOM DocumentType</a><br />
+<a target="_top" href="dom_processinginstruction.html" >DOM ProcessingInstr</a><br />
+<a target="_top" href="dom_element.html" style='font-weight:bold;'>DOM Element</a><br />
+<a target="_top" href="dom_attribute.html" >DOM Attribute</a><br />
+<a target="_top" href="dom_text.html" >DOM Text</a><br />
+<a target="_top" href="dom_cdatasection.html" >DOM CDATA</a><br />
+<a target="_top" href="dom_comment.html" >DOM Comment</a><br />
+<a target="_top" href="dom_http.html" >DOM XMLHttpRequest</a><br />
+<a target="_top" href="dom_errors.html" >DOM ParseError Obj</a><br />
+<a target="_top" href="dom_errors_crossbrowser.html" >DOM Parser Errors</a><br />
+
+<br />
+<a target="_top" href="dom_summary.html" >DOM Summary</a><br />
+<br />
+<h2 class="left"><span class="left_h2">XML DOM</span> Examples</h2>
+<a target="_top" href="dom_examples.html" >DOM Examples</a><br />
+<a target="_top" href="dom_validate.html" >DOM Validator</a><br /></div>
+<div style="width:634px;margin:0px;padding:0px;background-color:#ffffff;color:#000000;padding-bottom:8px;padding-right:5px;padding-top:4px;float:left;">
+
+<h1>XML DOM - The <span class="color_h1">Element</span> Object</h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="dom_processinginstruction.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="dom_attribute.html">Next Chapter &raquo;</a></div>
+</div>
+<hr />
+<h2>The Element object</h2>
+<p>The Element object represents an element in an XML document. Elements may 
+contain attributes, other elements, or text. If an
+element contains text, the text is represented in a text-node.</p>
+<p><b>IMPORTANT!</b> Text is always stored in text nodes. A common error in DOM 
+processing is to navigate to an element node and expect it to contain the text. 
+However, even the simplest element node has a text node under it. For example, 
+in &lt;year&gt;2005&lt;/year&gt;, there is an element node (year), and a text node under it, 
+which contains the text (2005).</p>
+<p>Because the Element object is also a Node, it inherits the Node object's 
+properties and methods. </p>
+<p>
+<b>IE:</b> Internet Explorer, <b>F:</b> Firefox, <b>O:</b> Opera, <b>W3C:</b> 
+World Wide Web Consortium (Internet Standard)</p>
+
+<h2>Element Object Properties</h2>
+
+<table class="reference">
+<tr>
+<th width="25%" align="left">Property</th>
+<th width="55%" align="left">Description</th>
+<th width="5%" align="left">IE</th>
+<th width="4%" align="left">F</th>
+<th width="4%" align="left">O</th>
+<th width="7%" align="left">W3C</th>
+</tr>
+<tr>
+	<td><a href="prop_element_attributes.html">attributes</a></td>
+	<td>Returns a NamedNodeMap of attributes for the element</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_baseuri.html">baseURI</a></td>
+	<td>Returns the absolute base URI of the element</td>
+	<td>No</td>
+	<td>1</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_childnodes.html">childNodes</a></td>
+	<td>Returns a NodeList of child nodes for the element</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_firstchild.html">firstChild</a></td>
+	<td>Returns the first child of the element</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_lastchild.html">lastChild</a></td>
+	<td>Returns the last child of the element</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_localname.html">localName</a></td>
+	<td>Returns the local part of the name of the element</td>
+	<td>No</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_namespaceuri.html">namespaceURI</a></td>
+	<td>Returns the namespace URI of the element</td>
+	<td>No</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_nextsibling.html">nextSibling</a></td>
+	<td>Returns the node immediately following the element</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_nodename.html">nodeName</a></td>
+	<td>Returns the name of the node, depending on its type</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_nodetype.html">nodeType</a></td>
+	<td>Returns the type of the node</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_ownerdocument.html">ownerDocument</a></td>
+	<td>Returns the root element (document object) for an element</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_parentnode.html">parentNode</a></td>
+	<td>Returns the parent node of the element</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_prefix.html">prefix</a></td>
+	<td>Sets or returns the namespace prefix of the element</td>
+	<td>No</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_previoussibling.html">previousSibling</a></td>
+	<td>Returns the node immediately before the element</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>schemaTypeInfo</td>
+	<td>Returns the type information associated with the element</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_tagname.html">tagName</a></td>
+	<td>Returns the name of the element</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_textcontent.html">textContent</a></td>
+	<td>Sets or returns the text content of the element and its 
+	descendants</td>
+	<td>No</td>
+	<td>1</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="prop_element_text.html">text</a></td>
+	<td>Returns the text of the node and its descendants. 
+	IE-only property</td>
+	<td>5</td>
+	<td>No</td>
+	<td>No</td>
+	<td>No</td>
+</tr>
+<tr>
+	<td><a href="prop_element_xml.html">xml</a></td>
+	<td>Returns the XML of the node and its descendants. IE-only 
+	property</td>
+	<td>5</td>
+	<td>No</td>
+	<td>No</td>
+	<td>No</td>
+</tr>
+</table>
+<h2>Element Object Methods</h2>
+
+<table class="reference">
+<tr>
+<th width="40%" align="left">Method</th>
+<th width="40%" align="left">Description</th>
+<th width="5%" align="left">IE</th>
+<th width="4%" align="left">F</th>
+<th width="4%" align="left">O</th>
+<th width="7%" align="left">W3C</th>
+</tr>
+<tr>
+	<td><a href="met_element_appendchild.html">appendChild()</a></td>
+	<td>Adds a new child node to the end of the list of children of 
+	the node</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_clonenode.html">cloneNode()</a></td>
+	<td>Clones a&nbsp; node</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_comparedocumentposition.html">compareDocumentPosition()</a></td>
+	<td>Compares the document position of two nodes</td>
+	<td>No</td>
+	<td>1</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_getattribute.html">getAttribute()</a></td>
+	<td>Returns the value of an attribute</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_getattributens.html">getAttributeNS()</a></td>
+	<td>Returns the value of an attribute (with a namespace)</td>
+	<td>No</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_getattributenode.html">getAttributeNode()</a></td>
+	<td>Returns an attribute node as an Attribute object</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_getattributenodens.html">getAttributeNodeNS()</a></td>
+	<td>Returns an attribute node (with a namespace) as an Attribute object</td>
+	<td>No</td>
+	<td>&nbsp;</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_getelementsbytagname.html">
+	getElementsByTagName()</a></td>
+	<td>Returns a NodeList of matching element nodes, and their&nbsp; 
+	children</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_getelementsbytagnamens.html">getElementsByTagNameNS()</a></td>
+	<td>Returns a NodeList of matching element nodes (with a 
+	namespace), and their&nbsp; children</td>
+	<td>No</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>getFeature(feature,version)</td>
+	<td>Returns a DOM object which implements the specialized APIs 
+	of the specified feature and version</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>getUserData(key)</td>
+	<td>Returns the object associated to a key on a this node. The 
+	object must first have been set to this node by calling setUserData with the 
+	same key</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_hasattribute.html">hasAttribute()</a></td>
+	<td>Returns whether an element has any attributes matching a 
+	specified name</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_hasattributens.html">hasAttributeNS()</a></td>
+	<td>Returns whether an element has any attributes matching a 
+	specified name and 
+	namespace</td>
+	<td>No</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_hasattributes.html">hasAttributes()</a></td>
+	<td>Returns whether the element has any attributes</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_haschildnodes.html">hasChildNodes()</a></td>
+	<td>Returns whether the element has any child nodes</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_insertbefore.html">insertBefore()</a></td>
+	<td>Inserts a new child node before an existing child node</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>isDefaultNamespace(URI)</td>
+	<td>Returns whether the specified namespaceURI is the default</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_isequalnode.html">isEqualNode()</a></td>
+	<td>Checks if two nodes are equal</td>
+	<td>No</td>
+	<td>No</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_issamenode.html">isSameNode()</a></td>
+	<td>Checks if two nodes are the same node</td>
+	<td>No</td>
+	<td>1</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>isSupported(feature,version)</td>
+	<td>Returns whether a specified feature is supported on the 
+	element</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_lookupnamespaceuri.html">lookupNamespaceURI()</a></td>
+	<td>Returns the namespace URI matching a specified prefix</td>
+	<td>No</td>
+	<td>1</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_lookupprefix.html">lookupPrefix()</a></td>
+	<td>Returns the prefix matching a specified namespace URI</td>
+	<td>No</td>
+	<td>1</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>normalize()</td>
+	<td>Puts all text nodes underneath this element (including 
+	attributes) into a &quot;normal&quot; form where only structure (e.g., elements, 
+	comments, processing instructions, CDATA sections, and entity references) 
+	separates Text nodes, i.e., there are neither adjacent Text nodes nor empty 
+	Text nodes </td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_removeattribute.html">removeAttribute()</a></td>
+	<td>Removes a specified attribute</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_removeattributens.html">removeAttributeNS()</a></td>
+	<td>Removes a specified attribute (with a namespace)</td>
+	<td>No</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_removeattributenode.html">
+	removeAttributeNode()</a></td>
+	<td>Removes a specified attribute node</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_removechild.html">removeChild()</a></td>
+	<td>Removes a child node</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_replacechild.html">replaceChild()</a></td>
+	<td>Replaces a child node</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>setUserData(key,data,handler)</td>
+	<td>Associates an object to a key on the element</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_setattribute.html">setAttribute()</a></td>
+	<td>Adds a new attribute</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_setattributens.html">setAttributeNS()</a></td>
+	<td>Adds a new attribute (with a namespace)</td>
+	<td>&nbsp;</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td><a href="met_element_setattributenode.html">setAttributeNode()</a></td>
+	<td>Adds a new attribute node</td>
+	<td>5</td>
+	<td>1</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>setAttributeNodeNS(attrnode)</td>
+	<td>Adds a new attribute node (with a namespace)</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>9</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>setIdAttribute(name,isId)</td>
+	<td>If the isId property of the Attribute object is true, this 
+	method declares the specified attribute to be a user-determined ID attribute</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>setIdAttributeNS(uri,name,isId)</td>
+	<td>If the isId property of the Attribute object is true, this 
+	method declares the specified attribute (with a namespace) to be a 
+	user-determined ID attribute</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+<tr>
+	<td>setIdAttributeNode(idAttr,isId)</td>
+	<td>If the isId property of the Attribute object is true, this 
+	method declares the specified attribute to be a user-determined ID attribute</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>No</td>
+	<td>Yes</td>
+</tr>
+</table>
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="dom_processinginstruction.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="dom_attribute.html">Next Chapter &raquo;</a></div>
+</div>
+
+<hr />
+
+<!-- **** SPOTLIGHTS 1 **** -->
+<!-- SmallPS -->
+<script type='text/javascript'>
+GA_googleFillSlot("SmallPS");
+</script>
+<!-- **** SPOTLIGHTS 2 **** -->
+<!-- LargePS -->
+<script type='text/javascript'>
+GA_googleFillSlot("LargePS");
+</script>
+<!-- **** SPOTLIGHTS 3 **** -->
+<!-- BottomRectangle -->
+<div style="width:340px;margin:auto">
+<script type='text/javascript'>
+GA_googleFillSlot("BottomRectangle");
+</script>
+</div>
+
+<hr />
+<div>
+<div style="float:left;width:224px;">
+<a href="../cert/default.html"><img src="../images/w3cert.gif" style="margin-top:40px;border:0;" alt="W3Schools Certification" /></a> 
+</div>
+<div style="float:left;width:400px;">
+<h2>W3Schools' Online Certification</h2>
+<p>The perfect solution for professionals who need to balance work, family, and career building.</p>
+<p>More than 10 000 certificates already issued!</p>
+<p><a class="tryitbtn" style="width:200px;font-size:120%;margin-top:5px;" href="../cert/default.html">Get Your Certificate &raquo;</a></p></div>
+<p style="clear:both;">The <a href="../cert/default.html">HTML Certificate</a> documents your knowledge of HTML.</p>
+<p>The <a href="../cert/default.html">CSS Certificate</a> documents your knowledge of advanced CSS.</p>
+<p>The <a href="../cert/default.html">JavaScript Certificate</a> documents your knowledge of JavaScript and HTML DOM.</p>
+<p>The <a href="../cert/default.html">jQuery Certificate</a> documents your knowledge of jQuery.</p>
+<p>The <a href="../cert/default.html">XML Certificate</a> documents your knowledge of XML, XML DOM and XSLT.</p>
+<p>The <a href="../cert/default.html">ASP Certificate</a> documents your knowledge of ASP, SQL, and ADO.</p>
+<p>The <a href="../cert/default.html">PHP Certificate</a> documents your knowledge of PHP and SQL (MySQL).</p>
+</div>
+<div style="width:470px;margin:auto;margin-top:5px;">
+<!-- BottomBanner -->
+<script type='text/javascript'>
+GA_googleFillSlot("BottomBanner");
+</script>
+</div>
+
+<div id="err_form" style="display:none">
+<h2>Your suggestion:</h2>
+<p><label for="err_email">Your E-mail (optional):</label> <input type="text" id="err_email" name="err_email" /></p>
+<p><label for="err_url">Page address:</label> <input type="text" disabled="disabled" id="err_url" name="err_url" /></p>
+<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+<p class="submit"><input type="button" value="Submit" onclick="sendErr()" /></p>
+<div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent" style="display:none">
+<h2>Thank you for your support.</h2>
+<div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+
+<div id="rightcolumn" style="width:150px;margin:0px;padding:0px;float:left">
+<table>
+<tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/id/w3schools/goto/w3schools">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/coupons">Best Hosting Coupons</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.justhost.com/track/w3schools/textlink">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/index.cfm?A=w3text">$3.98 Unlimited Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.website.com/">Premium Website Design</a>
+</td></tr>
+</table>
+<table>
+<tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text&amp;q=xmlspy">Download XML Editor</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_400H">FREE Website BUILDER</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_400H">CREATE HTML Websites</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.edirecthost.com/main/home">EASY WEBSITE BUILDER</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="../cert/default.html">Get Certified in:<br />HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="../books/default.html">
+New Books:<br />HTML, CSS<br />
+JavaScript, and Ajax</a>
+</td></tr>
+</table>
+<table>
+<tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="../browsers/browsers_stats.html">Browser Statistics</a><br />
+<a target="_top" href="../browsers/browsers_os.html">Browser OS</a><br />
+<a target="_top" href="../browsers/browsers_display.html">Browser Display</a>
+</td></tr></table>
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table>
+<tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height:16px">
+<a href="#" onclick="sharethis();return false;">Share with &raquo;</a>
+</div>
+</td>
+</tr>
+</table>
+<table>
+<tr><td><br />
+<div style="width:124px;margin:auto">
+<!-- SkyScraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("SkyScraper");
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br />
+</div>
+<div style="width:100%;clear:both;margin:0;padding:0;background-color:transparent;background-image:url('../images/gradientbottom.jpg');background-repeat:repeat-x;position:relative;">
+<div id="footer" style="width:960px;margin-left:auto;margin-right:auto;height:110px;">
+<div style="float:left;width:200px;text-align:left;padding-left:3px;padding-top:11px;"><a href="../index.html">
+<img style="border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com" /></a>
+</div>
+<div style="word-spacing:6px;font-size:80%;padding-right:12px;padding-top:19px;float:right;width:600px;text-align:right;">
+<a href="#" onclick="displayError();return false">REPORT ERROR</a> |
+<a href="../default.html" target="_top">HOME</a> |
+<a href="#top" target="_top">TOP</a> |
+<a href='dom_elementd86a.html?output=print' target="_blank">PRINT</a> |
+<a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+<a href="../about/default.html" target="_top">ABOUT</a>
+</div>
+<div style="padding-top:13px;color:#404040;clear:both;">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.<br />
+While using this site, you agree to have read and accepted our
+<a href="../about/about_copyright.html">terms of use</a> and
+<a href="../about/about_privacy.html">privacy policy</a>.<br />
+<a href="../about/about_copyright.html">Copyright 1999-2012</a> by Refsnes Data. All Rights Reserved.
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/dom/dom_element.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 06:58:37 GMT -->
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="empname">
+        
+    <item name="yogesh"> Yogesh</item>
+    <item name="Pragati">Pragati</item>
+    <item name="Mandeep">Mandeep</item>
+   </string-array>
+  
+</resources>

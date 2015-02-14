@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:orientation="vertical" android:layout_width="fill_parent"
+ android:layout_height="fill_parent">
+
+ <LinearLayout android:id="@+id/pie_container"
+  android:layout_width="fill_parent" android:layout_height="wrap_content"
+
+  android:orientation="vertical">
+ </LinearLayout>
+
+ <TextView android:id="@+id/tvAndroid" android:layout_width="110dip"
+  android:layout_height="wrap_content" android:layout_below="@+id/pie_container"
+  android:text="Android" android:padding="10dip" android:textStyle="bold"
+  android:background="#444544" android:layout_marginTop="200dip" />
+
+ <TextView android:id="@+id/tvIphone" android:layout_width="110dip"
+  android:layout_height="wrap_content" android:layout_below="@+id/pie_container"
+  android:layout_toRightOf="@+id/tvAndroid" android:text="IPhone"
+  android:padding="10dip" android:textStyle="bold" android:background="#878887"
+  android:layout_marginTop="200dip" />
+ <TextView android:id="@+id/tvBlackBerry" android:layout_width="110dip"
+  android:layout_height="wrap_content" android:layout_below="@+id/pie_container"
+  android:layout_toRightOf="@+id/tvIphone" android:text="BlackBerry"
+  android:padding="10dip" android:textStyle="bold" android:background="#98967F"
+  android:layout_marginTop="200dip" />
+
+ <TextView android:id="@+id/tvNokia" android:layout_width="160dip"
+  android:layout_height="wrap_content" android:layout_below="@+id/tvBlackBerry"
+  android:layout_toRightOf="@+id/tvSamsung" android:text="Others"
+  android:padding="10dip" android:textStyle="bold" android:background="#A1A1A1" />
+
+ <TextView android:id="@+id/tvSamsung" android:layout_width="160dip"
+  android:layout_height="wrap_content" android:layout_below="@+id/tvAndroid"
+  android:text="Nokia" android:padding="10dip" android:textStyle="bold"
+
+  android:background="#0000FF" />
+</RelativeLayout>   

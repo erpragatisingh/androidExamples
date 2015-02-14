@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pragati.singh.iimt"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission  android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/hello" android:allowBackup="true">
+        <activity
+            android:name=".iimtsite"
+            android:label="Placement Form" >
+        </activity>
+        <activity
+            android:name=".EnquiryActivity"
+            android:label="Enquiry Form" >
+        </activity>
+        <activity
+            android:name=".faculty"
+            android:label="Faculty Information" >
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="Welcome Admin" >
+        </activity>
+        <activity
+            android:name=".ProFile1Activity"
+            android:label="Select  Your Choice........." android:icon="@drawable/i_love">
+        </activity>
+        
+        
+        <activity
+            android:name=".splashscreen"
+            android:label="IIMT Zone" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+       
+        
+        
+        
+        
+        
+        <activity
+            android:name=".search"
+            android:label="Search" >
+        </activity>
+        <activity
+            android:name=".AccountDetails"
+            android:label="Acount Details" >
+        </activity>
+        <activity android:name=".upturesult" android:label="University Result"></activity>
+        <activity android:name=".placementPortalclg" android:label="IIMT Placement Portal"></activity>
+        <activity android:name="IIMTZONEActivity" android:label="IIMT Zone"></activity>
+        <activity android:name="registration_db" android:label="Registration"></activity>
+        <activity android:name=".facultyDetails" android:label="Faculty Information"
+             android:icon="@drawable/svs_logo"></activity>
+        <activity android:name=".GridviewDemoActivity" android:label="Campus Galary"></activity>
+        <activity android:name=".imagedisplay" android:label="Campus Galary"></activity>
+        <activity android:name=".unilogin" android:label="University/colege login"></activity>
+    </application>
+
+</manifest>

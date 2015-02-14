@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/cssref/css3_browsersupport.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 05:23:27 GMT -->
+<head>
+
+<title>CSS3 Reference</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<style type="text/css">
+table.bsReference
+{
+border:1px solid #c3c3c3;
+border-collapse:collapse;
+}
+
+table.bsReference th
+{
+background-color:#e5eecc;
+border:1px solid #c3c3c3;
+padding:3px;
+vertical-align:middle;
+}
+
+table.bsReference td 
+{
+border:1px solid #c3c3c3;
+padding:3px;
+vertical-align:middle;
+background-position:center;
+background-repeat:no-repeat;
+border:1px solid #dadada;
+text-align:right;
+font-size:10px;
+}
+
+table.bsReference td.bsProperty
+{
+border:1px solid #c3c3c3;
+white-space:nowrap;
+text-align:left;
+font-size:12px;
+}
+
+table.bsReference .bsIE			{width:80px;background-image:url('../images/compatible_ie2020.gif');}
+table.bsReference .bsFirefox	{width:80px;background-image:url('../images/compatible_firefox2020.gif')}
+table.bsReference .bsChrome		{width:80px;background-image:url('../images/compatible_chrome2020.gif');}
+table.bsReference .bsSafari		{width:80px;background-image:url('../images/compatible_safari2020.gif');}
+table.bsReference .bsOpera		{width:80px;background-image:url('../images/compatible_opera2020.gif')}
+table.bsReference .bsNoIE		{width:80px;}
+table.bsReference .bsNoFirefox	{width:80px;}
+table.bsReference .bsNoChrome	{width:80px;}
+table.bsReference .bsNoSafari	{width:80px;}
+table.bsReference .bsNoOpera	{width:80px;}
+table.bsReference .bsPreIE		{width:80px;background-image:url('../images/precompatible_ie5920.gif');}
+table.bsReference .bsPreFirefox	{width:80px;background-image:url('../images/precompatible_firefox5920.gif')}
+table.bsReference .bsPreChrome	{width:80px;background-image:url('../images/precompatible_chrome5920.gif');}
+table.bsReference .bsPreSafari	{width:80px;background-image:url('../images/precompatible_safari5920.gif');}
+table.bsReference .bsPreOpera	{width:80px;background-image:url('../images/precompatible_opera5920.gif')}
+table.bsReference .bsPreXVOpera	{width:80px;background-image:url('../images/precompatible_xv_opera5920.gif')}
+table.bsReference td.bsExp		{width:400px;text-align:left;font-size:12px;}
+table.bsReference td.bsExp span	{font-family:courier new;white-space:nowrap;font-size:13px;}
+table.bsReference td.bsExpIcon	{width:50px;}
+</style>
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<a id="top"></a>
+<div style="width:960px;margin-top:5px;margin-left:auto;margin-right:auto">
+<div style="width:960px;height:74px;margin:0;padding:0;">
+<div style="width:340px;text-align:left;float:left;">
+	<a href="../index.html"><img width="336" height="69" src="../images/w3schoolslogo.gif" alt="W3Schools.com" style="border:0;margin-top:5px;" /></a>
+</div>
+
+<div style="width:300px;float:right;text-align:right;margin-top:20px;margin-right:14px;margin-bottom:5px;">
+<div id="google_translate_element" style="display:none"></div>
+<div id="translate_link" style="margin-bottom:14px">
+<a href="#" class="topnav"
+onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+	<form style="font-size:11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.w3schools.com" />
+    <input onfocus="searchfield_focus(this)" style="width:150px;color:#808080;font-style:italic;margin:0;" 
+    type="text" name="as_q" size="20" value="Search w3schools.com" /><input type="submit" style="margin:0;" value="Search" title="Search" />
+	</form>
+</div>
+</div>
+<div id="topnav" style="clear:both;width:960px;height:25px;">
+<div style="float:left;width:400px;word-spacing:12px;font-size:90%;padding-left:15px;padding-top:6px;white-space:nowrap;text-align:left;">
+	<a class="topnav" href="../default.html" target="_top">HOME </a>
+	<a class="topnav" href="../html/default.html" target="_top">HTML </a>
+	<a class="topnav" href="../css/default.html" target="_top">CSS </a>
+	<a class="topnav" href="../xml/default.html" target="_top">XML </a>
+	<a class="topnav" href="../js/default.html" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="../asp/default.html" target="_top">ASP </a>
+	<a class="topnav" href="../php/default.html" target="_top">PHP </a>
+	<a class="topnav" href="../sql/default.html" target="_top">SQL </a>	
+	<a class="topnav" href="../sitemap/default.html" target="_top">MORE...</a>
+</div>
+<div style="float:right;width:280px;word-spacing:6px;font-size:80%;padding-right:13px;padding-top:7px;color:#888888;white-space:nowrap;text-align:right;">
+	<a class="topnav" href="../sitemap/default.html#references" target="_top">REFERENCES</a> |
+	<a class="topnav" href="../sitemap/default.html#examples" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://w3schools.invisionzone.com/" target="_top">FORUM</a> |
+	<a class="topnav" href="../about/default.html" target="_top">ABOUT</a>	
+</div>
+</div>
+<div style="width:960px;height:94px;position:relative;margin-left:auto;margin-right:auto;margin:0px;padding:0px;overflow:hidden">
+<script type='text/javascript' src='../../partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-3440800076797949");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-3440800076797949", "MainLeaderboard");
+GA_googleAddSlot("ca-pub-3440800076797949", "SmallPS");
+GA_googleAddSlot("ca-pub-3440800076797949", "LargePS");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomRectangle");
+GA_googleAddSlot("ca-pub-3440800076797949", "SkyScraper");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomBanner");
+GA_googleAddSlot("ca-pub-3440800076797949", "TopRectangle");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- TopRectangle -->
+<script type='text/javascript'>
+GA_googleFillSlot("TopRectangle");
+</script>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- MainLeaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("MainLeaderboard");
+</script>
+</div></div>
+<div style="width:960px;padding:0px;margin:0px;">
+<div id="leftcolumn" style="width:170px;margin:0;padding:0;margin-top:5px;float:left;"><h2 class="left"><span class="left_h2">CSS</span> Reference</h2>
+<a target="_top" href="default.html" >CSS Reference</a><br />
+<a target="_top" href="css_selectors.html" >CSS Selectors</a><br />
+<a target="_top" href="css_ref_aural.html" >CSS Reference Aural</a><br />
+<a target="_top" href="css_websafe_fonts.html" >CSS Web Safe Fonts</a><br />
+<a target="_top" href="css_units.html" >CSS Units</a><br />
+<a target="_top" href="css_colors.html" >CSS Colors</a><br />
+<a target="_top" href="css_colors_legal.html" >CSS Color Values</a><br />
+<a target="_top" href="css_colornames.html" >CSS Color Names</a><br />
+<a target="_top" href="css_colorsfull.html" >CSS Color HEX</a><br />
+<a target="_top" href="css3_browsersupport.html" style='font-weight:bold;'>CSS3 Browser Support</a><br />
+<br />
+
+
+<h2 class="left"><span class="left_h2">CSS</span> Properties</h2>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"animation")' class="expandingMenuHeader" >animation</div>
+	<div id="cssprop_animation" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_animation.html" >animation</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_animation-name.html" >animation-name</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_animation-duration.html" >animation-duration</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_animation-timing-function.html" >animation-timing-function</a></div>				
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_animation-delay.html" >animation-delay</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_animation-iteration-count.html" >animation-iteration-count</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_animation-direction.html" >animation-direction</a></div>				
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_animation-play-state.html" >animation-play-state</a></div>
+	</div>
+</div>
+
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_appearance.html" >appearance</a></div>		
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_backface-visibility.html" >backface-visibility</a></div>				
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"background")' class="expandingMenuHeader">background</div>
+	<div id="cssprop_background" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_background.html" >background</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_background-attachment.html" >background-attachment</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_background-color.html" >background-color</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_background-image.html" >background-image</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_background-position.html" >background-position</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_background-repeat.html" >background-repeat</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_background-clip.html" >background-clip</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_background-origin.html" >background-origin</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_background-size.html" >background-size</a></div>		
+	</div>
+</div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"border")' class="expandingMenuHeader">border</div>
+	<div id="cssprop_border" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="pr_border.html" >border</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-bottom.html" >border-bottom</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-bottom_color.html" >border-bottom-color</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-bottom_style.html" >border-bottom-style</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-bottom_width.html" >border-bottom-width</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_tab_border-collapse.html" >border-collapse</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-color.html" >border-color</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-left.html" >border-left</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-left_color.html" >border-left-color</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-left_style.html" >border-left-style</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-left_width.html" >border-left-width</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-right.html" >border-right</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-right_color.html" >border-right-color</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-right_style.html" >border-right-style</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-right_width.html" >border-right-width</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_tab_border-spacing.html" >border-spacing</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-style.html" >border-style</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-top.html" >border-top</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-top_color.html" >border-top-color</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-top_style.html" >border-top-style</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-top_width.html" >border-top-width</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_border-width.html" >border-width</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-bottom-left-radius.html" >border-bottom-left-radius</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-bottom-right-radius.html" >border-bottom-right-radius</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-image.html" >border-image</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-image-outset.html" >border-image-outset</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-image-repeat.html" >border-image-repeat</a></div>				
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-image-slice.html" >border-image-slice</a></div>				
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-image-source.html" >border-image-source</a></div>				
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-image-width.html" >border-image-width</a></div>				
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-radius.html" >border-radius</a></div>				
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-top-left-radius.html" >border-top-left-radius</a></div>				
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_border-top-right-radius.html" >border-top-right-radius</a></div>
+
+	</div>
+</div>
+
+<div class="expandingMenuItem"><a target="_top" href="pr_pos_bottom.html" >bottom</a></div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"box")' class="expandingMenuHeader">box</div>
+	<div id="cssprop_box" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_box-align.html" >box-align</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_box-direction.html" >box-direction</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_box-flex.html" >box-flex</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_box-flex-group.html" >box-flex-group</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_box-lines.html" >box-lines</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_box-ordinal-group.html" >box-ordinal-group</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_box-orient.html" >box-orient</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_box-pack.html" >box-pack</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_box-sizing.html" >box-sizing</a></div>				
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_box-shadow.html" >box-shadow</a></div>				
+	</div>
+</div>
+
+<div class="expandingMenuItem"><a target="_top" href="pr_tab_caption-side.html" >caption-side</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_class_clear.html" >clear</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_pos_clip.html" >clip</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_text_color.html" >color</a></div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"column")' class="expandingMenuHeader">column</div>
+	<div id="cssprop_column" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_column-count.html" >column-count</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_column-fill.html" >column-fill</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_column-gap.html" >column-gap</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_column-rule.html" >column-rule</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_column-rule-color.html" >column-rule-color</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_column-rule-style.html" >column-rule-style</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_column-rule-width.html" >column-rule-width</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_column-span.html" >column-span</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_column-width.html" >column-width</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_columns.html" >columns</a></div>
+	</div>
+</div>
+
+<div class="expandingMenuItem"><a target="_top" href="pr_gen_content.html" >content</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_gen_counter-increment.html" >counter-increment</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_gen_counter-reset.html" >counter-reset</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_class_cursor.html" >cursor</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_text_direction.html" >direction</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_class_display.html" >display</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_tab_empty-cells.html" >empty-cells</a></div>
+
+<div class="expandingMenuItem"><a target="_top" href="pr_class_float.html" >float</a></div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"font")' class="expandingMenuHeader">font</div>
+	<div id="cssprop_font" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="pr_font_font.html" >font</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_font_font-family.html" >font-family</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_font_font-size.html" >font-size</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_font_font-style.html" >font-style</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_font_font-variant.html" >font-variant</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_font_weight.html" >font-weight</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_font-face_rule.html" >@font-face</a></div>	
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_font-size-adjust.html" >font-size-adjust</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_font-stretch.html" >font-stretch</a></div>	
+	</div>
+</div>
+
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_grid-columns.html" >grid-columns</a></div>		
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_grid-rows.html" >grid-rows</a></div>			
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_hanging-punctuation.html" >hanging-punctuation</a></div>		
+<div class="expandingMenuItem"><a target="_top" href="pr_dim_height.html" >height</a></div>
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_icon.html" >icon</a></div>
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_keyframes.html" >@keyframes</a></div>
+
+<div class="expandingMenuItem"><a target="_top" href="pr_pos_left.html" >left</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_text_letter-spacing.html" >letter-spacing</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_dim_line-height.html" >line-height</a></div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"list")' class="expandingMenuHeader">list-style</div>
+	<div id="cssprop_list" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="pr_list-style.html" >list-style</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_list-style-image.html" >list-style-image</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_list-style-position.html" >list-style-position</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_list-style-type.html" >list-style-type</a></div>
+	</div>
+</div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"margin")' class="expandingMenuHeader">margin</div>
+	<div id="cssprop_margin" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="pr_margin.html" >margin</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_margin-bottom.html" >margin-bottom</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_margin-left.html" >margin-left</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_margin-right.html" >margin-right</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_margin-top.html" >margin-top</a></div>
+	</div>
+</div>
+
+<div class="expandingMenuItem"><a target="_top" href="pr_dim_max-height.html" >max-height</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_dim_max-width.html" >max-width</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_dim_min-height.html" >min-height</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_dim_min-width.html" >min-width</a></div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"nav")' class="expandingMenuHeader">nav</div>
+	<div id="cssprop_nav" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_nav-down.html" >nav-down</a></div>					
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_nav-index.html" >nav-index</a></div>					
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_nav-left.html" >nav-left</a></div>					
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_nav-right.html" >nav-right</a></div>					
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_nav-up.html" >nav-up</a></div>									
+	</div>
+</div>
+		
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_opacity.html" >opacity</a></div>	
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"outline")' class="expandingMenuHeader">outline</div>
+	<div id="cssprop_outline" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="pr_outline.html" >outline</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_outline-color.html" >outline-color</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_outline-offset.html" >outline-offset</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="pr_outline-style.html" >outline-style</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_outline-width.html" >outline-width</a></div>
+	</div>
+</div>
+		
+<div class="expandingMenuItem"><a target="_top" href="pr_pos_overflow.html" >overflow</a></div>
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_overflow-x.html" >overflow-x</a></div>		
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_overflow-y.html" >overflow-y</a></div>			
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"padding")' class="expandingMenuHeader">padding</div>
+	<div id="cssprop_padding" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="pr_padding.html" >padding</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_padding-bottom.html" >padding-bottom</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_padding-left.html" >padding-left</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_padding-right.html" >padding-right</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_padding-top.html" >padding-top</a></div>
+	</div>
+</div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"print")' class="expandingMenuHeader">page-break</div>
+	<div id="cssprop_print" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="pr_print_pageba.html" >page-break-after</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_print_pagebb.html" >page-break-before</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_print_pagebi.html" >page-break-inside</a></div>
+	</div>
+</div>
+
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_perspective.html" >perspective</a></div>
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_perspective-origin.html" >perspective-origin</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_class_position.html" >position</a></div>
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_punctuation-trim.html" >punctuation-trim</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_gen_quotes.html" >quotes</a></div>
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_resize.html" >resize</a></div>			
+<div class="expandingMenuItem"><a target="_top" href="pr_pos_right.html" >right</a></div>
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_rotation.html" >rotation</a></div>			
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_rotation-point.html" >rotation-point</a></div>			
+<div class="expandingMenuItem"><a target="_top" href="pr_tab_table-layout.html" >table-layout</a></div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"target")' class="expandingMenuHeader">target</div>
+	<div id="cssprop_target" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_target.html" >target</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_target-name.html" >target-name</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_target-new.html" >target-new</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_target-position.html" >target-position</a></div>				
+	</div>
+</div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"text")' class="expandingMenuHeader">text</div>
+	<div id="cssprop_text" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="pr_text_text-align.html" >text-align</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_text_text-decoration.html" >text-decoration</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="pr_text_text-indent.html" >text-indent</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_text-justify.html" >text-justify</a></div>	
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_text-outline.html" >text-outline</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_text-overflow.html" >text-overflow</a></div>		
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_text-shadow.html" >text-shadow</a></div>	
+		<div class="expandingMenuItem"><a target="_top" href="pr_text_text-transform.html" >text-transform</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_text-wrap.html" >text-wrap</a></div>		
+	</div>
+</div>
+
+<div class="expandingMenuItem"><a target="_top" href="pr_pos_top.html" >top</a></div>
+	
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"transform")' class="expandingMenuHeader">transform</div>
+	<div id="cssprop_transform" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_transform.html" >transform</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_transform-origin.html" >transform-origin</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_transform-style.html" >transform-style</a></div>
+	</div>
+</div>
+
+<div class="expandingMenu expandingMenuNotSelected">
+	<div onclick='click_expandingMenuHeader(this,"transition")' class="expandingMenuHeader">transition</div>
+	<div id="cssprop_transition" class="expandingMenuGroup" style="display:none;">
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_transition.html" >transition</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_transition-property.html" >transition-property</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_transition-duration.html" >transition-duration</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_transition-timing-function.html" >transition-timing-function</a></div>
+		<div class="expandingMenuItem"><a target="_top" href="css3_pr_transition-delay.html" >transition-delay</a></div>
+	</div>
+</div>
+	
+<div class="expandingMenuItem"><a target="_top" href="pr_pos_vertical-align.html" >vertical-align</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_class_visibility.html" >visibility</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_dim_width.html" >width</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_text_white-space.html" >white-space</a></div>
+<div class="expandingMenuItem"><a target="_top" href="pr_text_word-spacing.html" >word-spacing</a></div>
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_word-break.html" >word-break</a></div>		
+<div class="expandingMenuItem"><a target="_top" href="css3_pr_word-wrap.html" >word-wrap</a></div>		
+<div class="expandingMenuItem"><a target="_top" href="pr_pos_z-index.html" >z-index</a></div>
+
+
+
+
+</div>
+<div style="width:634px;margin:0px;padding:0px;background-color:#ffffff;color:#000000;padding-bottom:8px;padding-right:5px;padding-top:4px;float:left;">
+
+<h1>CSS3 <span class="color_h1">Browser Support Reference</span></h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="css_colorsfull.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="default.html">Next Reference &raquo;</a></div>
+</div>
+<hr />
+<p class="intro"><img style="float:left;margin-right:6px" alt="Note" src="../images/icon_small_star.gif" /> 
+W3Schools' Browser support reference is tested regularly with all major browsers.<br />
+Tested: January 13, 2012.</p>
+<hr />
+
+<h2>Browser support</h2>
+<p>CSS3 is not yet a W3C standard, but all the major browsers are already 
+supporting many of the new features. Below is a reference off all the new CSS3 
+properties and their browser support:</p>
+
+
+<table class="bsReference">
+	<tr>
+	<th>Property</th>
+    <th style="text-align:center;font-size:12px;">IE</th>
+    <th style="text-align:center;font-size:12px;">Firefox</th>
+    <th style="text-align:center;font-size:12px;">Chrome</th>
+    <th style="text-align:center;font-size:12px;">Safari</th>
+    <th style="text-align:center;font-size:12px;">Opera</th>
+ 	</tr>
+	<tr>
+    <td class="bsProperty">alignment-adjust</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">alignment-baseline</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_animation.html">animation</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">5</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_animation-name.html">animation-name</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">5</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_animation-duration.html">animation-duration</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">5</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_animation-timing-function.html">animation-timing-function</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">5</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_animation-delay.html">animation-delay</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">5</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_animation-iteration-count.html">animation-iteration-count</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">5</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_animation-direction.html">animation-direction</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">5</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_animation-play-state.html">animation-play-state</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">5</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_appearance.html">appearance</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">3</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_backface-visibility.html">backface-visibility</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_background-clip.html">background-clip</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome">10</td>
+    <td class="bsPreSafari">5</td>
+    <td class="bsOpera">10.5</td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_background-origin.html">background-origin</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome">4</td>
+    <td class="bsSafari">5</td>
+    <td class="bsOpera">10.5</td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_background-size.html">background-size</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome">4</td>
+    <td class="bsSafari">5</td>
+    <td class="bsOpera">10.5</td>
+  </tr>
+  	<tr>
+    <td class="bsProperty">baseline-shift</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">bookmark-label</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">bookmark-level</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">bookmark-target</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-bottom-left-radius.html">border-bottom-left-radius</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome">5</td>
+    <td class="bsSafari">5</td>
+    <td class="bsOpera">10.5</td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-bottom-right-radius.html">border-bottom-right-radius</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome">5</td>
+    <td class="bsSafari">5</td>
+    <td class="bsOpera">10.5</td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-image.html">border-image</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari">3</td>
+    <td class="bsOpera"></td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-image-outset.html">border-image-outset</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-image-repeat.html">border-image-repeat</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-image-slice.html">border-image-slice</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-image-source.html">border-image-source</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-image-width.html">border-image-width</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-radius.html">border-radius</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome">5</td>
+    <td class="bsSafari">5</td>
+    <td class="bsOpera">10.5</td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-top-left-radius.html">border-top-left-radius</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome">5</td>
+    <td class="bsSafari">5</td>
+    <td class="bsOpera">10.5</td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_border-top-right-radius.html">border-top-right-radius</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome">5</td>
+    <td class="bsSafari">5</td>
+    <td class="bsOpera">10.5</td>
+  </tr>
+  <tr>
+    <td class="bsProperty">box-decoration-break</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  	<tr>
+    <td class="bsProperty"><a href="css3_pr_box-align.html">box-align</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_box-direction.html">box-direction</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_box-flex.html">box-flex</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_box-flex-group.html">box-flex-group</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_box-lines.html">box-lines</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_box-ordinal-group.html">box-ordinal-group</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_box-orient.html">box-orient</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_box-pack.html">box-pack</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_box-shadow.html">box-shadow</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome">10</td>
+    <td class="bsSafari"></td>
+    <td class="bsOpera">10.5</td>
+  </tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_box-sizing.html">box-sizing</a></td>
+    <td class="bsIE">8</td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsChrome">9</td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">color-profile</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_column-fill.html">column-fill</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_column-gap.html">column-gap</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_column-rule.html">column-rule</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_column-rule-color.html">column-rule-color</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_column-rule-style.html">column-rule-style</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_column-rule-width.html">column-rule-width</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_column-span.html">column-span</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_column-width.html">column-width</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_columns.html">columns</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_column-count.html">column-count</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">crop</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">dominant-baseline</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">drop-initial-after-adjust</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">drop-initial-after-align</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">drop-initial-before-adjust</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">drop-initial-before-align</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">drop-initial-size</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">drop-initial-value</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">fit</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">fit-position</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">float-offset</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_font-face_rule.html">@font-face</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">3.6</td>
+    <td class="bsChrome">4</td>
+    <td class="bsSafari">3</td>
+    <td class="bsOpera">10</td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_font-size-adjust.html">font-size-adjust</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsFirefox">2</td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_font-stretch.html">font-stretch</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_grid-columns.html">grid-columns</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_grid-rows.html">grid-rows</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_hanging-punctuation.html">hanging-punctuation</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  	<tr>
+    <td class="bsProperty">hyphenate-after</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">hyphenate-before</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">hyphenate-characters</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">hyphenate-lines</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">hyphenate-resource</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">hyphens</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_icon.html">icon</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">image-orientation</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">image-resolution</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_keyframes.html">@keyframes</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">4</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsPreOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">inline-box-align</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">line-stacking</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">line-stacking-ruby</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">line-stacking-shift</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">line-stacking-strategy</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">mark</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">mark-after</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">mark-before</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">marks</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">marquee-direction</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">marquee-play-count</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">marquee-speed</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">marquee-style</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">move-to</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_nav-down.html">nav-down</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsOpera">11.5</td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_nav-index.html">nav-index</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsOpera">11.5</td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_nav-left.html">nav-left</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsOpera">11.5</td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_nav-right.html">nav-right</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsOpera">11.5</td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_nav-up.html">nav-up</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsOpera">11.5</td>
+  	</tr>
+  	<tr>
+    <td class="bsProperty"><a href="css3_pr_opacity.html">opacity</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">2</td>
+    <td class="bsChrome">4</td>
+    <td class="bsSafari">4</td>
+    <td class="bsOpera">10</td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_outline-offset.html">outline-offset</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsFirefox"></td>
+    <td class="bsChrome"></td>
+    <td class="bsSafari"></td>
+    <td class="bsOpera">11</td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_overflow-style.html">overflow-style</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_overflow-x.html">overflow-x</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">2</td>
+    <td class="bsChrome"></td>
+    <td class="bsSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_overflow-y.html">overflow-y</a></td>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">2</td>
+    <td class="bsChrome"></td>
+    <td class="bsSafari"></td>
+    <td class="bsOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">page</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">page-policy</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_perspective.html">perspective</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari">5</td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_perspective-origin.html">perspective-origin</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">phonemes</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsPreXVOpera"></td>
+  	</tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_punctuation-trim.html">punctuation-trim</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  	<tr>
+    <td class="bsProperty">rendering-intent</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_resize.html">resize</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome"></td>
+    <td class="bsSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">rest</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">rest-after</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">rest-before</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_rotation.html">rotation</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_rotation-point.html">rotation-point</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">ruby-align</td>
+    <td class="bsIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">ruby-overhang</td>
+    <td class="bsIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">ruby-position</td>
+    <td class="bsIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">ruby-span</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">size</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">string-set</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_target.html">target</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_target-name.html">target-name</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_target-new.html">target-new</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_target-position.html">target-position</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+  <tr>
+    <td class="bsProperty">text-align-last</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_text-emphasis.html">text-emphasis</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  	<tr>
+    <td class="bsProperty">text-height</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_text-justify.html">text-justify</a></td>
+    <td class="bsIE">5</td>
+    <td class="bsFirefox"></td>
+    <td class="bsChrome"></td>
+    <td class="bsSafari"></td>
+    <td class="bsOpera"></td>
+  </tr>
+  	<tr>
+    <td class="bsProperty"><a href="css3_pr_text-outline.html">text-outline</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_text-overflow.html">text-overflow</a></td>
+    <td class="bsIE">5</td>
+    <td class="bsFirefox">7</td>
+    <td class="bsChrome">4</td>
+    <td class="bsSafari">4</td>
+    <td class="bsOpera">10.6</td>
+  	</tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_text-shadow.html">text-shadow</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsFirefox">3</td>
+    <td class="bsChrome">4</td>
+    <td class="bsSafari">4</td>
+    <td class="bsOpera">10</td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_text-wrap.html">text-wrap</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  	<tr>
+    <td class="bsProperty"><a href="css3_pr_transform.html">transform</a></td>
+    <td class="bsPreIE">9</td>
+    <td class="bsPreFirefox">3.6</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsPreOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_transform-origin.html">transform-origin</a></td>
+    <td class="bsPreIE">9</td>
+    <td class="bsPreFirefox">3.6</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsPreOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_transform-style.html">transform-style</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari">5</td>
+    <td class="bsNoOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_transition.html">transition</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">4</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsPreOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty" height="25">
+	<a href="css3_pr_transition-property.html">transition-property</a></td>
+    <td class="bsNoIE" height="25"></td>
+    <td class="bsPreFirefox" height="25">4</td>
+    <td class="bsPreChrome" height="25"></td>
+    <td class="bsPreSafari" height="25"></td>
+    <td class="bsPreOpera" height="25"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_transition-duration.html">transition-duration</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">4</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsPreOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_transition-timing-function.html">transition-timing-function</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">4</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsPreOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty"><a href="css3_pr_transition-delay.html">transition-delay</a></td>
+    <td class="bsNoIE"></td>
+    <td class="bsPreFirefox">4</td>
+    <td class="bsPreChrome"></td>
+    <td class="bsPreSafari"></td>
+    <td class="bsPreOpera"></td>
+  	</tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_word-break.html">word-break</a></td>
+    <td class="bsIE">5</td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsChrome">8</td>
+    <td class="bsSafari">3</td>
+    <td class="bsNoOpera"></td>
+  </tr>
+  <tr>
+    <td class="bsProperty"><a href="css3_pr_word-wrap.html">word-wrap</a></td>
+    <td class="bsIE">5</td>
+    <td class="bsFirefox">3.6</td>
+    <td class="bsChrome"></td>
+    <td class="bsSafari"></td>
+    <td class="bsOpera"></td>
+  </tr>
+	<tr>
+    <td class="bsProperty">voice-balance</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsPreXVOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">voice-duration</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsPreXVOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">voice-pitch</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsPreXVOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">voice-pitch-range</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsPreXVOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">voice-rate</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsPreXVOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">voice-stress</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsPreXVOpera"></td>
+  	</tr>
+	<tr>
+    <td class="bsProperty">voice-volume</td>
+    <td class="bsNoIE"></td>
+    <td class="bsNoFirefox"></td>
+    <td class="bsNoChrome"></td>
+    <td class="bsNoSafari"></td>
+    <td class="bsPreXVOpera"></td>
+  	</tr>
+  </table>
+
+<br />
+
+<h2>Icon Explanations</h2>
+
+<table class="bsReference">
+  <tr><td class="bsIE bsExpIcon"></td><td class="bsExp">Supported by Internet Explorer</td></tr>
+  <tr><td class="bsFirefox bsExpIcon"></td><td class="bsExp">Supported by Firefox</td></tr>
+  <tr><td class="bsChrome bsExpIcon"></td><td class="bsExp">Supported by Google Chrome</td></tr>
+  <tr><td class="bsSafari bsExpIcon"></td><td class="bsExp">Supported by Safari</td></tr>
+  <tr><td class="bsOpera bsExpIcon"></td><td class="bsExp">Supported by Opera</td></tr>
+</table>
+
+<br />
+
+<table class="bsReference">
+  <tr><td class="bsPreIE bsExpIcon"></td><td class="bsExp">Supported by Internet Explorer with the prefix <span>-ms-</span></td></tr>
+  <tr><td class="bsPreFirefox bsExpIcon"></td><td class="bsExp">Supported by Firefox with the prefix <span>-moz-</span></td></tr>
+  <tr><td class="bsPreChrome bsExpIcon"></td><td class="bsExp">Supported by Google Chrome with the prefix <span>-webkit-</span></td></tr>
+  <tr><td class="bsPreSafari bsExpIcon"></td><td class="bsExp">Supported by Safari with the prefix <span>-webkit-</span></td></tr>
+  <tr><td class="bsPreOpera bsExpIcon"></td><td class="bsExp">Supported by Opera with the prefix <span>-o-</span></td></tr>
+  <tr><td class="bsPreXVOpera bsExpIcon"></td><td class="bsExp">Supported by Opera with the prefix <span>-xv-</span></td></tr>  
+</table>
+
+<br />
+
+<p>For some properties you see the browser icon and a number:</p>
+
+<table class="bsReference">
+  <tr>
+    <td class="bsIE">9</td>
+    <td class="bsFirefox">4</td>
+    <td class="bsChrome">4</td>
+    <td class="bsSafari">5</td>
+    <td class="bsOpera">10.5</td>
+  </tr>
+</table>
+
+<p>The number indicates in which browser version the property was first supported.</p>
+
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="css_colorsfull.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="default.html">Next Reference &raquo;</a></div>
+</div>
+
+<hr />
+
+<!-- **** SPOTLIGHTS 1 **** -->
+<!-- SmallPS -->
+<script type='text/javascript'>
+GA_googleFillSlot("SmallPS");
+</script>
+<!-- **** SPOTLIGHTS 2 **** -->
+<!-- LargePS -->
+<script type='text/javascript'>
+GA_googleFillSlot("LargePS");
+</script>
+<!-- **** SPOTLIGHTS 3 **** -->
+<!-- BottomRectangle -->
+<div style="width:340px;margin:auto">
+<script type='text/javascript'>
+GA_googleFillSlot("BottomRectangle");
+</script>
+</div>
+
+<div style="width:470px;margin:auto;margin-top:5px;">
+<!-- BottomBanner -->
+<script type='text/javascript'>
+GA_googleFillSlot("BottomBanner");
+</script>
+</div>
+
+<div id="err_form" style="display:none">
+<h2>Your suggestion:</h2>
+<p><label for="err_email">Your E-mail (optional):</label> <input type="text" id="err_email" name="err_email" /></p>
+<p><label for="err_url">Page address:</label> <input type="text" disabled="disabled" id="err_url" name="err_url" /></p>
+<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+<p class="submit"><input type="button" value="Submit" onclick="sendErr()" /></p>
+<div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent" style="display:none">
+<h2>Thank you for your support.</h2>
+<div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+
+<div id="rightcolumn" style="width:150px;margin:0px;padding:0px;float:left">
+<table>
+<tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/id/w3schools/goto/w3schools">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/coupons">Best Hosting Coupons</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.justhost.com/track/w3schools/textlink">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/index.cfm?A=w3text">$3.98 Unlimited Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.website.com/">Premium Website Design</a>
+</td></tr>
+</table>
+<table>
+<tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML Editor - Free Trial!</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_400H">FREE Website BUILDER</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_400H">CREATE HTML Websites</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.edirecthost.com/main/home">EASY WEBSITE BUILDER</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="../cert/default.html">Get Certified in:<br />HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="../books/default.html">
+New Books:<br />HTML, CSS<br />
+JavaScript, and Ajax</a>
+</td></tr>
+</table>
+<table>
+<tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="../browsers/browsers_stats.html">Browser Statistics</a><br />
+<a target="_top" href="../browsers/browsers_os.html">Browser OS</a><br />
+<a target="_top" href="../browsers/browsers_display.html">Browser Display</a>
+</td></tr></table>
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table>
+<tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height:16px">
+<a href="#" onclick="sharethis();return false;">Share with &raquo;</a>
+</div>
+</td>
+</tr>
+</table>
+<table>
+<tr><td><br />
+<div style="width:124px;margin:auto">
+<!-- SkyScraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("SkyScraper");
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br />
+</div>
+<div style="width:100%;clear:both;margin:0;padding:0;background-color:transparent;background-image:url('../images/gradientbottom.jpg');background-repeat:repeat-x;position:relative;">
+<div id="footer" style="width:960px;margin-left:auto;margin-right:auto;height:110px;">
+<div style="float:left;width:200px;text-align:left;padding-left:3px;padding-top:11px;"><a href="../index.html">
+<img style="border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com" /></a>
+</div>
+<div style="word-spacing:6px;font-size:80%;padding-right:12px;padding-top:19px;float:right;width:600px;text-align:right;">
+<a href="#" onclick="displayError();return false">REPORT ERROR</a> |
+<a href="../default.html" target="_top">HOME</a> |
+<a href="#top" target="_top">TOP</a> |
+<a href='css3_browsersupportd86a.html?output=print' target="_blank">PRINT</a> |
+<a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+<a href="../about/default.html" target="_top">ABOUT</a>
+</div>
+<div style="padding-top:13px;color:#404040;clear:both;">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.<br />
+While using this site, you agree to have read and accepted our
+<a href="../about/about_copyright.html">terms of use</a> and
+<a href="../about/about_privacy.html">privacy policy</a>.<br />
+<a href="../about/about_copyright.html">Copyright 1999-2012</a> by Refsnes Data. All Rights Reserved.
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/cssref/css3_browsersupport.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 05:23:36 GMT -->
+</html>

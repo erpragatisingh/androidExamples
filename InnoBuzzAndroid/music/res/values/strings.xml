@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MusicCompany</string>
+    <string name="app_name">MusicCompany</string>
+    
+    
+    <string-array name="audio">
+    <item>MP3 Player</item>
+    <item>FM</item>
+    <item>Radio</item>
+    <item>iPad</item>
+    <item>Walk Man</item>
+    <item>CD Players</item>
+    <item>DVD Players</item>
+    <item>Music CDs Audio</item>
+    <item>Music DVDs Audio</item>
+    <item>Amlifire</item>
+    
+    </string-array>
+    <string-array name="vedio">
+    <item>CD Players</item>
+    <item>DVD Players</item>
+    <item>MP4 Players</item>
+    <item>LCD TV</item>
+    <item>LED TV</item>
+    <item>TV</item>
+    <item>Music CDs Vedio</item>
+    <item>Music DVDs Vedio</item>
+    
+    
+    </string-array>
+    <string-array name="speakers">
+    <item>Com. Speakers</item>
+    <item>CD DVD Speakers</item>
+    <item>Home Theaters</item>
+    <item>Ear Phone</item>
+    <item>Hand Free</item>
+    <item>Bluetooth EarPhone</item>
+    <item>Normal Speakers</item>
+       
+    </string-array>
+    <string-array name="buy">
+     <item>Punjab Nat.Bank</item>
+     <item>State Bank of India</item>
+     <item>Bank Of India</item>
+     <item>HDFC Bank</item>
+     <item>ICICI Bank</item>
+     <item>Axis Bank</item>
+     <item>Bank Of Barora</item>
+     <item>Dena Bank</item>
+     <item>IDBI Bank</item>
+     <item>Vijya Bank</item>
+     <item>Orierntal Bank</item>
+     <item>State Bank of Patyala</item>
+    </string-array>
+    
+    
+</resources>
+
+

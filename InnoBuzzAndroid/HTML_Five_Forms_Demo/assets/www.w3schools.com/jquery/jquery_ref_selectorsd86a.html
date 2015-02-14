@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/jquery/jquery_ref_selectors.asp?output=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 07:40:43 GMT -->
+<head>
+
+<title>jQuery Selectors</title>
+ 
+<link rel="shortcut icon" href="http://www.w3schools.com/favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","http://www.w3schools.com/err_sup.asp",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="http://www.w3schools.com/stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='http://www.w3schools.com/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='http://www.w3schools.com/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.js?0=0&amp;0=0&amp;0=0'></script>
+
+<p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p>
+
+<h1>jQuery <span class="color_h1">Selectors</span></h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="http://www.w3schools.com/jquery/jquery_quiz.asp">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="http://www.w3schools.com/jquery/jquery_ref_events.asp">Next Chapter &raquo;</a></div>
+</div>
+<hr />
+<h2>jQuery Selectors</h2>
+<p>Use our excellent <a target="_blank" href="http://www.w3schools.com/jquery/trysel.asp?filename=trysel_basic&amp;jqsel=p.intro,%23choose">jQuery Selector Tester</a> to experiment with the different selectors.</p>
+<table class="reference">
+<tr>
+<th align="left">Selector</th>
+<th align="left">Example</th>
+<th align="left">Selects</th>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_all.asp">*</a></td>
+<td>$(&quot;*&quot;)</td>
+<td>All elements</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_id.asp">#<em>id</em></a></td>
+<td>$(&quot;#lastname&quot;)</td>
+<td>The element with id=lastname</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_class.asp">.<em>class</em></a></td>
+<td>$(&quot;.intro&quot;)</td>
+<td>All elements with class=&quot;intro&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_element.asp"><em>element</em></a></td>
+<td>$(&quot;p&quot;)</td>
+<td>All p elements</td>
+</tr>
+<tr>
+<td>.<em>class</em>.<em>class</em></td>
+<td>$(&quot;.intro.demo&quot;)</td>
+<td>All elements with the classes &quot;intro&quot; and &quot;demo&quot;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_first.asp">:first</a></td>
+<td>$(&quot;p:first&quot;)</td>
+<td>The first p element</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_last.asp">:last</a></td>
+<td>$(&quot;p:last&quot;)</td>
+<td>The last p element</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_even.asp">:even</a></td>
+<td>$(&quot;tr:even&quot;)</td>
+<td>All even tr elements</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_odd.asp">:odd</a></td>
+<td>$(&quot;tr:odd&quot;)</td>
+<td>All odd tr elements</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_eq.asp">:eq(<em>index</em>)</a></td>
+<td>$(&quot;ul li:eq(3)&quot;)</td>
+<td>The fourth element in a list (index starts at 0)</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_gt.asp">:gt(<em>no</em>)</a></td>
+<td>$(&quot;ul li:gt(3)&quot;)</td>
+<td>List elements with an index greater than 3</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_lt.asp">:lt(<em>no</em>)</a></td>
+<td>$(&quot;ul li:lt(3)&quot;)</td>
+<td>List elements with an index less than 3</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_not.asp">:not(<em>selector</em>)</a></td>
+<td>$(&quot;input:not(:empty)&quot;)</td>
+<td>All input elements that are not empty</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_header.asp">:header</a></td>
+<td>$(&quot;:header&quot;)</td>
+<td>All header elements h1, h2 ...</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_animated.asp">:animated</a></td>
+<td>$(&quot;:animated&quot;)</td>
+<td>All animated elements</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_contains.asp">:contains(<em>text</em>)</a></td>
+<td>$(&quot;:contains('W3Schools')&quot;)</td>
+<td>All elements which contains the text</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_empty.asp">:empty</a></td>
+<td>$(&quot;:empty&quot;)</td>
+<td>All elements with no child (elements) nodes</td>
+</tr>
+<tr>
+<td>:hidden</td>
+<td>$(&quot;p:hidden&quot;)</td>
+<td>All hidden p elements</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_visible.asp">:visible</a></td>
+<td>$(&quot;table:visible&quot;)</td>
+<td>All visible tables</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><em>s1</em>,<em>s2</em>,<em>s3</em></td>
+<td>$(&quot;th,td,.intro&quot;)</td>
+<td>All elements with matching selectors</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_attribute.asp">[<em>attribute</em>]</a></td>
+<td>$(&quot;[href]&quot;)</td>
+<td>All elements with a href attribute</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_attribute_equal_value.asp">[<em>attribute</em>=<em>value</em>]</a></td>
+<td>$(&quot;[href='default.htm']&quot;)</td>
+<td>All elements with a href attribute value equal to &quot;default.htm&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_attribute_notequal_value.asp">[<em>attribute</em>!=<em>value</em>]</a></td>
+<td>$(&quot;[href!='default.htm']&quot;)</td>
+<td>All elements with a href attribute value not equal to &quot;default.htm&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_attribute_end_value.asp">[<em>attribute</em>$=<em>value</em>]</a></td>
+<td>$(&quot;[href$='.jpg']&quot;)</td>
+<td>All elements with a href attribute value ending with &quot;.jpg&quot;</td>
+</tr>
+<tr>
+<td>[<i>attribute</i>^=<i>value</i>]</td>
+<td>$(&quot;[href^='jquery_']&quot;)</td>
+<td>All elements with a href attribute value starting with &quot;jquery_&quot;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input.asp">:input</a></td>
+<td>$(&quot;:input&quot;)</td>
+<td>All input elements</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_text.asp">:text</a></td>
+<td>$(&quot;:text&quot;)</td>
+<td>All input elements with type=&quot;text&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_password.asp">:password</a></td>
+<td>$(&quot;:password&quot;)</td>
+<td>All input elements with type=&quot;password&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_radio.asp">:radio</a></td>
+<td>$(&quot;:radio&quot;)</td>
+<td>All input elements with type=&quot;radio&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_checkbox.asp">:checkbox</a></td>
+<td>$(&quot;:checkbox&quot;)</td>
+<td>All input elements with type=&quot;checkbox&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_submit.asp">:submit</a></td>
+<td>$(&quot;:submit&quot;)</td>
+<td>All input elements with type=&quot;submit&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_reset.asp">:reset</a></td>
+<td>$(&quot;:reset&quot;)</td>
+<td>All input elements with type=&quot;reset&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_button.asp">:button</a></td>
+<td>$(&quot;:button&quot;)</td>
+<td>All input elements with type=&quot;button&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_image.asp">:image</a></td>
+<td>$(&quot;:image&quot;)</td>
+<td>All input elements with type=&quot;image&quot;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_file.asp">:file</a></td>
+<td>$(&quot;:file&quot;)</td>
+<td>All input elements with type=&quot;file&quot;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_enabled.asp">:enabled</a></td>
+<td>$(&quot;:enabled&quot;)</td>
+<td>All enabled input elements</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_disabled.asp">:disabled</a></td>
+<td>$(&quot;:disabled&quot;)</td>
+<td>All disabled input elements</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_selected.asp">:selected</a></td>
+<td>$(&quot;:selected&quot;)</td>
+<td>All selected input elements</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/jquery/sel_input_checked.asp">:checked</a></td>
+<td>$(&quot;:checked&quot;)</td>
+<td>All checked input elements</td>
+</tr>
+</table>
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="http://www.w3schools.com/jquery/jquery_quiz.asp">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="http://www.w3schools.com/jquery/jquery_ref_events.asp">Next Chapter &raquo;</a></div>
+</div>
+
+<p>From <b>http://www.w3schools.com</b> (Copyright Refsnes Data)</p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/jquery/jquery_ref_selectors.asp?output=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 07:40:43 GMT -->
+</html>

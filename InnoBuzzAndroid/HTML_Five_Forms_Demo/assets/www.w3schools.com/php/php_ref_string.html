@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/php/php_ref_string.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 06:43:30 GMT -->
+<head>
+<title>PHP String Functions</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<a id="top"></a>
+<div style="width:960px;margin-top:5px;margin-left:auto;margin-right:auto">
+<div style="width:960px;height:74px;margin:0;padding:0;">
+<div style="width:340px;text-align:left;float:left;">
+	<a href="../index.html"><img width="336" height="69" src="../images/w3schoolslogo.gif" alt="W3Schools.com" style="border:0;margin-top:5px;" /></a>
+</div>
+
+<div style="width:300px;float:right;text-align:right;margin-top:20px;margin-right:14px;margin-bottom:5px;">
+<div id="google_translate_element" style="display:none"></div>
+<div id="translate_link" style="margin-bottom:14px">
+<a href="#" class="topnav"
+onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+	<form style="font-size:11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.w3schools.com" />
+    <input onfocus="searchfield_focus(this)" style="width:150px;color:#808080;font-style:italic;margin:0;" 
+    type="text" name="as_q" size="20" value="Search w3schools.com" /><input type="submit" style="margin:0;" value="Search" title="Search" />
+	</form>
+</div>
+</div>
+<div id="topnav" style="clear:both;width:960px;height:25px;">
+<div style="float:left;width:400px;word-spacing:12px;font-size:90%;padding-left:15px;padding-top:6px;white-space:nowrap;text-align:left;">
+	<a class="topnav" href="../default.html" target="_top">HOME </a>
+	<a class="topnav" href="../html/default.html" target="_top">HTML </a>
+	<a class="topnav" href="../css/default.html" target="_top">CSS </a>
+	<a class="topnav" href="../xml/default.html" target="_top">XML </a>
+	<a class="topnav" href="../js/default.html" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="../asp/default.html" target="_top">ASP </a>
+	<a class="topnav" href="default.html" target="_top">PHP </a>
+	<a class="topnav" href="../sql/default.html" target="_top">SQL </a>	
+	<a class="topnav" href="../sitemap/default.html" target="_top">MORE...</a>
+</div>
+<div style="float:right;width:280px;word-spacing:6px;font-size:80%;padding-right:13px;padding-top:7px;color:#888888;white-space:nowrap;text-align:right;">
+	<a class="topnav" href="../sitemap/default.html#references" target="_top">REFERENCES</a> |
+	<a class="topnav" href="../sitemap/default.html#examples" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://w3schools.invisionzone.com/" target="_top">FORUM</a> |
+	<a class="topnav" href="../about/default.html" target="_top">ABOUT</a>	
+</div>
+</div>
+<div style="width:960px;height:94px;position:relative;margin-left:auto;margin-right:auto;margin:0px;padding:0px;overflow:hidden">
+<script type='text/javascript' src='../../partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-3440800076797949");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-3440800076797949", "MainLeaderboard");
+GA_googleAddSlot("ca-pub-3440800076797949", "SmallPS");
+GA_googleAddSlot("ca-pub-3440800076797949", "LargePS");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomRectangle");
+GA_googleAddSlot("ca-pub-3440800076797949", "SkyScraper");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomBanner");
+GA_googleAddSlot("ca-pub-3440800076797949", "TopRectangle");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- TopRectangle -->
+<script type='text/javascript'>
+GA_googleFillSlot("TopRectangle");
+</script>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- MainLeaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("MainLeaderboard");
+</script>
+</div></div>
+<div style="width:960px;padding:0px;margin:0px;">
+<div id="leftcolumn" style="width:170px;margin:0;padding:0;margin-top:5px;float:left;"><h2 class="left"><span class="left_h2">PHP</span> Basic</h2>
+<a target="_top" href="default.html" >PHP HOME</a><br />
+<a target="_top" href="php_intro.html" >PHP Intro</a><br />
+<a target="_top" href="php_install.html" >PHP Install</a><br />
+<a target="_top" href="php_syntax.html" >PHP Syntax</a><br />
+<a target="_top" href="php_variables.html" >PHP Variables</a><br />
+<a target="_top" href="php_string.html" >PHP String</a><br />
+<a target="_top" href="php_operators.html" >PHP Operators</a><br />
+<a target="_top" href="php_if_else.html" >PHP If...Else</a><br />
+<a target="_top" href="php_switch.html" >PHP Switch</a><br />
+<a target="_top" href="php_arrays.html" >PHP Arrays</a><br />
+<a target="_top" href="php_looping.html" >PHP While Loops</a><br />
+<a target="_top" href="php_looping_for.html" >PHP For Loops</a><br />
+<a target="_top" href="php_functions.html" >PHP Functions</a><br />
+<a target="_top" href="php_forms.html" >PHP Forms</a><br />
+<a target="_top" href="php_get.html" >PHP $_GET</a><br />
+<a target="_top" href="php_post.html" >PHP $_POST</a><br />
+<br />
+<h2 class="left"><span class="left_h2">PHP</span> Advanced</h2>
+<a target="_top" href="php_date.html" >PHP Date</a><br />
+<a target="_top" href="php_includes.html" >PHP Include</a><br />
+<a target="_top" href="php_file.html" >PHP File</a><br />
+<a target="_top" href="php_file_upload.html" >PHP File Upload</a><br />
+<a target="_top" href="php_cookies.html" >PHP Cookies</a><br />
+<a target="_top" href="php_sessions.html" >PHP Sessions</a><br />
+<a target="_top" href="php_mail.html" >PHP E-mail</a><br />
+<a target="_top" href="php_secure_mail.html" >PHP Secure E-mail</a><br />
+<a target="_top" href="php_error.html" >PHP Error</a><br />
+<a target="_top" href="php_exception.html" >PHP Exception</a><br />
+<a target="_top" href="php_filter.html" >PHP Filter</a><br />
+<br />  
+<h2 class="left"><span class="left_h2">PHP</span> Database</h2>
+<a target="_top" href="php_mysql_intro.html" >MySQL Introduction</a><br />
+<a target="_top" href="php_mysql_connect.html" >MySQL Connect</a><br />
+<a target="_top" href="php_mysql_create.html" >MySQL Create</a><br />
+<a target="_top" href="php_mysql_insert.html" >MySQL Insert</a><br />
+<a target="_top" href="php_mysql_select.html" >MySQL Select</a><br />
+<a target="_top" href="php_mysql_where.html" >MySQL Where</a><br />
+<a target="_top" href="php_mysql_order_by.html" >MySQL Order By</a><br />
+<a target="_top" href="php_mysql_update.html" >MySQL Update</a><br />
+<a target="_top" href="php_mysql_delete.html" >MySQL Delete</a><br />
+<a target="_top" href="php_db_odbc.html" >PHP ODBC</a><br />
+<br />
+<h2 class="left"><span class="left_h2">PHP</span> XML</h2>
+<a target="_top" href="php_xml_parser_expat.html" >XML Expat Parser</a><br />
+<a target="_top" href="php_xml_dom.html" >XML DOM</a><br />
+<a target="_top" href="php_xml_simplexml.html" >XML SimpleXML</a><br />
+<br />
+<h2 class="left"><span class="left_h2">PHP</span> and AJAX</h2>
+<a target="_top" href="php_ajax_intro.html" >AJAX Intro</a><br />
+<a target="_top" href="php_ajax_php.html" >AJAX PHP</a><br />
+<a target="_top" href="php_ajax_database.html" >AJAX Database</a><br />
+<a target="_top" href="php_ajax_xml.html" >AJAX XML</a><br />
+<a target="_top" href="php_ajax_livesearch.html" >AJAX Live Search</a><br />
+<a target="_top" href="php_ajax_rss_reader.html" >AJAX RSS Reader</a><br />
+<a target="_top" href="php_ajax_poll.html" >AJAX Poll</a><br />
+<br />
+<h2 class="left"><span class="left_h2">PHP</span> Reference</h2>
+<a target="_top" href="php_ref_array.html" >PHP Array</a><br />
+<a target="_top" href="php_ref_calendar.html" >PHP Calendar</a><br />
+<a target="_top" href="php_ref_date.html" >PHP Date</a><br />
+<a target="_top" href="php_ref_directory.html" >PHP Directory</a><br />
+<a target="_top" href="php_ref_error.html" >PHP Error</a><br />
+<a target="_top" href="php_ref_filesystem.html" >PHP Filesystem</a><br />
+<a target="_top" href="php_ref_filter.html" >PHP Filter</a><br />
+<a target="_top" href="php_ref_ftp.html" >PHP FTP</a><br />
+<a target="_top" href="php_ref_http.html" >PHP HTTP</a><br />
+<a target="_top" href="php_ref_libxml.html" >PHP Libxml</a><br />
+<a target="_top" href="php_ref_mail.html" >PHP Mail</a><br />
+<a target="_top" href="php_ref_math.html" >PHP Math</a><br />
+<a target="_top" href="php_ref_misc.html" >PHP Misc</a><br />
+<a target="_top" href="php_ref_mysql.html" >PHP MySQL</a><br />
+<a target="_top" href="php_ref_simplexml.html" >PHP SimpleXML</a><br />
+<a target="_top" href="php_ref_string.html" style='font-weight:bold;'>PHP String</a><br />
+<a target="_top" href="php_ref_xml.html" >PHP XML</a><br />
+<a target="_top" href="php_ref_zip.html" >PHP Zip</a><br />
+<br />
+<h2 class="left"><span class="left_h2">PHP</span> Quiz</h2>
+<a target="_top" href="php_quiz.html" >PHP Quiz</a><br />
+<a target="_top" href="php_exam.html" >PHP Certificate</a><br />
+
+<!--
+<h2 class="left"><span class="left_h2">PHP</span> XML</h2>
+<a target="_top" href="php_xml_parser.asp" >PHP Expat</a><br />
+<a target="_top" href="php_xml.asp" >PHP XML</a><br />
+<br />
+<h2 class="left"><span class="left_h2">PHP</span> Software</h2>
+<a target="_top" href="php_zend.asp" >Zend Studio</a><br />
+--></div>
+<div style="width:634px;margin:0px;padding:0px;background-color:#ffffff;color:#000000;padding-bottom:8px;padding-right:5px;padding-top:4px;float:left;">
+
+<h1>PHP <span class="color_h1">String</span> Functions</h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="php_ref_simplexml.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="php_ref_xml.html">Next Chapter &raquo;</a></div>
+</div>
+<hr />
+<h2>PHP String Introduction</h2>
+<p>The string functions allow you to manipulate strings.</p>
+<hr />
+
+<h2>Installation</h2>
+<p>The string functions are part of the PHP core. There is no installation 
+needed to use these functions.</p>
+<hr />
+
+<h2>PHP String Functions</h2>
+<p><b>PHP</b>: indicates the earliest version of PHP that supports the 
+  function.</p>
+<table class="reference">
+  <tr>
+    <th width="38%" align="left" valign="top">Function</th>
+    <th width="57%" align="left" valign="top">Description</th>
+    <th width="5%" align="left" valign="top">PHP</th>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_addcslashes.html">addcslashes()</a></td>
+    <td valign="top">Returns a string with backslashes in front of the specified 
+	characters</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_addslashes.html">addslashes()</a></td>
+    <td valign="top">Returns a string with backslashes in front of predefined 
+	characters</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_bin2hex.html">bin2hex()</a></td>
+    <td valign="top">Converts a string of ASCII characters to hexadecimal values</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_chop.html">chop()</a></td>
+    <td valign="top">Alias of rtrim()</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_chr.html">chr()</a></td>
+    <td valign="top">Returns a character from a specified ASCII value</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_chunk_split.html">chunk_split()</a></td>
+    <td valign="top">Splits a string into a series of smaller parts</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_convert_cyr_string.html">convert_cyr_string()</a></td>
+    <td valign="top">Converts a string from one Cyrillic character-set to another</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_convert_uudecode.html">convert_uudecode()</a></td>
+    <td valign="top">Decodes a uuencoded string</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_convert_uuencode.html">convert_uuencode()</a></td>
+    <td valign="top">Encodes a string using the uuencode algorithm</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_count_chars.html">count_chars()</a></td>
+    <td valign="top">Returns how many times an ASCII character occurs within a 
+	string and returns the information</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_crc32.html">crc32()</a></td>
+    <td valign="top">Calculates a 32-bit CRC for a string</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_crypt.html">crypt()</a></td>
+    <td valign="top">One-way string encryption (hashing)</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_echo.html">echo()</a></td>
+    <td valign="top">Outputs strings</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_explode.html">explode()</a></td>
+    <td valign="top">Breaks a string into an array</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_fprintf.html">fprintf()</a></td>
+    <td valign="top">Writes a formatted string to a specified output stream</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_get_html_translation_table.html">get_html_translation_table()</a></td>
+    <td valign="top">Returns the translation table used by htmlspecialchars() 
+	and htmlentities()</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_hebrev.html">hebrev()</a></td>
+    <td valign="top">Converts Hebrew text to visual text</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_hebrevc.html">hebrevc()</a></td>
+    <td valign="top">Converts Hebrew text to visual text and new lines (\n) into 
+	&lt;br /&gt;</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_html_entity_decode.html">html_entity_decode()</a></td>
+    <td valign="top">Converts HTML entities to characters</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_htmlentities.html">htmlentities()</a></td>
+    <td valign="top">Converts characters to HTML entities</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_htmlspecialchars_decode.html">htmlspecialchars_decode()</a></td>
+    <td valign="top">Converts some predefined HTML entities to characters</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_htmlspecialchars.html">htmlspecialchars()</a></td>
+    <td valign="top">Converts some predefined characters to HTML entities</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_implode.html">implode()</a></td>
+    <td valign="top">Returns a string from the elements of an array</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_join.html">join()</a></td>
+    <td valign="top">Alias of implode()</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_levenshtein.html">levenshtein()</a></td>
+    <td valign="top">Returns the Levenshtein distance between two strings</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_localeconv.html">localeconv()</a></td>
+    <td valign="top">Returns locale numeric and monetary formatting information</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_ltrim.html">ltrim()</a></td>
+    <td valign="top">Strips whitespace from the left side of a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_md5.html">md5()</a></td>
+    <td valign="top">Calculates the MD5 hash of a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_md5_file.html">md5_file()</a></td>
+    <td valign="top">Calculates the MD5 hash of a file</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_metaphone.html">metaphone()</a></td>
+    <td valign="top">Calculates the metaphone key of a string</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_money_format.html">money_format()</a></td>
+    <td valign="top">Returns a string formatted as a currency string</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_nl_langinfo.html">nl_langinfo()</a></td>
+    <td valign="top">Returns specific local information</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_nl2br.html">nl2br()</a></td>
+    <td valign="top">Inserts HTML line breaks in front 
+of each newline in a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_number_format.html">number_format()</a></td>
+    <td valign="top">Formats a number with grouped thousands</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_ord.html">ord()</a></td>
+    <td valign="top">Returns the ASCII value of the first character of a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_parse_str.html">parse_str()</a></td>
+    <td valign="top">Parses a query string into variables</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_print.html">print()</a></td>
+    <td valign="top">Outputs a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_printf.html">printf()</a></td>
+    <td valign="top">Outputs a formatted string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_quoted_printable_decode.html">quoted_printable_decode()</a></td>
+    <td valign="top">Decodes a quoted-printable string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_quotemeta.html">quotemeta()</a></td>
+    <td valign="top">Quotes meta characters</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_rtrim.html">rtrim()</a></td>
+    <td valign="top">Strips whitespace from the right side of a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_setlocale.html">setlocale()</a></td>
+    <td valign="top">Sets locale information</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_sha1.html">sha1()</a></td>
+    <td valign="top">Calculates the SHA-1 hash of a string</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_sha1_file.html">sha1_file()</a></td>
+    <td valign="top">Calculates the SHA-1 hash of a file</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_similar_text.html">similar_text()</a></td>
+    <td valign="top">Calculates the similarity between two strings</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_soundex.html">soundex()</a></td>
+    <td valign="top">Calculates the soundex key of a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_sprintf.html">sprintf()</a></td>
+    <td valign="top">Writes a formatted string to a variable</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_sscanf.html">sscanf()</a></td>
+    <td valign="top">Parses input from a string according to a format</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_str_ireplace.html">str_ireplace()</a></td>
+    <td valign="top">Replaces some characters in a 
+	string (case-insensitive)</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_str_pad.html">str_pad()</a></td>
+    <td valign="top">Pads a string to a new length</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_str_repeat.html">str_repeat()</a></td>
+    <td valign="top">Repeats a string a specified number of times</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_str_replace.html">str_replace()</a></td>
+    <td valign="top">Replaces some characters in a 
+	string (case-sensitive)</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_str_rot13.html">str_rot13()</a></td>
+    <td valign="top">Performs the ROT13 encoding on a string</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_str_shuffle.html">str_shuffle()</a></td>
+    <td valign="top">Randomly shuffles all characters in a string</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_str_split.html">str_split()</a></td>
+    <td valign="top">Splits a string into an array</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_str_word_count.html">str_word_count()</a></td>
+    <td valign="top">Count the number of words in a string</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strcasecmp.html">strcasecmp()</a></td>
+    <td valign="top">Compares two strings (case-insensitive)</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strchr.html">strchr()</a></td>
+    <td valign="top">Finds the first occurrence of a string inside another 
+	string (alias of strstr())</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strcmp.html">strcmp()</a></td>
+    <td valign="top">Compares two strings (case-sensitive)</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strcoll.html">strcoll()</a></td>
+    <td valign="top">Locale based string comparison</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strcspn.html">strcspn()</a></td>
+    <td valign="top">Returns the number of characters found in a string before 
+	any part of some specified characters are found</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strip_tags.html">strip_tags()</a></td>
+    <td valign="top">Strips HTML and PHP tags from a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_stripcslashes.html">stripcslashes()</a></td>
+    <td valign="top">Unquotes a string quoted with addcslashes()</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_stripslashes.html">stripslashes()</a></td>
+    <td valign="top">Unquotes a string quoted with addslashes()</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_stripos.html">stripos()</a></td>
+    <td valign="top">Returns the position of the first occurrence of a string 
+	inside another string (case-insensitive)</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_stristr.html">stristr()</a></td>
+    <td valign="top">Finds the first occurrence of a string inside another 
+	string (case-insensitive)</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strlen.html">strlen()</a></td>
+    <td valign="top">Returns the length of a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strnatcasecmp.html">strnatcasecmp()</a></td>
+    <td valign="top">Compares two strings using a &quot;natural order&quot; 
+	algorithm (case-insensitive)</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strnatcmp.html">strnatcmp()</a></td>
+    <td valign="top">Compares two strings using a &quot;natural order&quot; 
+	algorithm (case-sensitive)</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strncasecmp.html">strncasecmp()</a></td>
+    <td valign="top">String comparison of the first 
+	n characters (case-insensitive)</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strncmp.html">strncmp()</a></td>
+    <td valign="top">String comparison of the first 
+	n characters (case-sensitive)</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strpbrk.html">strpbrk()</a></td>
+    <td valign="top">Searches a string for any of a set of characters</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strpos.html">strpos()</a></td>
+    <td valign="top">Returns the position of the first occurrence of a string 
+	inside another string (case-sensitive)</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strrchr.html">strrchr()</a></td>
+    <td valign="top">Finds the last occurrence of a string inside another 
+	string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strrev.html">strrev()</a></td>
+    <td valign="top">Reverses a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strripos.html">strripos()</a></td>
+    <td valign="top">Finds the position of the last occurrence of a 
+	string inside another string (case-insensitive)</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strrpos.html">strrpos()</a></td>
+    <td valign="top">Finds the position of the last occurrence of a 
+	string inside another string (case-sensitive)</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strspn.html">strspn()</a></td>
+    <td valign="top">Returns the number of characters found in a string that 
+	contains only characters from a specified charlist</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strstr.html">strstr()</a></td>
+    <td valign="top">Finds the first occurrence of a string inside another 
+	string (case-sensitive)</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strtok.html">strtok()</a></td>
+    <td valign="top">Splits a string into smaller strings</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strtolower.html">strtolower()</a></td>
+    <td valign="top">Converts a string to lowercase letters</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strtoupper.html">strtoupper()</a></td>
+    <td valign="top">Converts a string to uppercase letters</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_strtr.html">strtr()</a></td>
+    <td valign="top">Translates certain characters in a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_substr.html">substr()</a></td>
+    <td valign="top">Returns a part of a string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_substr_compare.html">substr_compare()</a></td>
+    <td valign="top">Compares two strings from a specified start position (binary safe 
+	and optionally case-sensitive)</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_substr_count.html">substr_count()</a></td>
+    <td valign="top">Counts the number of times a substring occurs in a string</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_substr_replace.html">substr_replace()</a></td>
+    <td valign="top">Replaces a part of a string with another string</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_trim.html">trim()</a></td>
+    <td valign="top">Strips whitespace from both sides of a 
+	string</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_ucfirst.html">ucfirst()</a></td>
+    <td valign="top">Converts the first character of a string to uppercase</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_ucwords.html">ucwords()</a></td>
+    <td valign="top">Converts the first character of each word in a string to uppercase</td>
+    <td valign="top">3</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_vfprintf.html">vfprintf()</a></td>
+    <td valign="top">Writes a formatted string to a specified output stream</td>
+    <td valign="top">5</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_vprintf.html">vprintf()</a></td>
+    <td valign="top">Outputs a formatted string</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_vsprintf.html">vsprintf()</a></td>
+    <td valign="top">Writes a formatted string to a variable</td>
+    <td valign="top">4</td>
+  </tr>
+  <tr>
+    <td valign="top"><a href="func_string_wordwrap.html">wordwrap()</a></td>
+    <td valign="top">Wraps a string to a given number of characters</td>
+    <td valign="top">4</td>
+  </tr>
+  </table>
+<br />
+<hr>
+
+<h2>PHP String Constants</h2>
+<p><b>PHP</b>: indicates the earliest version of PHP that supports the 
+  constant. </p>
+<table class="reference">
+  <tr>
+    <th width="38%" align="left">Constant</th>
+    <th width="57%" align="left">Description</th>
+    <th width="5%" align="left">PHP</th>
+  </tr>
+  <tr>
+    <td valign="top">CRYPT_SALT_LENGTH</td>
+    <td valign="top">Contains the length of the default encryption method for 
+	the<br />
+	system. For standard DES encryption, the length is 2</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">CRYPT_STD_DES</td>
+    <td valign="top">Set to 1 if the standard DES-based encryption with a 2 
+	character salt is supported, 0 otherwise</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+	<tr>
+    <td valign="top">CRYPT_EXT_DES</td>
+    <td valign="top">Set to 1 if the extended DES-based encryption with a 9 
+	character salt is supported, 0 otherwise</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">CRYPT_MD5</td>
+    <td valign="top">Set to 1 if the MD5 encryption with a 12 character salt 
+	starting with $1$ is supported, 0 otherwise</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">CRYPT_BLOWFISH</td>
+    <td valign="top">Set to 1 if the Blowfish encryption with a 16 character 
+	salt starting with $2$ or $2a$ is supported, 0 otherwise0</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">HTML_SPECIALCHARS</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">HTML_ENTITIES</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">ENT_COMPAT</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">ENT_QUOTES</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">ENT_NOQUOTES</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">CHAR_MAX</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">LC_CTYPE</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">LC_NUMERIC</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">LC_TIME</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">LC_COLLATE</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">LC_MONETARY</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">LC_ALL</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">LC_MESSAGES</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">STR_PAD_LEFT</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">STR_PAD_RIGHT</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">STR_PAD_BOTH</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+</table>
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="php_ref_simplexml.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="php_ref_xml.html">Next Chapter &raquo;</a></div>
+</div>
+
+<hr />
+
+<!-- **** SPOTLIGHTS 1 **** -->
+<!-- SmallPS -->
+<script type='text/javascript'>
+GA_googleFillSlot("SmallPS");
+</script>
+<!-- **** SPOTLIGHTS 2 **** -->
+<!-- LargePS -->
+<script type='text/javascript'>
+GA_googleFillSlot("LargePS");
+</script>
+<!-- **** SPOTLIGHTS 3 **** -->
+<!-- BottomRectangle -->
+<div style="width:340px;margin:auto">
+<script type='text/javascript'>
+GA_googleFillSlot("BottomRectangle");
+</script>
+</div>
+
+<div style="width:470px;margin:auto;margin-top:5px;">
+<!-- BottomBanner -->
+<script type='text/javascript'>
+GA_googleFillSlot("BottomBanner");
+</script>
+</div>
+
+<div id="err_form" style="display:none">
+<h2>Your suggestion:</h2>
+<p><label for="err_email">Your E-mail (optional):</label> <input type="text" id="err_email" name="err_email" /></p>
+<p><label for="err_url">Page address:</label> <input type="text" disabled="disabled" id="err_url" name="err_url" /></p>
+<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+<p class="submit"><input type="button" value="Submit" onclick="sendErr()" /></p>
+<div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent" style="display:none">
+<h2>Thank you for your support.</h2>
+<div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+
+<div id="rightcolumn" style="width:150px;margin:0px;padding:0px;float:left">
+<table>
+<tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/id/w3schools/goto/w3schools">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/coupons">Best Hosting Coupons</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.justhost.com/track/w3schools/textlink">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/index.cfm?A=w3text">$3.98 Unlimited Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.website.com/">Premium Website Design</a>
+</td></tr>
+</table>
+<table>
+<tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML Editor - Free Trial!</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_400H">FREE Website BUILDER</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_400H">CREATE HTML Websites</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.edirecthost.com/main/home">EASY WEBSITE BUILDER</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="../cert/default.html">Get Certified in:<br />HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="../books/default.html">
+New Books:<br />HTML, CSS<br />
+JavaScript, and Ajax</a>
+</td></tr>
+</table>
+<table>
+<tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="../browsers/browsers_stats.html">Browser Statistics</a><br />
+<a target="_top" href="../browsers/browsers_os.html">Browser OS</a><br />
+<a target="_top" href="../browsers/browsers_display.html">Browser Display</a>
+</td></tr></table>
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table>
+<tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height:16px">
+<a href="#" onclick="sharethis();return false;">Share with &raquo;</a>
+</div>
+</td>
+</tr>
+</table>
+<table>
+<tr><td><br />
+<div style="width:124px;margin:auto">
+<!-- SkyScraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("SkyScraper");
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br />
+</div>
+<div style="width:100%;clear:both;margin:0;padding:0;background-color:transparent;background-image:url('../images/gradientbottom.jpg');background-repeat:repeat-x;position:relative;">
+<div id="footer" style="width:960px;margin-left:auto;margin-right:auto;height:110px;">
+<div style="float:left;width:200px;text-align:left;padding-left:3px;padding-top:11px;"><a href="../index.html">
+<img style="border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com" /></a>
+</div>
+<div style="word-spacing:6px;font-size:80%;padding-right:12px;padding-top:19px;float:right;width:600px;text-align:right;">
+<a href="#" onclick="displayError();return false">REPORT ERROR</a> |
+<a href="../default.html" target="_top">HOME</a> |
+<a href="#top" target="_top">TOP</a> |
+<a href='php_ref_stringd86a.html?output=print' target="_blank">PRINT</a> |
+<a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+<a href="../about/default.html" target="_top">ABOUT</a>
+</div>
+<div style="padding-top:13px;color:#404040;clear:both;">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.<br />
+While using this site, you agree to have read and accepted our
+<a href="../about/about_copyright.html">terms of use</a> and
+<a href="../about/about_privacy.html">privacy policy</a>.<br />
+<a href="../about/about_copyright.html">Copyright 1999-2012</a> by Refsnes Data. All Rights Reserved.
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/php/php_ref_string.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 06:45:44 GMT -->
+</html>

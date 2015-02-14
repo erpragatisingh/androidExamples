@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from www.w3schools.com/jsref/dom_obj_style.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 07:31:48 GMT -->
+<head>
+<title>HTML DOM Style object</title>
+ 
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="Keywords" content="html,css,tutorial,html5,dhtml,css3,xsl,xslt,xhtml,javascript,jquery,asp,ado,net,vbscript,dom,sql,colors,soap,php,rss,authoring,programming,training,learning,quiz,beginner's guide,primer,lessons,school,howto,reference,examples,samples,source code,tags,demos,tips,links,FAQ,tag list,forms,frames,color table,w3c,cascading style sheets,active server pages,dynamic html,internet,database,development,Web building,Webmaster,html guide" />
+<meta name="Description" content="Free HTML XHTML CSS JavaScript jQuery XML DOM XSL XSLT RSS AJAX ASP .NET PHP SQL tutorials, references, examples for web building." />
+<script type="text/javascript">
+<!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//-->
+</script>
+<script type="text/javascript">
+<!--
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search w3schools.com")
+	{obj.value=""}
+}
+var pageTracker = _gat._getTracker("UA-3855518-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+var addr=document.location.href;
+function displayError()
+{
+document.getElementById("err_url").value=addr;
+document.getElementById("err_form").style.display="block";
+document.getElementById("err_desc").focus();
+hideSent();
+}
+function hideError()
+{
+document.getElementById("err_form").style.display="none";
+}
+function hideSent()
+{
+document.getElementById("err_sent").style.display="none";
+}
+function sendErr()
+{
+var xmlhttp;
+var err_url=document.getElementById("err_url").value;
+var err_email=document.getElementById("err_email").value;
+var err_desc=document.getElementById("err_desc").value;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("POST","../err_sup.html",true);
+xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send("err_url=" + err_url + "&err_email=" + err_email + "&err_desc=" + escape(err_desc));
+hideError();
+document.getElementById("err_sent").style.display="block";
+}
+function click_expandingMenuHeader(obj,sectionName)
+{
+var x=document.getElementById("cssprop_" + sectionName).parentNode.className;
+if (x.indexOf("expandingMenuNotSelected")>-1)
+	{
+	x=x.replace("expandingMenuNotSelected","expandingMenuSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="block";
+	}
+else
+	{
+	x=x.replace("expandingMenuSelected","expandingMenuNotSelected");
+	document.getElementById("cssprop_" + sectionName).parentNode.className=x;
+	document.getElementById("cssprop_" + sectionName).style.display="none";
+	}
+}
+//-->
+</script>
+<!--[if lt IE 7]>
+<style>
+#leftcolumn{margin-left:0}
+</style>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="../stdtheme.css" />
+<script type="text/javascript"></script><link rel='stylesheet' type='text/css' href='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css' /><!--[if lt IE 8]><link rel='stylesheet' type='text/css' href='/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui_ie7.css' /><![endif]--></head>
+<body><script type='text/javascript' language='javascript' src='../B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui5792.js?0=0&amp;0=0&amp;0=0'></script>
+
+<div style="position:relative;width:100%;margin-top:0px;margin-bottom:0px;">
+<a id="top"></a>
+<div style="width:960px;margin-top:5px;margin-left:auto;margin-right:auto">
+<div style="width:960px;height:74px;margin:0;padding:0;">
+<div style="width:340px;text-align:left;float:left;">
+	<a href="../index.html"><img width="336" height="69" src="../images/w3schoolslogo.gif" alt="W3Schools.com" style="border:0;margin-top:5px;" /></a>
+</div>
+
+<div style="width:300px;float:right;text-align:right;margin-top:20px;margin-right:14px;margin-bottom:5px;">
+<div id="google_translate_element" style="display:none"></div>
+<div id="translate_link" style="margin-bottom:14px">
+<a href="#" class="topnav"
+onclick="document.getElementById('google_translate_element').style.display='inline';document.getElementById('translate_link').style.display='none';return false;">
+TRANSLATE
+</a>
+</div>
+	<form style="font-size:11px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.w3schools.com" />
+    <input onfocus="searchfield_focus(this)" style="width:150px;color:#808080;font-style:italic;margin:0;" 
+    type="text" name="as_q" size="20" value="Search w3schools.com" /><input type="submit" style="margin:0;" value="Search" title="Search" />
+	</form>
+</div>
+</div>
+<div id="topnav" style="clear:both;width:960px;height:25px;">
+<div style="float:left;width:400px;word-spacing:12px;font-size:90%;padding-left:15px;padding-top:6px;white-space:nowrap;text-align:left;">
+	<a class="topnav" href="../default.html" target="_top">HOME </a>
+	<a class="topnav" href="../html/default.html" target="_top">HTML </a>
+	<a class="topnav" href="../css/default.html" target="_top">CSS </a>
+	<a class="topnav" href="../xml/default.html" target="_top">XML </a>
+	<a class="topnav" href="../js/default.html" target="_top">JAVASCRIPT </a>
+	<a class="topnav" href="../asp/default.html" target="_top">ASP </a>
+	<a class="topnav" href="../php/default.html" target="_top">PHP </a>
+	<a class="topnav" href="../sql/default.html" target="_top">SQL </a>	
+	<a class="topnav" href="../sitemap/default.html" target="_top">MORE...</a>
+</div>
+<div style="float:right;width:280px;word-spacing:6px;font-size:80%;padding-right:13px;padding-top:7px;color:#888888;white-space:nowrap;text-align:right;">
+	<a class="topnav" href="../sitemap/default.html#references" target="_top">REFERENCES</a> |
+	<a class="topnav" href="../sitemap/default.html#examples" target="_top">EXAMPLES</a> |
+	<a class="topnav" href="http://w3schools.invisionzone.com/" target="_top">FORUM</a> |
+	<a class="topnav" href="../about/default.html" target="_top">ABOUT</a>	
+</div>
+</div>
+<div style="width:960px;height:94px;position:relative;margin-left:auto;margin-right:auto;margin:0px;padding:0px;overflow:hidden">
+<script type='text/javascript' src='../../partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-3440800076797949");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-3440800076797949", "MainLeaderboard");
+GA_googleAddSlot("ca-pub-3440800076797949", "SmallPS");
+GA_googleAddSlot("ca-pub-3440800076797949", "LargePS");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomRectangle");
+GA_googleAddSlot("ca-pub-3440800076797949", "SkyScraper");
+GA_googleAddSlot("ca-pub-3440800076797949", "BottomBanner");
+GA_googleAddSlot("ca-pub-3440800076797949", "TopRectangle");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+<!-- TopRectangle -->
+<script type='text/javascript'>
+GA_googleFillSlot("TopRectangle");
+</script>
+<div style="width:728px;height:90px;position:absolute;right:0px;top:0px;margin:0;padding:0;overflow:hidden;">
+<!-- MainLeaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("MainLeaderboard");
+</script>
+</div></div>
+<div style="width:960px;padding:0px;margin:0px;">
+<div id="leftcolumn" style="width:170px;margin:0;padding:0;margin-top:5px;float:left;"><h2 class="left"><span class="left_h2">JS & DOM</span> Reference</h2>
+<a target="_top" href="default.html" >Overview</a><br />
+<br />
+<h2 class="left"><span class="left_h2">JavaScript</span> Objects</h2>
+<a target="_top" href="jsref_obj_array.html" >JS Array</a><br />
+<a target="_top" href="jsref_obj_boolean.html" >JS Boolean</a><br />
+<a target="_top" href="jsref_obj_date.html" >JS Date</a><br />
+<a target="_top" href="jsref_obj_math.html" >JS Math</a><br />
+<a target="_top" href="jsref_obj_number.html" >JS Number</a><br />
+<a target="_top" href="jsref_obj_string.html" >JS String</a><br />
+<a target="_top" href="jsref_obj_regexp.html" >JS RegExp</a><br />
+<a target="_top" href="jsref_obj_global.html" >JS Global</a><br />
+<br />
+<h2 class="left"><span class="left_h2">Browser</span> Objects</h2>
+<a target="_top" href="obj_window.html" >Window</a><br />
+<a target="_top" href="obj_navigator.html" >Navigator</a><br />
+<a target="_top" href="obj_screen.html" >Screen</a><br />
+<a target="_top" href="obj_history.html" >History</a><br />
+<a target="_top" href="obj_location.html" >Location</a><br />
+<br />
+<h2 class="left"><span class="left_h2">Core DOM</span> Objects</h2>
+<a target="_top" href="dom_obj_node.html" >DOM Node</a><br />
+<a target="_top" href="dom_obj_nodelist.html" >DOM NodeList</a><br />
+<a target="_top" href="dom_obj_namednodemap.html" >DOM NamedNodeMap</a><br />
+<a target="_top" href="dom_obj_core_document.html" >DOM Document</a><br />
+<a target="_top" href="dom_obj_element.html" >DOM Element</a><br />
+<a target="_top" href="dom_obj_attr.html" >DOM Attr</a><br />
+<br />
+<h2 class="left"><span class="left_h2">HTML DOM</span> Objects</h2>
+<a target="_top" href="dom_obj_document.html" >DOM Document</a><br />
+<a target="_top" href="dom_obj_event.html" >DOM Events</a><br />
+<a target="_top" href="dom_obj_all.html" >DOM Elements</a><br />
+<br />
+<a target="_top" href="dom_obj_anchor.html" >DOM Anchor</a><br />
+<a target="_top" href="dom_obj_area.html" >DOM Area</a><br />
+<a target="_top" href="dom_obj_base.html" >DOM Base</a><br />
+<a target="_top" href="dom_obj_body.html" >DOM Body</a><br />
+<a target="_top" href="dom_obj_pushbutton.html" >DOM Button</a><br />
+<a target="_top" href="dom_obj_form.html" >DOM Form</a><br />
+<a target="_top" href="dom_obj_frame.html" >DOM Frame/IFrame</a><br />
+<a target="_top" href="dom_obj_frameset.html" >DOM Frameset</a><br />
+<a target="_top" href="dom_obj_image.html" >DOM Image</a><br />
+<a target="_top" href="dom_obj_button.html" >DOM Input Button</a><br />
+<a target="_top" href="dom_obj_checkbox.html" >DOM Input Checkbox</a><br />
+<a target="_top" href="dom_obj_fileupload.html" >DOM Input File</a><br />
+<a target="_top" href="dom_obj_hidden.html" >DOM Input Hidden</a><br />
+<a target="_top" href="dom_obj_password.html" >DOM Input Password</a><br />
+<a target="_top" href="dom_obj_radio.html" >DOM Input Radio</a><br />
+<a target="_top" href="dom_obj_reset.html" >DOM Input Reset</a><br />
+<a target="_top" href="dom_obj_submit.html" >DOM Input Submit</a><br />
+<a target="_top" href="dom_obj_text.html" >DOM Input Text</a><br />
+<a target="_top" href="dom_obj_link.html" >DOM Link</a><br />
+<a target="_top" href="dom_obj_meta.html" >DOM Meta</a><br />
+<a target="_top" href="dom_obj_object.html" >DOM Object</a><br />
+<a target="_top" href="dom_obj_option.html" >DOM Option</a><br />
+<a target="_top" href="dom_obj_select.html" >DOM Select</a><br />
+<a target="_top" href="dom_obj_style.html" style='font-weight:bold;'>DOM Style</a><br />
+<a target="_top" href="dom_obj_table.html" >DOM Table</a><br />
+<a target="_top" href="dom_obj_tabledata.html" >DOM td / th</a><br />
+<a target="_top" href="dom_obj_tablerow.html" >DOM tr</a><br />
+<a target="_top" href="dom_obj_textarea.html" >DOM Textarea</a><br /></div>
+<div style="width:634px;margin:0px;padding:0px;background-color:#ffffff;color:#000000;padding-bottom:8px;padding-right:5px;padding-top:4px;float:left;">
+
+<h1>HTML DOM <span class="color_h1">Style</span> Object</h1>
+<div class="chapter">
+<div class="prev"><a class="chapter" href="dom_obj_select.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="dom_obj_table.html">Next Reference &raquo;</a></div>
+</div>
+<hr />
+
+<h2>Style object</h2>
+<p>The Style object represents an individual style statement.</p>
+<p>The Style object can be accessed from the document or from the elements to which that style is applied.</p>
+<p><b>Syntax for using the Style object properties:</b></p>
+
+<div class="code notranslate"><div>
+document.getElementById(&quot;<i>id</i>&quot;).style.<i>property</i>=&quot;<i>value</i>&quot;</div></div>
+  
+<p><b>The Style object property categories:</b></p>
+<table class="reference">
+  <tr>
+    <td>
+<ul>
+  <li><a href="#background">Background</a></li>
+  <li><a href="#border">Border/Outline</a></li>
+  <li><a href="#generatedcontent">Generated Content</a></li>  
+  <li><a href="#list">List</a></li>
+  <li><a href="#misc">Misc</a></li>
+</ul>
+	</td>
+    <td>
+<ul>
+  <li><a href="#marginpadding">Margin/Padding</a></li>  
+  <li><a href="#positioning">Positioning/Layout</a></li>
+  <li><a href="#printing">Printing</a></li>
+  <li><a href="#table">Table</a></li>
+  <li><a href="#text">Text</a></li>
+</ul>
+	</td>
+</tr>
+</table>
+<br />
+<hr />
+
+<h2><a name="background">Background properties</a></h2>
+<p><b>W3C:</b> W3C Standard.</p>
+
+<table class="reference">
+  <tr>
+    <th width="30%" align="left">Property</th>
+    <th width="63%" align="left">Description</th>
+    <th width="7%" align="left">W3C</th>
+  </tr>
+  <tr>
+    <td><a href="prop_style_background.html">background</a></td>
+    <td>Sets or returns all the background properties in one declaration</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_backgroundattachment.html">backgroundAttachment</a></td>
+    <td>Sets or returns whether a background-image is fixed or scrolls with the page</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_backgroundcolor.html">backgroundColor</a></td>
+    <td>Sets or returns the background-color of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_backgroundimage.html">backgroundImage</a></td>
+    <td>Sets or returns the background-image for an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_backgroundposition.html">backgroundPosition</a></td>
+    <td>Sets or returns the starting position of a background-image</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_backgroundrepeat.html">backgroundRepeat</a></td>
+    <td>Sets or returns how to repeat (tile) a background-image</td>
+    <td>Yes</td>
+  </tr>
+</table>
+
+<h2><a name="border">Border/Outline properties</a></h2>
+<table class="reference">
+  <tr>
+    <th width="30%" align="left">Property</th>
+    <th width="63%" align="left">Description</th>
+    <th width="7%" align="left">W3C</th>
+  </tr>
+  <tr>
+    <td><a href="prop_style_border.html">border</a></td>
+    <td>Sets or returns border-width, border-style, and border-color in one 
+	declaration</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_borderbottom.html">borderBottom</a></td>
+    <td>Sets or returns all the borderBottom* properties in one declaration</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_borderbottomcolor.html">borderBottomColor</a></td>
+    <td>Sets or returns the color of the bottom border</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_borderbottomstyle.html">borderBottomStyle</a></td>
+    <td>Sets or returns the style of the bottom border</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_borderbottomwidth.html">borderBottomWidth</a></td>
+    <td>Sets or returns the width of the bottom border</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_bordercolor.html">borderColor</a></td>
+    <td>Sets or returns the color of an element's border (can have up to four 
+	values)</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_borderleft.html">borderLeft</a></td>
+    <td>Sets or returns all the borderLeft* properties in one declaration</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_borderleftcolor.html">borderLeftColor</a></td>
+    <td>Sets or returns the color of the left border</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_borderleftstyle.html">borderLeftStyle</a></td>
+    <td>Sets or returns the style of the left border</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_borderleftwidth.html">borderLeftWidth</a></td>
+    <td>Sets or returns the width of the left border</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_borderright.html">borderRight</a></td>
+    <td>Sets or returns all the borderRight* properties in one declaration</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_borderrightcolor.html">borderRightColor</a></td>
+    <td>Sets or returns the color of the right border</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_borderrightstyle.html">borderRightStyle</a></td>
+    <td>Sets or returns the style of the right border</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_borderrightwidth.html">borderRightWidth</a></td>
+    <td>Sets or returns the width of the right border</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_borderstyle.html">borderStyle</a></td>
+    <td>Sets or returns the style of an element's border (can have up to four 
+	values)</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_bordertop.html">borderTop</a></td>
+    <td>Sets or returns all the borderTop* properties in one declaration</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_bordertopcolor.html">borderTopColor</a></td>
+    <td>Sets or returns the color of the top border</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_bordertopstyle.html">borderTopStyle</a></td>
+    <td>Sets or returns the style of the top border</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_bordertopwidth.html">borderTopWidth</a></td>
+    <td>Sets or returns the width of the top border</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_borderwidth.html">borderWidth</a></td>
+    <td>Sets or returns the width of an element's border (can have up to four 
+	values)</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_outline.html">outline</a></td>
+    <td>Sets or returns all the outline properties in one declaration</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_outlinecolor.html">outlineColor</a></td>
+    <td>Sets or returns the color of the outline around a element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_outlinestyle.html">outlineStyle</a></td>
+    <td>Sets or returns the style of the outline around an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_outlinewidth.html">outlineWidth</a></td>
+    <td>Sets or returns the width of the outline around an element</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+
+<h2><a name="generatedcontent">Generated Content Properties</a></h2>
+<table class="reference">
+  <tr>
+    <th width="30%" align="left">Property</th>
+    <th width="63%" align="left">Description</th>
+    <th width="7%" align="left">W3C</th>
+  </tr>
+  <tr>
+    <td>content</td>
+    <td>Sets or returns the generated content before or after the element</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td>counterIncrement</td>
+    <td>Sets or returns the list of counters and increment values</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td>counterReset</td>
+    <td>Sets or returns the list of counters and their initial values</td>
+    <td>Yes</td>
+  </tr>
+</table>
+
+<h2><a name="list">List properties</a></h2>
+<table class="reference">
+  <tr>
+    <th width="30%" align="left">Property</th>
+    <th width="63%" align="left">Description</th>
+    <th width="7%" align="left">W3C</th>
+  </tr>
+  <tr>
+    <td><a href="prop_style_liststyle.html">listStyle</a></td>
+    <td>Sets or returns list-style-image, list-style-position, and 
+	list-style-type in one 
+	declaration</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_liststyleimage.html">listStyleImage</a></td>
+    <td>Sets or returns an image as the list-item marker</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_liststyleposition.html">listStylePosition</a></td>
+    <td>Sets or returns the position of the list-item marker</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_liststyletype.html">listStyleType</a></td>
+    <td>Sets or returns the list-item marker type</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+
+<h2><a name="marginpadding">Margin/Padding properties</a></h2>
+<table class="reference">
+  <tr>
+    <th width="30%" align="left">Property</th>
+    <th width="63%" align="left">Description</th>
+    <th width="7%" align="left">W3C</th>
+  </tr>
+  <tr>
+    <td><a href="prop_style_margin.html">margin</a></td>
+    <td>Sets or returns the margins of an element (can have up to four values)</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_marginbottom.html">marginBottom</a></td>
+    <td>Sets or returns the bottom margin of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_marginleft.html">marginLeft</a></td>
+    <td>Sets or returns the left margin of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_marginright.html">marginRight</a></td>
+    <td>Sets or returns the right margin of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_margintop.html">marginTop</a></td>
+    <td>Sets or returns the top margin of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_padding.html">padding</a></td>
+    <td>Sets or returns the padding of an element (can have up to four values)</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_paddingbottom.html">paddingBottom</a></td>
+    <td>Sets or returns the bottom padding of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_paddingleft.html">paddingLeft</a></td>
+    <td>Sets or returns the left padding of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_paddingright.html">paddingRight</a></td>
+    <td>Sets or returns the right padding of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_paddingtop.html">paddingTop</a></td>
+    <td>Sets or returns the top padding of an element</td>
+    <td>Yes</td>
+  </tr>
+</table>
+
+<h2><a name="misc">Misc properties</a></h2>
+<table class="reference">
+  <tr>
+    <th width="30%" align="left">Property</th>
+    <th width="63%" align="left">Description</th>
+    <th width="7%" align="left">W3C</th>
+  </tr>
+  <tr>
+    <td><a href="prop_style_csstext.html">cssText</a></td>
+    <td>Sets or returns the contents of a style declaration as a string</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+
+<h2><a name="positioning">Positioning/Layout properties</a></h2>
+<table class="reference">
+  <tr>
+    <th width="30%" align="left">Property</th>
+    <th width="63%" align="left">Description</th>
+    <th width="7%" align="left">W3C</th>
+  </tr>
+  <tr>
+    <td><a href="prop_style_bottom.html">bottom</a></td>
+    <td>Sets or returns the bottom position of a positioned element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_clear.html">clear</a></td>
+    <td>Sets or returns the position of the element relative to floating objects</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_clip.html">clip</a></td>
+    <td>Sets or returns which part of a positioned element is visible</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_cssfloat.html">cssFloat</a></td>
+    <td>Sets or returns the horizontal alignment of an object</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_cursor.html">cursor</a></td>
+    <td>Sets or returns the type of cursor to display for the mouse pointer</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_display.html">display</a></td>
+    <td>Sets or returns an element's display type</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_height.html">height</a></td>
+    <td>Sets or returns the height of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_left.html">left</a></td>
+    <td>Sets or returns the left position of a positioned element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_maxheight.html">maxHeight</a></td>
+    <td>Sets or returns the maximum height of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_maxwidth.html">maxWidth</a></td>
+    <td>Sets or returns the maximum width of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_minheight.html">minHeight</a></td>
+    <td>Sets or returns the minimum height of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_minwidth.html">minWidth</a></td>
+    <td>Sets or returns the minimum width of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_overflow.html">overflow</a></td>
+    <td>Sets or returns what to do with content that renders outside the element box</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_position.html">position</a></td>
+    <td>Sets or returns the type of positioning method used for an element (static, relative, absolute or fixed)</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_right.html">right</a></td>
+    <td>Sets or returns the right position of a positioned element</td>
+    <td>Yes</td>
+  </tr>
+	<tr>
+    <td><a href="prop_style_top.html">top</a></td>
+    <td>Sets or returns the top position of a positioned element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_verticalalign.html">verticalAlign</a></td>
+    <td>Sets or returns the vertical alignment of the content in an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_visibility.html">visibility</a></td>
+    <td>Sets or returns whether an element should be visible</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_width.html">width</a></td>
+    <td>Sets or returns the width of an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_zindex.html">zIndex</a></td>
+    <td>Sets or returns the stack order of a positioned element</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+
+<h2><a name="printing">Printing properties</a></h2>
+<table class="reference">
+  <tr>
+    <th width="30%" align="left">Property</th>
+    <th width="63%" align="left">Description</th>
+    <th width="7%" align="left">W3C</th>
+  </tr>
+  <tr>
+    <td><a href="prop_style_orphans.html">orphans</a></td>
+    <td>Sets or returns the minimum number of lines for an element that must be 
+	visible at the bottom of a page</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_pagebreakafter.html">pageBreakAfter</a></td>
+    <td>Sets or returns the page-break behavior after an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_pagebreakbefore.html">pageBreakBefore</a></td>
+    <td>Sets or returns the page-break behavior before an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_pagebreakinside.html">pageBreakInside</a></td>
+    <td>Sets or returns the page-break behavior inside an element</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_widows.html">widows</a></td>
+    <td>Sets or returns the minimum number of lines for an element that must be 
+	visible at the
+      top of a page</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+
+<h2><a name="table">Table properties</a></h2>
+<table class="reference">
+  <tr>
+    <th width="30%" align="left">Property</th>
+    <th width="63%" align="left">Description</th>
+    <th width="7%" align="left">W3C</th>
+  </tr>
+  <tr>
+    <td><a href="prop_style_bordercollapse.html">borderCollapse</a></td>
+    <td>Sets or returns whether the table border should be collapsed into a 
+single border, or not</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_borderspacing.html">borderSpacing</a></td>
+    <td>Sets or returns the space between cells in a table</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_captionside.html">captionSide</a></td>
+    <td>Sets or returns the position of the table caption</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_emptycells.html">emptyCells</a></td>
+    <td>Sets or returns whether to show the border and background of empty cells, 
+	or not</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_tablelayout.html">tableLayout</a></td>
+    <td>Sets or returns the way to lay out table cells, rows, 
+	and columns</td>
+    <td>Yes</td>
+  </tr>
+</table>
+
+<h2><a name="text">Text properties</a></h2>
+<table class="reference">
+  <tr>
+    <th width="30%" align="left">Property</th>
+    <th width="63%" align="left">Description</th>
+    <th width="7%" align="left">W3C</th>
+  </tr>
+  <tr>
+    <td><a href="prop_style_color.html">color</a></td>
+    <td>Sets or returns the color of the text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_direction.html">direction</a></td>
+    <td>Sets or returns the text direction</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_font.html">font</a></td>
+    <td>Sets or returns font-style, font-variant, font-weight, font-size, 
+	line-height, and font-family in one declaration</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_fontfamily.html">fontFamily</a></td>
+    <td>Sets or returns the font face for text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_fontsize.html">fontSize</a></td>
+    <td>Sets or returns the font size of the text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_fontsizeadjust.html">fontSizeAdjust</a></td>
+    <td>Sets or returns the font aspect value</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_fontstyle.html">fontStyle</a></td>
+    <td>Sets or returns whether the style of the font is normal, italic or 
+	oblique</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_fontvariant.html">fontVariant</a></td>
+    <td>Sets or returns whether the font should be displayed in small capital 
+	letters</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_fontweight.html">fontWeight</a></td>
+    <td>Sets or returns the boldness of the font</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_letterspacing.html">letterSpacing</a></td>
+    <td>Sets or returns the space between characters in a text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_lineheight.html">lineHeight</a></td>
+    <td>Sets or returns the distance between lines in a text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_quotes.html">quotes</a></td>
+    <td>Sets or returns the type of quotation marks for embedded quotations</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_textalign.html">textAlign</a></td>
+    <td>Sets or returns the horizontal alignment of text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_textdecoration.html">textDecoration</a></td>
+    <td>Sets or returns the decoration of a text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_textindent.asp">textIndent</a></td>
+    <td>Sets or returns the indentation of the first line of text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_textshadow.asp">textShadow</a></td>
+    <td>Sets or returns the shadow effect of a text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_texttransform.html">textTransform</a></td>
+    <td>Sets or returns the case of a text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_unicodebidi.html">unicodeBidi</a></td>
+    <td>Sets or returns whether the text should be overridden to support 
+	multiple languages in the same document</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_whitespace.html">whiteSpace</a></td>
+    <td>Sets or returns how to handle tabs, line breaks and whitespace in a text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td><a href="prop_style_wordspacing.html">wordSpacing</a></td>
+    <td>Sets or returns the spacing between words in a text</td>
+    <td>Yes</td>
+  </tr>
+  </table>
+
+<br />
+<div class="chapter">
+<div class="prev"><a class="chapter" href="dom_obj_select.html">&laquo; Previous</a></div>
+<div class="next"><a class="chapter" href="dom_obj_table.html">Next Reference &raquo;</a></div>
+</div>
+
+<hr />
+
+<!-- **** SPOTLIGHTS 1 **** -->
+<!-- SmallPS -->
+<script type='text/javascript'>
+GA_googleFillSlot("SmallPS");
+</script>
+<!-- **** SPOTLIGHTS 2 **** -->
+<!-- LargePS -->
+<script type='text/javascript'>
+GA_googleFillSlot("LargePS");
+</script>
+<!-- **** SPOTLIGHTS 3 **** -->
+<!-- BottomRectangle -->
+<div style="width:340px;margin:auto">
+<script type='text/javascript'>
+GA_googleFillSlot("BottomRectangle");
+</script>
+</div>
+
+<div style="width:470px;margin:auto;margin-top:5px;">
+<!-- BottomBanner -->
+<script type='text/javascript'>
+GA_googleFillSlot("BottomBanner");
+</script>
+</div>
+
+<div id="err_form" style="display:none">
+<h2>Your suggestion:</h2>
+<p><label for="err_email">Your E-mail (optional):</label> <input type="text" id="err_email" name="err_email" /></p>
+<p><label for="err_url">Page address:</label> <input type="text" disabled="disabled" id="err_url" name="err_url" /></p>
+<p><label for="err_desc">Description:</label> <textarea name="err_desc" id="err_desc" cols="92" rows="20"></textarea></p>
+<p class="submit"><input type="button" value="Submit" onclick="sendErr()" /></p>
+<div class="err_close" onclick="hideError()">Close [X]</div>
+</div>
+<div id="err_sent" style="display:none">
+<h2>Thank you for your support.</h2>
+<div class="err_close" onclick="hideSent()">Close [X]</div>
+</div>
+</div>
+
+<div id="rightcolumn" style="width:150px;margin:0px;padding:0px;float:left">
+<table>
+<tr><th>WEB HOSTING</th></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.lunarpages.com/id/w3schools/goto/w3schools">Best Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.eukhost.com/">PHP MySQL Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.web-hosting-top.com/coupons">Best Hosting Coupons</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.heartinternet.co.uk/index.shtml">UK Reseller Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.webhosting.uk.com/cloud-hosting.php">Cloud Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.justhost.com/track/w3schools/textlink">Top Web Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.doteasy.com/index.cfm?A=w3text">$3.98 Unlimited Hosting</a>
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.website.com/">Premium Website Design</a>
+</td></tr>
+</table>
+<table>
+<tr><th>WEB BUILDING</th></tr>
+<tr><td>
+
+<a target="_blank" rel="nofollow" href="http://www.altova.com/ref/?s=w3s_text2&amp;q=xmlspy">XML Editor - Free Trial!</a>
+
+</td></tr>
+<tr><td>
+<a target="_blank" rel="nofollow" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink1_400H">FREE Website BUILDER</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.wix.com/html5/websites_400?utm_campaign=ma_w3schools.com&amp;experiment_id=ma_w3schools.comlink2_400H">CREATE HTML Websites</a>
+</td></tr>
+<tr><td>
+<a rel="nofollow" target="_blank" href="http://www.edirecthost.com/main/home">EASY WEBSITE BUILDER</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS EXAMS</th></tr>
+<tr><td>
+<a target="_blank" href="../cert/default.html">Get Certified in:<br />HTML, CSS, JavaScript, XML, PHP, and ASP</a>
+</td></tr>
+</table>
+<table>
+<tr><th>W3SCHOOLS BOOKS</th></tr>
+<tr><td>
+<a target="_blank" href="../books/default.html">
+New Books:<br />HTML, CSS<br />
+JavaScript, and Ajax</a>
+</td></tr>
+</table>
+<table>
+<tr><th>STATISTICS</th></tr>
+<tr><td>
+<a target="_top" href="../browsers/browsers_stats.html">Browser Statistics</a><br />
+<a target="_top" href="../browsers/browsers_os.html">Browser OS</a><br />
+<a target="_top" href="../browsers/browsers_display.html">Browser Display</a>
+</td></tr></table>
+<script type="text/javascript">
+<!--
+function sharethis()
+{
+txt='<a href="http://www.facebook.com/sharer.php?u='+document.URL+'" target="_blank" title="Facebook">'
+txt=txt+'<img src="/images/share_facebook.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://twitter.com/home?status=Currently reading '+document.URL+'" target="_blank" title="Twitter">';
+txt=txt+'<img src="/images/share_twitter.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="mailto:?&amp;subject='+document.title+'&amp;body=Take%20a%20look%20at%20this%20page%20at%20W3Schools.com:%20'+document.URL+'" target="_blank" title="E-mail">';
+txt=txt+'<img src="/images/share_email.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://delicious.com/save?v=5&noui&jump=close&url='+document.URL+'&title='+document.title+'" target="_blank" title="Delicious">';
+txt=txt+'<img src="/images/share_delicious.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.reddit.com/submit?url='+document.URL+'" target="_blank" title="Reddit">';
+txt=txt+'<img src="/images/share_reddit.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://digg.com/submit?url='+document.URL+'&amp;title='+document.title+'" target="_blank" title="Digg">';
+txt=txt+'<img src="/images/share_digg.gif" width="16px" height="16px" style="margin-right:4px" /></a>';
+txt=txt+'<a href="http://www.stumbleupon.com/submit?url='+document.URL+'%26title%3D'+document.title+'" target="_blank" title="Stumbleupon">';
+txt=txt+'<img src="/images/share_stumbleupon.gif" width="16px" height="16px" /></a>';
+document.getElementById("sharethis").innerHTML=txt;
+}
+//--></script>
+<table>
+<tr><th>SHARE THIS PAGE</th></tr>
+<tr>
+<td id="sharethis">
+<div style="height:16px">
+<a href="#" onclick="sharethis();return false;">Share with &raquo;</a>
+</div>
+</td>
+</tr>
+</table>
+<table>
+<tr><td><br />
+<div style="width:124px;margin:auto">
+<!-- SkyScraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("SkyScraper");
+</script>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+<br />
+</div>
+<div style="width:100%;clear:both;margin:0;padding:0;background-color:transparent;background-image:url('../images/gradientbottom.jpg');background-repeat:repeat-x;position:relative;">
+<div id="footer" style="width:960px;margin-left:auto;margin-right:auto;height:110px;">
+<div style="float:left;width:200px;text-align:left;padding-left:3px;padding-top:11px;"><a href="../index.html">
+<img style="border:0" src="../images/w3schoolscom_gray.gif" alt="W3Schools.com" /></a>
+</div>
+<div style="word-spacing:6px;font-size:80%;padding-right:12px;padding-top:19px;float:right;width:600px;text-align:right;">
+<a href="#" onclick="displayError();return false">REPORT ERROR</a> |
+<a href="../default.html" target="_top">HOME</a> |
+<a href="#top" target="_top">TOP</a> |
+<a href='dom_obj_styled86a.html?output=print' target="_blank">PRINT</a> |
+<a href="http://w3schools.invisionzone.com/" target="_blank">FORUM</a> |
+<a href="../about/default.html" target="_top">ABOUT</a>
+</div>
+<div style="padding-top:13px;color:#404040;clear:both;">
+W3Schools is optimized for learning, testing, and training. Examples might be simplified to improve reading and basic understanding.<br />
+Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content.<br />
+While using this site, you agree to have read and accepted our
+<a href="../about/about_copyright.html">terms of use</a> and
+<a href="../about/about_privacy.html">privacy policy</a>.<br />
+<a href="../about/about_copyright.html">Copyright 1999-2012</a> by Refsnes Data. All Rights Reserved.
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,    
+    gaTrack: true,
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/jsref/dom_obj_style.asp by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 13 Jun 2012 07:37:41 GMT -->
+</html>

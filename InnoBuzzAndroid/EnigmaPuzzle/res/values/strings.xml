@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appName">"EnigmaPuzzle"</string>
+    <string name="gameInactive">"Use the menu\nto start the game on level %1$d"</string>
+    <string name="gameSolved">"Congratulations\nYou solved the board in\n%1$d seconds with %2$d moves"</string>
+    <string name="gameActive">"%1$d moves in %2$d seconds"</string>
+    <string name="gameStarted">"Turn the discs\nto reconstruct the original board"</string>
+    <string name="menuNewGame">"New Game"</string>
+    <string name="menuStopGame">"Stop"</string>
+    <string name="menuSettings">"Settings"</string>
+    <string name="menuLevelUp">"Level Up"</string>
+    <string name="menuHelp">"Help"</string>
+    <string name="menuLevelDown">"Level Down"</string>
+    <string name="slTitle">"Enigma General Settings"</string>
+    <string name="slStartupLevel">"Level at startup"</string>
+    <string name="slGameSettings">"Game Settings"</string>
+    <string name="slTurns">"Turns on new Game"</string>
+    <string name="slShowTurns">"Show turns on new game"</string>
+    <string name="slDisplaySettings">"Display Settings"</string>
+    <string name="slDelay">"Rotation delay"</string>
+    <string name="slSteps">"Rotation steps"</string>
+    <string name="slSwings">"Overswing steps"</string>
+    <string name="slShowSwings">"Show an overswing"</string>
+    <string name="helpTitle">"Enigma Help"</string>
+    <string name="helpIntro">"Welcome to the Enigma Puzzle – a game as difficult as the Rubik's cube. This puzzle was invented by Douglas A. Engel and it consisted of two intersecting disks in a plastic holder."</string>
+    <string name="helpPlay">"The game"</string>
+    <string name="helpPlay1">"In the middle of the screen you see the actual playing area. It consists of two circular disks that are intersecting each other. On each disk, there are six stones alternating with six bones. The stones look like overweight triangles, the bones as malnourished rectangles."</string>
+    <string name="helpPlay2">"Since the disks are intersecting, they share two stones and a bone. If a disk, let's say the upper one, is rotated by 60 degrees, then one stone and one bone that had previously also belonged to the lower disk are replaced by a new stone and new bone."</string>
+    <string name="helpPlay3">"Right next to the playing area there are four buttons arranged with little arrows. With these buttons, the two disks may be rotated. The arrow, that directs to upper right means, for example, that the upper disk shall be rotated 60 degrees to the left (anticlockwise)."</string>
+    <string name="helpPlay4">"The rotations can also be initiated with a gesture on the touchscreen. This requires a tap on the appropriate disk and then a move in the appropriate direction. When you release the screen, the rotation will be executed."</string>
+    <string name="helpGame">"Playing the game"</string>
+    <string name="helpGame1">"The menu contains the option 'New Game' to start a new game in the current level. In this case there are a couple of random disc rotations in different directions. Depending on the settings, the rotations are displayed or not. Now you have to get the discs back to its original position by turning the discs. The first action starts the clock."</string>
+    <string name="helpGame2">"You can interrupt a running game by the action 'Return'. At a new start of EnigmaPuzzle the game continues with the interrupted state. You can also cancel a game entirely. For that you use the menu item 'Stop'"</string>
+    <string name="helpGame3">"When you solve a level, the level will be increased automatically to the next level. You can set the current level with the menu."</string>
+        
+</resources>
